@@ -10,6 +10,8 @@
     h1 { margin-top: 0; color: #1a202c; }
     .nav-link { display: inline-block; margin-bottom: 1rem; color: #2b6cb0; font-weight: bold; text-decoration: none; }
     .nav-link:hover { text-decoration: underline; }
+    .btn { background: #3182ce; color: white; border: none; padding: 0.6rem 1.2rem; border-radius: 6px; font-weight: bold; cursor: pointer; margin-right: 0.5rem; transition: background 0.2s; }
+    .btn:hover { background: #2b6cb0; }
   </style>
 </head>
 <body>
@@ -34,19 +36,26 @@
     </table>
 
     <div style="margin-top: 2rem; padding-top: 1rem; border-top: 1px solid #e2e8f0;">
-      <a href="min_variance.html" style="background: #3182ce; color: white; padding: 0.6rem 1.2rem; border-radius: 6px; text-decoration: none; font-weight: bold;">
-        Proceed to Minimum Variance Portfolio Allocation →
-      </a>
+      <p style="font-weight: bold; margin-bottom: 0.5rem;">Send Top Momentum Stocks to Minimum Variance Optimizer:</p>
+      <button class="btn" onclick="optimizeTopN(10)">Optimize Top 10 Stocks →</button>
+      <button class="btn" onclick="optimizeTopN(20)">Optimize Top 20 Stocks →</button>
+      <button class="btn" onclick="optimizeTopN(30)">Optimize Top 30 Stocks →</button>
     </div>
   </div>
 
   <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
   <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
   <script>
+    // 1. Declare global variable to store stock dataset
+    let globalMomentumData = [];
+
     $(document).ready(function() {
       fetch('data.json')
         .then(response => response.json())
         .then(data => {
+          // 2. Assign loaded array to global variable
+          globalMomentumData = data;
+
           $('#momentumTable').DataTable({
             data: data,
             columns: [
@@ -62,6 +71,26 @@
         })
         .catch(err => console.error('Error loading data.json:', err));
     });
+
+    // 3. Function to select top N stocks and redirect
+    function optimizeTopN(n) {
+      if (!globalMomentumData || globalMomentumData.length === 0) {
+        alert("Data is still loading. Please wait a moment.");
+        return;
+      }
+
+      // Sort descending by momentum score and slice top N
+      const topTickers = [...globalMomentumData]
+        .sort((a, b) => b.momentum_score - a.momentum_score)
+        .slice(0, n)
+        .map(item => item.symbol);
+
+      // Store selection in LocalStorage
+      localStorage.setItem('selectedStocks', JSON.stringify(topTickers));
+
+      // Redirect to optimization page
+      window.location.href = 'min_variance.html';
+    }
   </script>
 </body>
 </html>
