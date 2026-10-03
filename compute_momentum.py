@@ -58,8 +58,22 @@ for i in range(0, len(symbols), batch_size):
             continue
     time.sleep(1) # Gentle rate-limiting delay
 
-# 3. Save as JSON
-with open("data.json", "w") as f:
-    json.dump(all_data, f, indent=2)
+# Add this at the end of compute_momentum.py
+import json
 
-print("data.json successfully generated!")
+# Extract daily close prices for all valid stocks into a single DataFrame
+price_df = pd.DataFrame()
+for symbol in batch_symbols:
+    if symbol in data and 'Close' in data[symbol]:
+        price_df[symbol.replace(".NS", "")] = data[symbol]['Close']
+
+# Calculate daily returns & annualize covariance matrix (252 trading days)
+returns_df = price_df.pct_change().dropna()
+cov_matrix = (returns_df.cov() * 252).round(6)
+
+# Convert covariance matrix to dictionary structure and save
+cov_dict = cov_matrix.to_dict()
+with open("cov_matrix.json", "w") as f:
+    json.dump(cov_dict, f)
+
+print("cov_matrix.json successfully generated!")
