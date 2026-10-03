@@ -1,0 +1,5112 @@
+[
+  {
+    "symbol": "360ONE",
+    "price": 1040.0,
+    "return_12m": 0.21,
+    "volatility": 28.1,
+    "momentum_score": 0.3616
+  },
+  {
+    "symbol": "ABB",
+    "price": 6900.0,
+    "return_12m": 35.23,
+    "volatility": 30.39,
+    "momentum_score": 1.3947
+  },
+  {
+    "symbol": "ACC",
+    "price": 1182.8,
+    "return_12m": -35.66,
+    "volatility": 22.61,
+    "momentum_score": -1.2671
+  },
+  {
+    "symbol": "ACMESOLAR",
+    "price": 432.55,
+    "return_12m": 51.24,
+    "volatility": 37.32,
+    "momentum_score": 1.1686
+  },
+  {
+    "symbol": "AIAENG",
+    "price": 3824.4,
+    "return_12m": 19.06,
+    "volatility": 30.56,
+    "momentum_score": 0.8762
+  },
+  {
+    "symbol": "APLAPOLLO",
+    "price": 2115.7,
+    "return_12m": 22.19,
+    "volatility": 27.83,
+    "momentum_score": 0.8565
+  },
+  {
+    "symbol": "AUBANK",
+    "price": 987.0,
+    "return_12m": 33.17,
+    "volatility": 29.94,
+    "momentum_score": 1.3727
+  },
+  {
+    "symbol": "AWL",
+    "price": 175.43,
+    "return_12m": -33.55,
+    "volatility": 26.6,
+    "momentum_score": -0.9588
+  },
+  {
+    "symbol": "AXISCADES",
+    "price": 2307.3,
+    "return_12m": 35.23,
+    "volatility": 50.24,
+    "momentum_score": 0.0376
+  },
+  {
+    "symbol": "AADHARHFC",
+    "price": 448.4,
+    "return_12m": -12.07,
+    "volatility": 26.71,
+    "momentum_score": -0.2153
+  },
+  {
+    "symbol": "AARTIIND",
+    "price": 465.1,
+    "return_12m": 22.44,
+    "volatility": 37.82,
+    "momentum_score": 0.7824
+  },
+  {
+    "symbol": "AARTIPHARM",
+    "price": 968.5,
+    "return_12m": 17.66,
+    "volatility": 45.14,
+    "momentum_score": 0.1289
+  },
+  {
+    "symbol": "AAVAS",
+    "price": 1190.9,
+    "return_12m": -28.35,
+    "volatility": 30.24,
+    "momentum_score": -0.665
+  },
+  {
+    "symbol": "ABBOTINDIA",
+    "price": 26840.0,
+    "return_12m": -8.33,
+    "volatility": 20.02,
+    "momentum_score": -0.5687
+  },
+  {
+    "symbol": "ACE",
+    "price": 1212.3,
+    "return_12m": 12.79,
+    "volatility": 33.38,
+    "momentum_score": 0.2085
+  },
+  {
+    "symbol": "ACUTAAS",
+    "price": 3196.5,
+    "return_12m": 130.68,
+    "volatility": 44.78,
+    "momentum_score": 2.9201
+  },
+  {
+    "symbol": "ADANIENSOL",
+    "price": 1326.4,
+    "return_12m": 44.75,
+    "volatility": 39.08,
+    "momentum_score": 1.2545
+  },
+  {
+    "symbol": "ADANIENT",
+    "price": 2816.8,
+    "return_12m": 8.81,
+    "volatility": 36.13,
+    "momentum_score": 0.3241
+  },
+  {
+    "symbol": "ADANIGREEN",
+    "price": 1276.1,
+    "return_12m": 19.23,
+    "volatility": 41.64,
+    "momentum_score": 0.4754
+  },
+  {
+    "symbol": "ADANIPORTS",
+    "price": 1737.8,
+    "return_12m": 22.97,
+    "volatility": 29.34,
+    "momentum_score": 0.7204
+  },
+  {
+    "symbol": "ADANIPOWER",
+    "price": 196.21,
+    "return_12m": 33.13,
+    "volatility": 34.62,
+    "momentum_score": 1.1245
+  },
+  {
+    "symbol": "ATGL",
+    "price": 583.05,
+    "return_12m": -8.47,
+    "volatility": 43.01,
+    "momentum_score": -0.0796
+  },
+  {
+    "symbol": "ABCAPITAL",
+    "price": 375.05,
+    "return_12m": 23.39,
+    "volatility": 32.18,
+    "momentum_score": 0.9353
+  },
+  {
+    "symbol": "ABFRL",
+    "price": 44.53,
+    "return_12m": -49.39,
+    "volatility": 36.5,
+    "momentum_score": -1.0335
+  },
+  {
+    "symbol": "ABLBL",
+    "price": 74.44,
+    "return_12m": -45.16,
+    "volatility": 33.91,
+    "momentum_score": -1.0119
+  },
+  {
+    "symbol": "ABREL",
+    "price": 1100.5,
+    "return_12m": -31.92,
+    "volatility": 38.85,
+    "momentum_score": -0.3048
+  },
+  {
+    "symbol": "ABSLAMC",
+    "price": 991.7,
+    "return_12m": 24.91,
+    "volatility": 37.35,
+    "momentum_score": 0.804
+  },
+  {
+    "symbol": "CPPLUS",
+    "price": 3799.6,
+    "return_12m": 180.07,
+    "volatility": 43.61,
+    "momentum_score": 4.0992
+  },
+  {
+    "symbol": "AVL",
+    "price": 572.3,
+    "return_12m": 2.43,
+    "volatility": 27.79,
+    "momentum_score": 0.2559
+  },
+  {
+    "symbol": "ADVENZYMES",
+    "price": 274.25,
+    "return_12m": -16.74,
+    "volatility": 38.1,
+    "momentum_score": -0.2464
+  },
+  {
+    "symbol": "AEGISLOG",
+    "price": 1401.1,
+    "return_12m": 59.86,
+    "volatility": 45.99,
+    "momentum_score": 1.109
+  },
+  {
+    "symbol": "AEGISVOPAK",
+    "price": 290.75,
+    "return_12m": 2.67,
+    "volatility": 46.88,
+    "momentum_score": 0.0279
+  },
+  {
+    "symbol": "AEQUS",
+    "price": 275.05,
+    "return_12m": 81.8,
+    "volatility": 55.69,
+    "momentum_score": 1.2667
+  },
+  {
+    "symbol": "AEROFLEX",
+    "price": 521.35,
+    "return_12m": 190.67,
+    "volatility": 60.09,
+    "momentum_score": 3.2367
+  },
+  {
+    "symbol": "AETHER",
+    "price": 1670.0,
+    "return_12m": 120.7,
+    "volatility": 40.06,
+    "momentum_score": 2.9894
+  },
+  {
+    "symbol": "AFCONS",
+    "price": 242.39,
+    "return_12m": -45.74,
+    "volatility": 33.13,
+    "momentum_score": -0.8449
+  },
+  {
+    "symbol": "AFFLE",
+    "price": 1449.6,
+    "return_12m": -25.22,
+    "volatility": 33.19,
+    "momentum_score": -0.622
+  },
+  {
+    "symbol": "AJANTPHARM",
+    "price": 3581.0,
+    "return_12m": 52.15,
+    "volatility": 25.3,
+    "momentum_score": 1.9937
+  },
+  {
+    "symbol": "AKUMS",
+    "price": 813.1,
+    "return_12m": 83.09,
+    "volatility": 32.9,
+    "momentum_score": 2.3987
+  },
+  {
+    "symbol": "ALKEM",
+    "price": 5220.0,
+    "return_12m": -3.13,
+    "volatility": 21.76,
+    "momentum_score": -0.1678
+  },
+  {
+    "symbol": "ALKYLAMINE",
+    "price": 1741.4,
+    "return_12m": -7.08,
+    "volatility": 40.66,
+    "momentum_score": 0.1474
+  },
+  {
+    "symbol": "ABDL",
+    "price": 679.45,
+    "return_12m": 23.93,
+    "volatility": 41.2,
+    "momentum_score": 0.3018
+  },
+  {
+    "symbol": "ARE&M",
+    "price": 747.4,
+    "return_12m": -24.32,
+    "volatility": 31.77,
+    "momentum_score": -0.352
+  },
+  {
+    "symbol": "AMBER",
+    "price": 6500.0,
+    "return_12m": -20.87,
+    "volatility": 39.9,
+    "momentum_score": -0.2153
+  },
+  {
+    "symbol": "AMBUJACEM",
+    "price": 362.25,
+    "return_12m": -36.81,
+    "volatility": 27.44,
+    "momentum_score": -0.957
+  },
+  {
+    "symbol": "ANANDRATHI",
+    "price": 2117.5,
+    "return_12m": 48.01,
+    "volatility": 21.23,
+    "momentum_score": 2.4494
+  },
+  {
+    "symbol": "ANANTRAJ",
+    "price": 577.85,
+    "return_12m": -19.59,
+    "volatility": 44.48,
+    "momentum_score": -0.2599
+  },
+  {
+    "symbol": "ANGELONE",
+    "price": 276.8,
+    "return_12m": 28.17,
+    "volatility": 40.18,
+    "momentum_score": 0.7813
+  },
+  {
+    "symbol": "ANTHEM",
+    "price": 855.75,
+    "return_12m": 13.0,
+    "volatility": 29.11,
+    "momentum_score": 0.7899
+  },
+  {
+    "symbol": "ANURAS",
+    "price": 1163.7,
+    "return_12m": 7.05,
+    "volatility": 25.47,
+    "momentum_score": 0.5145
+  },
+  {
+    "symbol": "APARINDS",
+    "price": 17648.0,
+    "return_12m": 110.54,
+    "volatility": 46.59,
+    "momentum_score": 2.3719
+  },
+  {
+    "symbol": "APOLLOHOSP",
+    "price": 8133.5,
+    "return_12m": 9.45,
+    "volatility": 19.3,
+    "momentum_score": 0.8226
+  },
+  {
+    "symbol": "APOLLO",
+    "price": 394.0,
+    "return_12m": 15.02,
+    "volatility": 54.47,
+    "momentum_score": 0.2231
+  },
+  {
+    "symbol": "APOLLOTYRE",
+    "price": 404.75,
+    "return_12m": -13.37,
+    "volatility": 27.66,
+    "momentum_score": -0.2408
+  },
+  {
+    "symbol": "APTUS",
+    "price": 226.4,
+    "return_12m": -29.46,
+    "volatility": 32.63,
+    "momentum_score": -0.5346
+  },
+  {
+    "symbol": "ACI",
+    "price": 475.05,
+    "return_12m": -29.48,
+    "volatility": 32.4,
+    "momentum_score": -0.7843
+  },
+  {
+    "symbol": "ARVINDFASN",
+    "price": 379.7,
+    "return_12m": -29.33,
+    "volatility": 34.94,
+    "momentum_score": -0.3339
+  },
+  {
+    "symbol": "ARVIND",
+    "price": 534.05,
+    "return_12m": 79.23,
+    "volatility": 39.09,
+    "momentum_score": 2.1564
+  },
+  {
+    "symbol": "ASAHIINDIA",
+    "price": 944.25,
+    "return_12m": 5.65,
+    "volatility": 32.86,
+    "momentum_score": 0.2227
+  },
+  {
+    "symbol": "ASHAPURMIN",
+    "price": 489.95,
+    "return_12m": -28.8,
+    "volatility": 53.91,
+    "momentum_score": -0.3442
+  },
+  {
+    "symbol": "ASHOKLEY",
+    "price": 150.48,
+    "return_12m": 10.23,
+    "volatility": 36.62,
+    "momentum_score": 0.5835
+  },
+  {
+    "symbol": "ASHOKA",
+    "price": 105.31,
+    "return_12m": -44.22,
+    "volatility": 37.67,
+    "momentum_score": -0.9019
+  },
+  {
+    "symbol": "ASIANPAINT",
+    "price": 2407.0,
+    "return_12m": 3.13,
+    "volatility": 23.94,
+    "momentum_score": 0.3521
+  },
+  {
+    "symbol": "ASTERDM",
+    "price": 708.9,
+    "return_12m": 10.28,
+    "volatility": 28.58,
+    "momentum_score": 0.7069
+  },
+  {
+    "symbol": "ASTRAMICRO",
+    "price": 1624.5,
+    "return_12m": 46.21,
+    "volatility": 39.28,
+    "momentum_score": 1.235
+  },
+  {
+    "symbol": "ASTRAL",
+    "price": 1344.0,
+    "return_12m": -2.62,
+    "volatility": 30.4,
+    "momentum_score": 0.2466
+  },
+  {
+    "symbol": "ATHERENERG",
+    "price": 1406.1,
+    "return_12m": 137.12,
+    "volatility": 48.15,
+    "momentum_score": 3.143
+  },
+  {
+    "symbol": "ATLANTAELE",
+    "price": 1716.5,
+    "return_12m": 88.33,
+    "volatility": 54.86,
+    "momentum_score": 1.7742
+  },
+  {
+    "symbol": "ATUL",
+    "price": 5861.0,
+    "return_12m": -3.98,
+    "volatility": 25.13,
+    "momentum_score": 0.2157
+  },
+  {
+    "symbol": "AURIONPRO",
+    "price": 607.8,
+    "return_12m": -46.31,
+    "volatility": 44.53,
+    "momentum_score": -0.7885
+  },
+  {
+    "symbol": "AUROPHARMA",
+    "price": 1676.8,
+    "return_12m": 53.37,
+    "volatility": 25.95,
+    "momentum_score": 1.9638
+  },
+  {
+    "symbol": "AIIL",
+    "price": 539.3,
+    "return_12m": -15.5,
+    "volatility": 50.92,
+    "momentum_score": -0.381
+  },
+  {
+    "symbol": "AVALON",
+    "price": 2280.2,
+    "return_12m": 116.09,
+    "volatility": 55.62,
+    "momentum_score": 2.0621
+  },
+  {
+    "symbol": "AVANTIFEED",
+    "price": 711.55,
+    "return_12m": 10.72,
+    "volatility": 53.64,
+    "momentum_score": 0.3973
+  },
+  {
+    "symbol": "DMART",
+    "price": 3813.0,
+    "return_12m": -13.7,
+    "volatility": 23.98,
+    "momentum_score": -0.6267
+  },
+  {
+    "symbol": "CCAVENUE",
+    "price": 15.28,
+    "return_12m": -8.61,
+    "volatility": 38.86,
+    "momentum_score": -0.2016
+  },
+  {
+    "symbol": "AXISBANK",
+    "price": 1217.1,
+    "return_12m": 3.14,
+    "volatility": 24.6,
+    "momentum_score": 0.2876
+  },
+  {
+    "symbol": "AZAD",
+    "price": 2860.9,
+    "return_12m": 65.52,
+    "volatility": 42.64,
+    "momentum_score": 1.457
+  },
+  {
+    "symbol": "BEML",
+    "price": 1962.3,
+    "return_12m": -9.83,
+    "volatility": 38.0,
+    "momentum_score": -0.1251
+  },
+  {
+    "symbol": "BLS",
+    "price": 216.51,
+    "return_12m": -33.79,
+    "volatility": 47.5,
+    "momentum_score": -0.5084
+  },
+  {
+    "symbol": "BSE",
+    "price": 3046.0,
+    "return_12m": 45.89,
+    "volatility": 37.7,
+    "momentum_score": 1.426
+  },
+  {
+    "symbol": "BAJAJ-AUTO",
+    "price": 10045.0,
+    "return_12m": 17.36,
+    "volatility": 23.8,
+    "momentum_score": 1.3906
+  },
+  {
+    "symbol": "BAJAJCON",
+    "price": 497.05,
+    "return_12m": 107.68,
+    "volatility": 48.0,
+    "momentum_score": 2.292
+  },
+  {
+    "symbol": "BAJFINANCE",
+    "price": 948.3,
+    "return_12m": -3.6,
+    "volatility": 30.67,
+    "momentum_score": 0.1957
+  },
+  {
+    "symbol": "BAJAJFINSV",
+    "price": 1732.6,
+    "return_12m": -13.34,
+    "volatility": 24.48,
+    "momentum_score": -0.0126
+  },
+  {
+    "symbol": "BAJAJHLDNG",
+    "price": 10666.0,
+    "return_12m": -8.1,
+    "volatility": 28.41,
+    "momentum_score": -0.1474
+  },
+  {
+    "symbol": "BAJAJHFL",
+    "price": 82.91,
+    "return_12m": -25.65,
+    "volatility": 21.81,
+    "momentum_score": -1.1738
+  },
+  {
+    "symbol": "BALAMINES",
+    "price": 2052.2,
+    "return_12m": 45.46,
+    "volatility": 56.17,
+    "momentum_score": 1.0786
+  },
+  {
+    "symbol": "BALKRISIND",
+    "price": 2083.5,
+    "return_12m": -8.89,
+    "volatility": 34.11,
+    "momentum_score": 0.0463
+  },
+  {
+    "symbol": "BALRAMCHIN",
+    "price": 649.05,
+    "return_12m": 40.67,
+    "volatility": 39.93,
+    "momentum_score": 1.2152
+  },
+  {
+    "symbol": "BALUFORGE",
+    "price": 488.95,
+    "return_12m": -23.5,
+    "volatility": 51.85,
+    "momentum_score": -0.1784
+  },
+  {
+    "symbol": "BANCOINDIA",
+    "price": 589.85,
+    "return_12m": -27.9,
+    "volatility": 41.84,
+    "momentum_score": -0.5916
+  },
+  {
+    "symbol": "BANDHANBNK",
+    "price": 176.0,
+    "return_12m": 6.97,
+    "volatility": 41.77,
+    "momentum_score": -0.0047
+  },
+  {
+    "symbol": "BANKBARODA",
+    "price": 230.82,
+    "return_12m": -9.72,
+    "volatility": 27.54,
+    "momentum_score": -0.2078
+  },
+  {
+    "symbol": "BANKINDIA",
+    "price": 129.48,
+    "return_12m": 6.52,
+    "volatility": 32.57,
+    "momentum_score": 0.5288
+  },
+  {
+    "symbol": "MAHABANK",
+    "price": 80.5,
+    "return_12m": 46.88,
+    "volatility": 35.7,
+    "momentum_score": 1.5018
+  },
+  {
+    "symbol": "BATAINDIA",
+    "price": 613.0,
+    "return_12m": -46.98,
+    "volatility": 30.45,
+    "momentum_score": -1.2305
+  },
+  {
+    "symbol": "BELRISE",
+    "price": 237.5,
+    "return_12m": 46.04,
+    "volatility": 35.75,
+    "momentum_score": 1.2882
+  },
+  {
+    "symbol": "BERGEPAINT",
+    "price": 452.4,
+    "return_12m": -15.99,
+    "volatility": 27.83,
+    "momentum_score": -0.2895
+  },
+  {
+    "symbol": "BDL",
+    "price": 1087.9,
+    "return_12m": -30.03,
+    "volatility": 38.02,
+    "momentum_score": -0.4356
+  },
+  {
+    "symbol": "BEL",
+    "price": 383.1,
+    "return_12m": -6.64,
+    "volatility": 24.9,
+    "momentum_score": -0.016
+  },
+  {
+    "symbol": "BHARATFORG",
+    "price": 1875.0,
+    "return_12m": 54.31,
+    "volatility": 29.45,
+    "momentum_score": 2.0256
+  },
+  {
+    "symbol": "BHEL",
+    "price": 421.0,
+    "return_12m": 72.38,
+    "volatility": 36.41,
+    "momentum_score": 2.0568
+  },
+  {
+    "symbol": "BPCL",
+    "price": 300.6,
+    "return_12m": -7.62,
+    "volatility": 29.3,
+    "momentum_score": -0.0528
+  },
+  {
+    "symbol": "BHARTIARTL",
+    "price": 1741.1,
+    "return_12m": -7.05,
+    "volatility": 20.69,
+    "momentum_score": -0.0099
+  },
+  {
+    "symbol": "BHARTIHEXA",
+    "price": 1379.2,
+    "return_12m": -14.93,
+    "volatility": 28.36,
+    "momentum_score": -0.2302
+  },
+  {
+    "symbol": "GROWW",
+    "price": 180.11,
+    "return_12m": 37.14,
+    "volatility": 49.0,
+    "momentum_score": 0.8666
+  },
+  {
+    "symbol": "BIOCON",
+    "price": 370.7,
+    "return_12m": 5.36,
+    "volatility": 25.04,
+    "momentum_score": 0.5252
+  },
+  {
+    "symbol": "BIRLACORPN",
+    "price": 828.95,
+    "return_12m": -30.43,
+    "volatility": 32.67,
+    "momentum_score": -0.7511
+  },
+  {
+    "symbol": "BSOFT",
+    "price": 269.75,
+    "return_12m": -21.29,
+    "volatility": 37.94,
+    "momentum_score": -0.35
+  },
+  {
+    "symbol": "BBOX",
+    "price": 795.85,
+    "return_12m": 42.6,
+    "volatility": 45.25,
+    "momentum_score": 0.7117
+  },
+  {
+    "symbol": "BLACKBUCK",
+    "price": 606.15,
+    "return_12m": -2.69,
+    "volatility": 39.59,
+    "momentum_score": -0.1709
+  },
+  {
+    "symbol": "BLUEJET",
+    "price": 541.8,
+    "return_12m": -18.15,
+    "volatility": 46.87,
+    "momentum_score": -0.2544
+  },
+  {
+    "symbol": "BLUESTARCO",
+    "price": 1459.6,
+    "return_12m": -22.77,
+    "volatility": 32.05,
+    "momentum_score": -0.6555
+  },
+  {
+    "symbol": "BLUESTONE",
+    "price": 787.95,
+    "return_12m": 28.78,
+    "volatility": 53.15,
+    "momentum_score": 0.5811
+  },
+  {
+    "symbol": "BORORENEW",
+    "price": 449.6,
+    "return_12m": -28.09,
+    "volatility": 40.5,
+    "momentum_score": -0.4559
+  },
+  {
+    "symbol": "BOSCHLTD",
+    "price": 45480.0,
+    "return_12m": 18.51,
+    "volatility": 29.22,
+    "momentum_score": 0.7616
+  },
+  {
+    "symbol": "FIRSTCRY",
+    "price": 174.75,
+    "return_12m": -53.04,
+    "volatility": 40.26,
+    "momentum_score": -1.263
+  },
+  {
+    "symbol": "BRIGADE",
+    "price": 569.55,
+    "return_12m": -15.02,
+    "volatility": 36.99,
+    "momentum_score": 0.1356
+  },
+  {
+    "symbol": "BRITANNIA",
+    "price": 4778.0,
+    "return_12m": -18.94,
+    "volatility": 19.15,
+    "momentum_score": -0.6307
+  },
+  {
+    "symbol": "BIRET",
+    "price": 330.25,
+    "return_12m": 1.38,
+    "volatility": 15.92,
+    "momentum_score": 0.3087
+  },
+  {
+    "symbol": "MAPMYINDIA",
+    "price": 845.75,
+    "return_12m": -49.18,
+    "volatility": 45.68,
+    "momentum_score": -0.7989
+  },
+  {
+    "symbol": "CCL",
+    "price": 1056.6,
+    "return_12m": 23.85,
+    "volatility": 31.81,
+    "momentum_score": 0.8936
+  },
+  {
+    "symbol": "CESC",
+    "price": 131.62,
+    "return_12m": -15.18,
+    "volatility": 27.75,
+    "momentum_score": -0.1491
+  },
+  {
+    "symbol": "CGPOWER",
+    "price": 879.0,
+    "return_12m": 17.85,
+    "volatility": 34.42,
+    "momentum_score": 0.5706
+  },
+  {
+    "symbol": "CIEINDIA",
+    "price": 376.35,
+    "return_12m": -7.41,
+    "volatility": 30.41,
+    "momentum_score": -0.1785
+  },
+  {
+    "symbol": "CMSINFO",
+    "price": 220.69,
+    "return_12m": -40.89,
+    "volatility": 28.43,
+    "momentum_score": -1.1262
+  },
+  {
+    "symbol": "CRISIL",
+    "price": 4428.6,
+    "return_12m": -2.46,
+    "volatility": 26.95,
+    "momentum_score": 0.1241
+  },
+  {
+    "symbol": "CSBBANK",
+    "price": 304.75,
+    "return_12m": -21.0,
+    "volatility": 46.57,
+    "momentum_score": -0.3174
+  },
+  {
+    "symbol": "CAMPUS",
+    "price": 205.83,
+    "return_12m": -24.9,
+    "volatility": 26.01,
+    "momentum_score": -0.6459
+  },
+  {
+    "symbol": "CANFINHOME",
+    "price": 711.0,
+    "return_12m": -8.44,
+    "volatility": 26.2,
+    "momentum_score": 0.1232
+  },
+  {
+    "symbol": "CANBK",
+    "price": 118.36,
+    "return_12m": -2.89,
+    "volatility": 28.17,
+    "momentum_score": 0.1074
+  },
+  {
+    "symbol": "CANHLIFE",
+    "price": 143.85,
+    "return_12m": 29.45,
+    "volatility": 29.99,
+    "momentum_score": 1.2081
+  },
+  {
+    "symbol": "CRAMC",
+    "price": 216.52,
+    "return_12m": -26.88,
+    "volatility": 39.02,
+    "momentum_score": -0.3351
+  },
+  {
+    "symbol": "CAPILLARY",
+    "price": 554.7,
+    "return_12m": -8.54,
+    "volatility": 47.51,
+    "momentum_score": -0.5071
+  },
+  {
+    "symbol": "CAPLIPOINT",
+    "price": 2631.9,
+    "return_12m": 30.76,
+    "volatility": 33.42,
+    "momentum_score": 1.1401
+  },
+  {
+    "symbol": "CGCL",
+    "price": 249.23,
+    "return_12m": 31.73,
+    "volatility": 34.88,
+    "momentum_score": 1.1448
+  },
+  {
+    "symbol": "CARBORUNIV",
+    "price": 1239.7,
+    "return_12m": 32.81,
+    "volatility": 34.8,
+    "momentum_score": 0.5119
+  },
+  {
+    "symbol": "CARTRADE",
+    "price": 2806.6,
+    "return_12m": 12.36,
+    "volatility": 54.18,
+    "momentum_score": 0.3427
+  },
+  {
+    "symbol": "CASTROLIND",
+    "price": 199.04,
+    "return_12m": 4.42,
+    "volatility": 13.24,
+    "momentum_score": -0.1772
+  },
+  {
+    "symbol": "CEATLTD",
+    "price": 3286.6,
+    "return_12m": -5.44,
+    "volatility": 37.74,
+    "momentum_score": -0.1212
+  },
+  {
+    "symbol": "CEIGALL",
+    "price": 380.1,
+    "return_12m": 46.05,
+    "volatility": 30.41,
+    "momentum_score": 1.2016
+  },
+  {
+    "symbol": "CELLO",
+    "price": 323.1,
+    "return_12m": -45.61,
+    "volatility": 33.21,
+    "momentum_score": -1.1949
+  },
+  {
+    "symbol": "CEMPRO",
+    "price": 1178.9,
+    "return_12m": 44.26,
+    "volatility": 52.48,
+    "momentum_score": 1.0167
+  },
+  {
+    "symbol": "CENTRALBK",
+    "price": 30.0,
+    "return_12m": -18.48,
+    "volatility": 28.11,
+    "momentum_score": -0.5684
+  },
+  {
+    "symbol": "CDSL",
+    "price": 1242.5,
+    "return_12m": -15.86,
+    "volatility": 31.52,
+    "momentum_score": -0.1582
+  },
+  {
+    "symbol": "CENTUM",
+    "price": 4701.7,
+    "return_12m": 91.47,
+    "volatility": 49.6,
+    "momentum_score": 1.3499
+  },
+  {
+    "symbol": "CERA",
+    "price": 5096.5,
+    "return_12m": -16.15,
+    "volatility": 28.37,
+    "momentum_score": -0.2053
+  },
+  {
+    "symbol": "CHALET",
+    "price": 830.25,
+    "return_12m": -14.35,
+    "volatility": 28.2,
+    "momentum_score": -0.2717
+  },
+  {
+    "symbol": "CHAMBLFERT",
+    "price": 399.3,
+    "return_12m": -21.29,
+    "volatility": 26.14,
+    "momentum_score": -0.6408
+  },
+  {
+    "symbol": "CHENNPETRO",
+    "price": 1346.4,
+    "return_12m": 81.48,
+    "volatility": 52.22,
+    "momentum_score": 1.6847
+  },
+  {
+    "symbol": "CHOICEIN",
+    "price": 719.4,
+    "return_12m": -8.18,
+    "volatility": 32.01,
+    "momentum_score": -0.0562
+  },
+  {
+    "symbol": "CHOLAHLDNG",
+    "price": 1369.6,
+    "return_12m": -25.56,
+    "volatility": 35.5,
+    "momentum_score": -0.4701
+  },
+  {
+    "symbol": "CHOLAFIN",
+    "price": 1580.0,
+    "return_12m": 0.69,
+    "volatility": 33.11,
+    "momentum_score": 0.4608
+  },
+  {
+    "symbol": "CIPLA",
+    "price": 1344.0,
+    "return_12m": -10.61,
+    "volatility": 20.93,
+    "momentum_score": -0.3334
+  },
+  {
+    "symbol": "CUB",
+    "price": 230.04,
+    "return_12m": 43.77,
+    "volatility": 39.13,
+    "momentum_score": 1.1656
+  },
+  {
+    "symbol": "CLEAN",
+    "price": 803.05,
+    "return_12m": -25.47,
+    "volatility": 32.29,
+    "momentum_score": -0.6212
+  },
+  {
+    "symbol": "COALINDIA",
+    "price": 420.4,
+    "return_12m": 17.11,
+    "volatility": 23.07,
+    "momentum_score": 0.6834
+  },
+  {
+    "symbol": "COCHINSHIP",
+    "price": 1287.0,
+    "return_12m": -30.46,
+    "volatility": 37.31,
+    "momentum_score": -0.4591
+  },
+  {
+    "symbol": "COFORGE",
+    "price": 1826.0,
+    "return_12m": 13.99,
+    "volatility": 38.68,
+    "momentum_score": 0.5527
+  },
+  {
+    "symbol": "COHANCE",
+    "price": 451.3,
+    "return_12m": -48.46,
+    "volatility": 50.59,
+    "momentum_score": -0.917
+  },
+  {
+    "symbol": "COLPAL",
+    "price": 1735.0,
+    "return_12m": -19.85,
+    "volatility": 24.32,
+    "momentum_score": -0.5606
+  },
+  {
+    "symbol": "CAMS",
+    "price": 677.25,
+    "return_12m": -9.62,
+    "volatility": 29.17,
+    "momentum_score": -0.0082
+  },
+  {
+    "symbol": "CONCORDBIO",
+    "price": 1374.1,
+    "return_12m": -13.45,
+    "volatility": 40.69,
+    "momentum_score": -0.2055
+  },
+  {
+    "symbol": "CONCOR",
+    "price": 442.0,
+    "return_12m": -15.75,
+    "volatility": 27.45,
+    "momentum_score": -0.1014
+  },
+  {
+    "symbol": "COROMANDEL",
+    "price": 1763.6,
+    "return_12m": -22.99,
+    "volatility": 29.89,
+    "momentum_score": -0.4787
+  },
+  {
+    "symbol": "CRAFTSMAN",
+    "price": 10266.0,
+    "return_12m": 51.75,
+    "volatility": 36.44,
+    "momentum_score": 1.6533
+  },
+  {
+    "symbol": "CREDITACC",
+    "price": 1239.0,
+    "return_12m": -12.18,
+    "volatility": 39.86,
+    "momentum_score": 0.0406
+  },
+  {
+    "symbol": "CROMPTON",
+    "price": 202.7,
+    "return_12m": -30.51,
+    "volatility": 29.6,
+    "momentum_score": -0.6757
+  },
+  {
+    "symbol": "CUMMINSIND",
+    "price": 4860.0,
+    "return_12m": 25.17,
+    "volatility": 28.34,
+    "momentum_score": 1.0351
+  },
+  {
+    "symbol": "CUPID",
+    "price": 312.5,
+    "return_12m": 627.66,
+    "volatility": 58.82,
+    "momentum_score": 10.4737
+  },
+  {
+    "symbol": "CYIENT",
+    "price": 1104.6,
+    "return_12m": -4.35,
+    "volatility": 34.02,
+    "momentum_score": -0.1102
+  },
+  {
+    "symbol": "DCBBANK",
+    "price": 199.71,
+    "return_12m": 52.8,
+    "volatility": 39.31,
+    "momentum_score": 1.6007
+  },
+  {
+    "symbol": "DLF",
+    "price": 658.4,
+    "return_12m": -8.58,
+    "volatility": 30.14,
+    "momentum_score": -0.1714
+  },
+  {
+    "symbol": "DOMS",
+    "price": 2097.5,
+    "return_12m": -15.99,
+    "volatility": 26.16,
+    "momentum_score": -0.4226
+  },
+  {
+    "symbol": "DABUR",
+    "price": 374.25,
+    "return_12m": -23.19,
+    "volatility": 22.59,
+    "momentum_score": -0.9516
+  },
+  {
+    "symbol": "DALBHARAT",
+    "price": 1682.1,
+    "return_12m": -25.0,
+    "volatility": 27.83,
+    "momentum_score": -0.7177
+  },
+  {
+    "symbol": "DATAPATTNS",
+    "price": 4251.3,
+    "return_12m": 50.27,
+    "volatility": 49.78,
+    "momentum_score": 1.157
+  },
+  {
+    "symbol": "DATAMATICS",
+    "price": 790.3,
+    "return_12m": -10.39,
+    "volatility": 40.9,
+    "momentum_score": -0.3188
+  },
+  {
+    "symbol": "DEEPAKFERT",
+    "price": 1300.9,
+    "return_12m": -16.7,
+    "volatility": 41.29,
+    "momentum_score": -0.3063
+  },
+  {
+    "symbol": "DEEPAKNTR",
+    "price": 1492.8,
+    "return_12m": -19.02,
+    "volatility": 29.13,
+    "momentum_score": -0.1903
+  },
+  {
+    "symbol": "DELHIVERY",
+    "price": 400.0,
+    "return_12m": -8.53,
+    "volatility": 30.94,
+    "momentum_score": 0.1722
+  },
+  {
+    "symbol": "DEVYANI",
+    "price": 127.07,
+    "return_12m": -24.07,
+    "volatility": 39.05,
+    "momentum_score": -0.4127
+  },
+  {
+    "symbol": "DIACABS",
+    "price": 345.0,
+    "return_12m": 127.14,
+    "volatility": 47.34,
+    "momentum_score": 2.5409
+  },
+  {
+    "symbol": "DBL",
+    "price": 399.1,
+    "return_12m": -20.65,
+    "volatility": 34.41,
+    "momentum_score": -0.6114
+  },
+  {
+    "symbol": "DIVISLAB",
+    "price": 9249.0,
+    "return_12m": 58.32,
+    "volatility": 23.86,
+    "momentum_score": 2.4443
+  },
+  {
+    "symbol": "DIXON",
+    "price": 12700.0,
+    "return_12m": -23.39,
+    "volatility": 38.86,
+    "momentum_score": -0.2928
+  },
+  {
+    "symbol": "LALPATHLAB",
+    "price": 2005.1,
+    "return_12m": 29.48,
+    "volatility": 28.75,
+    "momentum_score": 0.8809
+  },
+  {
+    "symbol": "DRREDDY",
+    "price": 1206.2,
+    "return_12m": -2.74,
+    "volatility": 23.57,
+    "momentum_score": -0.3045
+  },
+  {
+    "symbol": "DYNAMATECH",
+    "price": 13756.0,
+    "return_12m": 96.18,
+    "volatility": 46.25,
+    "momentum_score": 1.6626
+  },
+  {
+    "symbol": "EIDPARRY",
+    "price": 674.55,
+    "return_12m": -35.26,
+    "volatility": 26.74,
+    "momentum_score": -0.8204
+  },
+  {
+    "symbol": "E2E",
+    "price": 648.0,
+    "return_12m": 83.43,
+    "volatility": 56.65,
+    "momentum_score": 1.3079
+  },
+  {
+    "symbol": "EIHOTEL",
+    "price": 297.85,
+    "return_12m": -23.92,
+    "volatility": 29.18,
+    "momentum_score": -0.9032
+  },
+  {
+    "symbol": "EMBASSY",
+    "price": 428.71,
+    "return_12m": 6.39,
+    "volatility": 16.99,
+    "momentum_score": 0.5088
+  },
+  {
+    "symbol": "EPL",
+    "price": 232.39,
+    "return_12m": 8.2,
+    "volatility": 32.94,
+    "momentum_score": 0.4233
+  },
+  {
+    "symbol": "EDELWEISS",
+    "price": 137.9,
+    "return_12m": 25.16,
+    "volatility": 39.32,
+    "momentum_score": 0.5518
+  },
+  {
+    "symbol": "EICHERMOT",
+    "price": 6920.0,
+    "return_12m": 0.74,
+    "volatility": 26.56,
+    "momentum_score": 0.405
+  },
+  {
+    "symbol": "ELECON",
+    "price": 440.0,
+    "return_12m": -24.44,
+    "volatility": 46.0,
+    "momentum_score": -0.5516
+  },
+  {
+    "symbol": "EMIL",
+    "price": 204.05,
+    "return_12m": 42.4,
+    "volatility": 46.41,
+    "momentum_score": 0.5725
+  },
+  {
+    "symbol": "ELECTCAST",
+    "price": 74.54,
+    "return_12m": -22.15,
+    "volatility": 47.17,
+    "momentum_score": -0.2341
+  },
+  {
+    "symbol": "ELGIEQUIP",
+    "price": 584.65,
+    "return_12m": 18.81,
+    "volatility": 33.02,
+    "momentum_score": 0.789
+  },
+  {
+    "symbol": "ELLEN",
+    "price": 341.7,
+    "return_12m": -27.17,
+    "volatility": 51.81,
+    "momentum_score": -0.5902
+  },
+  {
+    "symbol": "EMAMILTD",
+    "price": 372.65,
+    "return_12m": -30.97,
+    "volatility": 25.0,
+    "momentum_score": -1.2872
+  },
+  {
+    "symbol": "EMBDL",
+    "price": 56.13,
+    "return_12m": -41.94,
+    "volatility": 53.23,
+    "momentum_score": -0.7091
+  },
+  {
+    "symbol": "EMCURE",
+    "price": 1944.6,
+    "return_12m": 45.41,
+    "volatility": 32.48,
+    "momentum_score": 1.2426
+  },
+  {
+    "symbol": "EMMVEE",
+    "price": 305.9,
+    "return_12m": 39.86,
+    "volatility": 51.69,
+    "momentum_score": 0.8869
+  },
+  {
+    "symbol": "ENDURANCE",
+    "price": 2601.4,
+    "return_12m": -9.72,
+    "volatility": 30.5,
+    "momentum_score": -0.1363
+  },
+  {
+    "symbol": "ENGINERSIN",
+    "price": 312.75,
+    "return_12m": 58.63,
+    "volatility": 43.71,
+    "momentum_score": 1.0705
+  },
+  {
+    "symbol": "ENTERO",
+    "price": 1680.8,
+    "return_12m": 53.83,
+    "volatility": 40.06,
+    "momentum_score": 1.5057
+  },
+  {
+    "symbol": "EIEL",
+    "price": 184.0,
+    "return_12m": -27.57,
+    "volatility": 47.71,
+    "momentum_score": -0.453
+  },
+  {
+    "symbol": "EQUITASBNK",
+    "price": 68.41,
+    "return_12m": 19.31,
+    "volatility": 34.62,
+    "momentum_score": 0.7407
+  },
+  {
+    "symbol": "ERIS",
+    "price": 1189.8,
+    "return_12m": -24.92,
+    "volatility": 29.95,
+    "momentum_score": -0.541
+  },
+  {
+    "symbol": "ESCORTS",
+    "price": 2667.3,
+    "return_12m": -24.05,
+    "volatility": 29.72,
+    "momentum_score": -0.458
+  },
+  {
+    "symbol": "ETERNAL",
+    "price": 313.9,
+    "return_12m": -4.43,
+    "volatility": 33.13,
+    "momentum_score": -0.0324
+  },
+  {
+    "symbol": "EXIDEIND",
+    "price": 409.45,
+    "return_12m": 3.36,
+    "volatility": 29.53,
+    "momentum_score": 0.2222
+  },
+  {
+    "symbol": "NYKAA",
+    "price": 324.95,
+    "return_12m": 35.5,
+    "volatility": 27.95,
+    "momentum_score": 1.3694
+  },
+  {
+    "symbol": "FEDFINA",
+    "price": 149.77,
+    "return_12m": -3.37,
+    "volatility": 41.28,
+    "momentum_score": 0.0383
+  },
+  {
+    "symbol": "FEDERALBNK",
+    "price": 318.2,
+    "return_12m": 65.98,
+    "volatility": 26.11,
+    "momentum_score": 2.8202
+  },
+  {
+    "symbol": "FACT",
+    "price": 734.95,
+    "return_12m": -18.4,
+    "volatility": 40.92,
+    "momentum_score": -0.2504
+  },
+  {
+    "symbol": "FIEMIND",
+    "price": 1794.8,
+    "return_12m": -5.73,
+    "volatility": 35.07,
+    "momentum_score": 0.1754
+  },
+  {
+    "symbol": "FINCABLES",
+    "price": 1458.8,
+    "return_12m": 77.47,
+    "volatility": 43.43,
+    "momentum_score": 1.4286
+  },
+  {
+    "symbol": "FINPIPE",
+    "price": 150.49,
+    "return_12m": -25.61,
+    "volatility": 26.73,
+    "momentum_score": -0.823
+  },
+  {
+    "symbol": "FSL",
+    "price": 250.4,
+    "return_12m": -20.4,
+    "volatility": 49.37,
+    "momentum_score": -0.2995
+  },
+  {
+    "symbol": "FIVESTAR",
+    "price": 506.25,
+    "return_12m": -4.84,
+    "volatility": 41.02,
+    "momentum_score": 0.0112
+  },
+  {
+    "symbol": "FORCEMOT",
+    "price": 16800.0,
+    "return_12m": 0.24,
+    "volatility": 44.93,
+    "momentum_score": 0.0884
+  },
+  {
+    "symbol": "FORTIS",
+    "price": 785.0,
+    "return_12m": -19.85,
+    "volatility": 26.59,
+    "momentum_score": -0.2033
+  },
+  {
+    "symbol": "UTLSOLAR",
+    "price": 401.65,
+    "return_12m": 92.69,
+    "volatility": 45.85,
+    "momentum_score": 2.1584
+  },
+  {
+    "symbol": "GAIL",
+    "price": 171.22,
+    "return_12m": -0.16,
+    "volatility": 24.87,
+    "momentum_score": 0.0728
+  },
+  {
+    "symbol": "GVT&D",
+    "price": 4253.2,
+    "return_12m": 34.5,
+    "volatility": 44.54,
+    "momentum_score": 0.8306
+  },
+  {
+    "symbol": "GMRAIRPORT",
+    "price": 93.16,
+    "return_12m": 4.35,
+    "volatility": 31.01,
+    "momentum_score": 0.2637
+  },
+  {
+    "symbol": "GMRP&UI",
+    "price": 101.87,
+    "return_12m": -12.16,
+    "volatility": 38.54,
+    "momentum_score": -0.6035
+  },
+  {
+    "symbol": "EBGNG",
+    "price": 704.7,
+    "return_12m": 99.46,
+    "volatility": 52.93,
+    "momentum_score": 1.6283
+  },
+  {
+    "symbol": "GABRIEL",
+    "price": 1315.0,
+    "return_12m": 2.35,
+    "volatility": 50.31,
+    "momentum_score": 0.0922
+  },
+  {
+    "symbol": "GALLANTT",
+    "price": 530.15,
+    "return_12m": -20.59,
+    "volatility": 54.4,
+    "momentum_score": -0.2484
+  },
+  {
+    "symbol": "GRSE",
+    "price": 2111.1,
+    "return_12m": -21.91,
+    "volatility": 42.74,
+    "momentum_score": -0.1465
+  },
+  {
+    "symbol": "GRWRHITECH",
+    "price": 6925.5,
+    "return_12m": 123.27,
+    "volatility": 53.34,
+    "momentum_score": 2.3539
+  },
+  {
+    "symbol": "GICRE",
+    "price": 323.9,
+    "return_12m": -8.06,
+    "volatility": 24.06,
+    "momentum_score": -0.1046
+  },
+  {
+    "symbol": "GENUSPOWER",
+    "price": 280.0,
+    "return_12m": -10.51,
+    "volatility": 41.41,
+    "momentum_score": 0.1673
+  },
+  {
+    "symbol": "GILLETTE",
+    "price": 6899.0,
+    "return_12m": -25.17,
+    "volatility": 22.45,
+    "momentum_score": -0.853
+  },
+  {
+    "symbol": "GLAND",
+    "price": 2874.4,
+    "return_12m": 48.41,
+    "volatility": 33.46,
+    "momentum_score": 1.4813
+  },
+  {
+    "symbol": "GLAXO",
+    "price": 2771.1,
+    "return_12m": 3.49,
+    "volatility": 25.01,
+    "momentum_score": 0.366
+  },
+  {
+    "symbol": "GLENMARK",
+    "price": 2331.0,
+    "return_12m": 17.83,
+    "volatility": 26.99,
+    "momentum_score": 0.8536
+  },
+  {
+    "symbol": "MEDANTA",
+    "price": 1357.3,
+    "return_12m": 2.18,
+    "volatility": 30.62,
+    "momentum_score": 0.2692
+  },
+  {
+    "symbol": "GPIL",
+    "price": 215.67,
+    "return_12m": -12.46,
+    "volatility": 34.5,
+    "momentum_score": -0.0685
+  },
+  {
+    "symbol": "GODFRYPHLP",
+    "price": 1849.7,
+    "return_12m": -44.9,
+    "volatility": 46.61,
+    "momentum_score": -0.7585
+  },
+  {
+    "symbol": "GODREJAGRO",
+    "price": 631.9,
+    "return_12m": -6.7,
+    "volatility": 30.1,
+    "momentum_score": -0.0863
+  },
+  {
+    "symbol": "GODREJCP",
+    "price": 840.0,
+    "return_12m": -25.48,
+    "volatility": 26.04,
+    "momentum_score": -0.8037
+  },
+  {
+    "symbol": "GODREJIND",
+    "price": 1019.6,
+    "return_12m": -12.2,
+    "volatility": 41.7,
+    "momentum_score": -0.0128
+  },
+  {
+    "symbol": "GODREJPROP",
+    "price": 1595.8,
+    "return_12m": -21.13,
+    "volatility": 35.54,
+    "momentum_score": -0.0241
+  },
+  {
+    "symbol": "GOKEX",
+    "price": 688.75,
+    "return_12m": -7.58,
+    "volatility": 54.56,
+    "momentum_score": 0.0495
+  },
+  {
+    "symbol": "GOKULAGRO",
+    "price": 210.1,
+    "return_12m": 3.92,
+    "volatility": 42.85,
+    "momentum_score": 0.338
+  },
+  {
+    "symbol": "GOLDIAM",
+    "price": 310.8,
+    "return_12m": 7.01,
+    "volatility": 56.03,
+    "momentum_score": 0.2814
+  },
+  {
+    "symbol": "GRANULES",
+    "price": 821.75,
+    "return_12m": 47.76,
+    "volatility": 29.04,
+    "momentum_score": 1.774
+  },
+  {
+    "symbol": "GRAPHITE",
+    "price": 786.15,
+    "return_12m": 43.16,
+    "volatility": 43.5,
+    "momentum_score": 0.7857
+  },
+  {
+    "symbol": "GRASIM",
+    "price": 2962.0,
+    "return_12m": 6.44,
+    "volatility": 23.25,
+    "momentum_score": 0.7294
+  },
+  {
+    "symbol": "GRAVITA",
+    "price": 1412.6,
+    "return_12m": -10.36,
+    "volatility": 35.86,
+    "momentum_score": 0.1616
+  },
+  {
+    "symbol": "GESHIP",
+    "price": 1530.6,
+    "return_12m": 49.79,
+    "volatility": 34.13,
+    "momentum_score": 1.0757
+  },
+  {
+    "symbol": "GREAVESCOT",
+    "price": 225.98,
+    "return_12m": 4.97,
+    "volatility": 44.33,
+    "momentum_score": -0.2492
+  },
+  {
+    "symbol": "GRINDWELL",
+    "price": 1975.8,
+    "return_12m": 19.95,
+    "volatility": 36.12,
+    "momentum_score": 0.5504
+  },
+  {
+    "symbol": "GUJALKALI",
+    "price": 603.6,
+    "return_12m": 10.38,
+    "volatility": 40.53,
+    "momentum_score": 0.6075
+  },
+  {
+    "symbol": "GAEL",
+    "price": 157.69,
+    "return_12m": 47.91,
+    "volatility": 36.66,
+    "momentum_score": 1.5176
+  },
+  {
+    "symbol": "FLUOROCHEM",
+    "price": 4341.5,
+    "return_12m": 17.37,
+    "volatility": 30.63,
+    "momentum_score": 0.8105
+  },
+  {
+    "symbol": "GMDCLTD",
+    "price": 487.65,
+    "return_12m": -19.1,
+    "volatility": 46.78,
+    "momentum_score": -0.1444
+  },
+  {
+    "symbol": "GNFC",
+    "price": 589.15,
+    "return_12m": 21.63,
+    "volatility": 31.87,
+    "momentum_score": 0.5526
+  },
+  {
+    "symbol": "GPPL",
+    "price": 165.88,
+    "return_12m": 10.24,
+    "volatility": 28.92,
+    "momentum_score": 0.3447
+  },
+  {
+    "symbol": "GSFC",
+    "price": 146.9,
+    "return_12m": -23.97,
+    "volatility": 26.37,
+    "momentum_score": -0.6694
+  },
+  {
+    "symbol": "HGINFRA",
+    "price": 419.9,
+    "return_12m": -55.88,
+    "volatility": 37.45,
+    "momentum_score": -1.1583
+  },
+  {
+    "symbol": "HBLENGINE",
+    "price": 779.35,
+    "return_12m": -7.61,
+    "volatility": 44.22,
+    "momentum_score": -0.5623
+  },
+  {
+    "symbol": "HCLTECH",
+    "price": 1243.1,
+    "return_12m": -6.75,
+    "volatility": 28.81,
+    "momentum_score": -0.0347
+  },
+  {
+    "symbol": "HDBFS",
+    "price": 618.2,
+    "return_12m": -17.89,
+    "volatility": 25.77,
+    "momentum_score": -0.2732
+  },
+  {
+    "symbol": "HDFCAMC",
+    "price": 2308.1,
+    "return_12m": -15.63,
+    "volatility": 31.7,
+    "momentum_score": -0.2384
+  },
+  {
+    "symbol": "HDFCBANK",
+    "price": 721.2,
+    "return_12m": -24.04,
+    "volatility": 21.61,
+    "momentum_score": -1.2075
+  },
+  {
+    "symbol": "HDFCLIFE",
+    "price": 534.2,
+    "return_12m": -29.39,
+    "volatility": 24.22,
+    "momentum_score": -1.2185
+  },
+  {
+    "symbol": "HEGAM",
+    "price": 239.28,
+    "return_12m": -53.45,
+    "volatility": 76.5,
+    "momentum_score": 0.1664
+  },
+  {
+    "symbol": "HFCL",
+    "price": 238.36,
+    "return_12m": 214.46,
+    "volatility": 50.7,
+    "momentum_score": 4.0672
+  },
+  {
+    "symbol": "HAPPSTMNDS",
+    "price": 304.7,
+    "return_12m": -40.89,
+    "volatility": 40.07,
+    "momentum_score": -0.6733
+  },
+  {
+    "symbol": "HAPPYFORGE",
+    "price": 2003.7,
+    "return_12m": 116.75,
+    "volatility": 36.22,
+    "momentum_score": 3.5732
+  },
+  {
+    "symbol": "HAVELLS",
+    "price": 1040.0,
+    "return_12m": -29.55,
+    "volatility": 24.16,
+    "momentum_score": -0.6711
+  },
+  {
+    "symbol": "HCG",
+    "price": 668.75,
+    "return_12m": 3.84,
+    "volatility": 31.54,
+    "momentum_score": 0.2783
+  },
+  {
+    "symbol": "HERITGFOOD",
+    "price": 402.9,
+    "return_12m": -18.75,
+    "volatility": 34.35,
+    "momentum_score": -0.7917
+  },
+  {
+    "symbol": "HEROMOTOCO",
+    "price": 5168.0,
+    "return_12m": -3.68,
+    "volatility": 26.15,
+    "momentum_score": -0.0395
+  },
+  {
+    "symbol": "HEXT",
+    "price": 490.45,
+    "return_12m": -24.68,
+    "volatility": 38.36,
+    "momentum_score": -0.4531
+  },
+  {
+    "symbol": "HSCL",
+    "price": 665.15,
+    "return_12m": 47.52,
+    "volatility": 35.04,
+    "momentum_score": 1.3427
+  },
+  {
+    "symbol": "HINDALCO",
+    "price": 941.85,
+    "return_12m": 21.33,
+    "volatility": 28.63,
+    "momentum_score": 0.9805
+  },
+  {
+    "symbol": "HAL",
+    "price": 4601.0,
+    "return_12m": -4.55,
+    "volatility": 27.78,
+    "momentum_score": -0.0396
+  },
+  {
+    "symbol": "HCC",
+    "price": 20.23,
+    "return_12m": -29.22,
+    "volatility": 51.26,
+    "momentum_score": -0.3254
+  },
+  {
+    "symbol": "HINDCOPPER",
+    "price": 462.15,
+    "return_12m": 37.31,
+    "volatility": 54.26,
+    "momentum_score": 0.8817
+  },
+  {
+    "symbol": "HINDPETRO",
+    "price": 345.0,
+    "return_12m": -17.87,
+    "volatility": 34.52,
+    "momentum_score": -0.3865
+  },
+  {
+    "symbol": "HINDUNILVR",
+    "price": 1836.0,
+    "return_12m": -26.55,
+    "volatility": 21.68,
+    "momentum_score": -0.9285
+  },
+  {
+    "symbol": "HINDZINC",
+    "price": 555.05,
+    "return_12m": 14.99,
+    "volatility": 38.14,
+    "momentum_score": 0.5399
+  },
+  {
+    "symbol": "POWERINDIA",
+    "price": 31290.0,
+    "return_12m": 71.75,
+    "volatility": 43.97,
+    "momentum_score": 1.6823
+  },
+  {
+    "symbol": "HOMEFIRST",
+    "price": 1125.7,
+    "return_12m": -10.03,
+    "volatility": 37.13,
+    "momentum_score": -0.1003
+  },
+  {
+    "symbol": "HONASA",
+    "price": 427.9,
+    "return_12m": 47.43,
+    "volatility": 31.99,
+    "momentum_score": 1.7621
+  },
+  {
+    "symbol": "HONAUT",
+    "price": 33470.0,
+    "return_12m": -6.01,
+    "volatility": 30.83,
+    "momentum_score": -0.0381
+  },
+  {
+    "symbol": "HUDCO",
+    "price": 161.54,
+    "return_12m": -28.7,
+    "volatility": 31.37,
+    "momentum_score": -0.571
+  },
+  {
+    "symbol": "HYUNDAI",
+    "price": 2024.0,
+    "return_12m": -18.51,
+    "volatility": 27.4,
+    "momentum_score": -0.4586
+  },
+  {
+    "symbol": "ICICIBANK",
+    "price": 1310.6,
+    "return_12m": -3.19,
+    "volatility": 19.47,
+    "momentum_score": 0.265
+  },
+  {
+    "symbol": "ICICIGI",
+    "price": 1563.0,
+    "return_12m": -17.66,
+    "volatility": 25.62,
+    "momentum_score": -0.7952
+  },
+  {
+    "symbol": "ICICIPRULI",
+    "price": 448.05,
+    "return_12m": -25.2,
+    "volatility": 26.49,
+    "momentum_score": -0.593
+  },
+  {
+    "symbol": "IDBI",
+    "price": 86.57,
+    "return_12m": -6.51,
+    "volatility": 47.69,
+    "momentum_score": -0.0134
+  },
+  {
+    "symbol": "IDFCFIRSTB",
+    "price": 80.39,
+    "return_12m": 16.78,
+    "volatility": 31.89,
+    "momentum_score": 0.781
+  },
+  {
+    "symbol": "IFBIND",
+    "price": 1166.2,
+    "return_12m": -32.5,
+    "volatility": 42.54,
+    "momentum_score": -0.503
+  },
+  {
+    "symbol": "IFCI",
+    "price": 65.14,
+    "return_12m": 12.02,
+    "volatility": 55.45,
+    "momentum_score": 0.7953
+  },
+  {
+    "symbol": "IIFLCAPS",
+    "price": 345.6,
+    "return_12m": 18.38,
+    "volatility": 38.36,
+    "momentum_score": 0.421
+  },
+  {
+    "symbol": "IIFL",
+    "price": 583.8,
+    "return_12m": 28.64,
+    "volatility": 39.12,
+    "momentum_score": 0.9687
+  },
+  {
+    "symbol": "INOXINDIA",
+    "price": 2168.3,
+    "return_12m": 78.65,
+    "volatility": 42.54,
+    "momentum_score": 1.8574
+  },
+  {
+    "symbol": "IRB",
+    "price": 17.0,
+    "return_12m": -18.42,
+    "volatility": 26.49,
+    "momentum_score": -0.1828
+  },
+  {
+    "symbol": "IRCON",
+    "price": 110.25,
+    "return_12m": -35.94,
+    "volatility": 39.77,
+    "momentum_score": -0.7401
+  },
+  {
+    "symbol": "ITCHOTELS",
+    "price": 158.51,
+    "return_12m": -26.96,
+    "volatility": 29.76,
+    "momentum_score": -0.8695
+  },
+  {
+    "symbol": "ITC",
+    "price": 255.9,
+    "return_12m": -33.62,
+    "volatility": 20.64,
+    "momentum_score": -1.4983
+  },
+  {
+    "symbol": "ITI",
+    "price": 241.54,
+    "return_12m": -23.53,
+    "volatility": 36.01,
+    "momentum_score": -0.375
+  },
+  {
+    "symbol": "INDGN",
+    "price": 593.5,
+    "return_12m": 2.82,
+    "volatility": 27.3,
+    "momentum_score": 0.1439
+  },
+  {
+    "symbol": "INDIACEM",
+    "price": 295.15,
+    "return_12m": -23.68,
+    "volatility": 32.07,
+    "momentum_score": -0.1854
+  },
+  {
+    "symbol": "INDIAGLYCO",
+    "price": 298.8,
+    "return_12m": -67.44,
+    "volatility": 90.88,
+    "momentum_score": -0.9675
+  },
+  {
+    "symbol": "INDIAMART",
+    "price": 1620.3,
+    "return_12m": -29.7,
+    "volatility": 23.87,
+    "momentum_score": -0.9799
+  },
+  {
+    "symbol": "INDIANB",
+    "price": 793.15,
+    "return_12m": 5.76,
+    "volatility": 32.2,
+    "momentum_score": 0.5129
+  },
+  {
+    "symbol": "IEX",
+    "price": 105.98,
+    "return_12m": -24.12,
+    "volatility": 31.64,
+    "momentum_score": -0.413
+  },
+  {
+    "symbol": "INDHOTEL",
+    "price": 718.0,
+    "return_12m": -0.45,
+    "volatility": 24.75,
+    "momentum_score": 0.0591
+  },
+  {
+    "symbol": "IMFA",
+    "price": 1176.8,
+    "return_12m": 1.49,
+    "volatility": 48.64,
+    "momentum_score": 0.1988
+  },
+  {
+    "symbol": "IOC",
+    "price": 131.34,
+    "return_12m": -8.04,
+    "volatility": 26.34,
+    "momentum_score": -0.1274
+  },
+  {
+    "symbol": "IOB",
+    "price": 30.38,
+    "return_12m": -23.84,
+    "volatility": 25.06,
+    "momentum_score": -0.6092
+  },
+  {
+    "symbol": "IRCTC",
+    "price": 454.1,
+    "return_12m": -34.93,
+    "volatility": 22.3,
+    "momentum_score": -1.3773
+  },
+  {
+    "symbol": "IRFC",
+    "price": 77.06,
+    "return_12m": -37.59,
+    "volatility": 28.21,
+    "momentum_score": -1.0927
+  },
+  {
+    "symbol": "IREDA",
+    "price": 111.0,
+    "return_12m": -27.1,
+    "volatility": 30.12,
+    "momentum_score": -0.8628
+  },
+  {
+    "symbol": "INDIGOPNTS",
+    "price": 1053.5,
+    "return_12m": -2.41,
+    "volatility": 35.86,
+    "momentum_score": 0.2277
+  },
+  {
+    "symbol": "ICIL",
+    "price": 443.65,
+    "return_12m": 64.42,
+    "volatility": 59.36,
+    "momentum_score": 1.061
+  },
+  {
+    "symbol": "IGL",
+    "price": 142.79,
+    "return_12m": -29.65,
+    "volatility": 26.56,
+    "momentum_score": -0.9867
+  },
+  {
+    "symbol": "INDUSTOWER",
+    "price": 376.25,
+    "return_12m": 10.57,
+    "volatility": 26.03,
+    "momentum_score": 0.3927
+  },
+  {
+    "symbol": "INDUSINDBK",
+    "price": 886.85,
+    "return_12m": 18.85,
+    "volatility": 28.97,
+    "momentum_score": 1.0558
+  },
+  {
+    "symbol": "NAUKRI",
+    "price": 1200.0,
+    "return_12m": -9.4,
+    "volatility": 30.96,
+    "momentum_score": 0.0417
+  },
+  {
+    "symbol": "INFY",
+    "price": 1035.0,
+    "return_12m": -25.79,
+    "volatility": 30.22,
+    "momentum_score": -0.5742
+  },
+  {
+    "symbol": "INOXWIND",
+    "price": 68.75,
+    "return_12m": -51.37,
+    "volatility": 38.49,
+    "momentum_score": -1.1504
+  },
+  {
+    "symbol": "INTELLECT",
+    "price": 610.95,
+    "return_12m": -37.45,
+    "volatility": 37.51,
+    "momentum_score": -0.7337
+  },
+  {
+    "symbol": "INDIGO",
+    "price": 4929.9,
+    "return_12m": -12.85,
+    "volatility": 33.98,
+    "momentum_score": -0.3487
+  },
+  {
+    "symbol": "IGIL",
+    "price": 311.95,
+    "return_12m": -11.26,
+    "volatility": 35.68,
+    "momentum_score": -0.1951
+  },
+  {
+    "symbol": "IKS",
+    "price": 1776.4,
+    "return_12m": 17.55,
+    "volatility": 34.52,
+    "momentum_score": 0.4347
+  },
+  {
+    "symbol": "IONEXCHANG",
+    "price": 406.4,
+    "return_12m": -0.72,
+    "volatility": 41.41,
+    "momentum_score": -0.1704
+  },
+  {
+    "symbol": "IPCALAB",
+    "price": 1943.2,
+    "return_12m": 48.5,
+    "volatility": 29.56,
+    "momentum_score": 1.6631
+  },
+  {
+    "symbol": "JKCEMENT",
+    "price": 4952.0,
+    "return_12m": -21.33,
+    "volatility": 33.02,
+    "momentum_score": -0.5933
+  },
+  {
+    "symbol": "JAIBALAJI",
+    "price": 61.72,
+    "return_12m": -38.5,
+    "volatility": 50.75,
+    "momentum_score": -0.5046
+  },
+  {
+    "symbol": "JBMA",
+    "price": 544.65,
+    "return_12m": -20.12,
+    "volatility": 41.56,
+    "momentum_score": -0.1641
+  },
+  {
+    "symbol": "JKPAPER",
+    "price": 382.6,
+    "return_12m": -9.3,
+    "volatility": 34.46,
+    "momentum_score": -0.0749
+  },
+  {
+    "symbol": "JKTYRE",
+    "price": 340.35,
+    "return_12m": -7.95,
+    "volatility": 36.53,
+    "momentum_score": -0.0019
+  },
+  {
+    "symbol": "JMFINANCIL",
+    "price": 123.4,
+    "return_12m": -24.81,
+    "volatility": 39.77,
+    "momentum_score": -0.4158
+  },
+  {
+    "symbol": "JSWCEMENT",
+    "price": 111.6,
+    "return_12m": -19.33,
+    "volatility": 29.16,
+    "momentum_score": -0.3359
+  },
+  {
+    "symbol": "JSWENERGY",
+    "price": 485.0,
+    "return_12m": -9.86,
+    "volatility": 29.7,
+    "momentum_score": 0.008
+  },
+  {
+    "symbol": "JSWINFRA",
+    "price": 357.45,
+    "return_12m": 13.55,
+    "volatility": 32.6,
+    "momentum_score": 0.2012
+  },
+  {
+    "symbol": "JSWSTEEL",
+    "price": 1233.0,
+    "return_12m": 6.75,
+    "volatility": 23.8,
+    "momentum_score": 0.5244
+  },
+  {
+    "symbol": "JAINREC",
+    "price": 282.5,
+    "return_12m": -9.21,
+    "volatility": 52.53,
+    "momentum_score": -0.1936
+  },
+  {
+    "symbol": "JPPOWER",
+    "price": 14.8,
+    "return_12m": -20.22,
+    "volatility": 49.99,
+    "momentum_score": -0.2383
+  },
+  {
+    "symbol": "J&KBANK",
+    "price": 139.98,
+    "return_12m": 32.78,
+    "volatility": 40.59,
+    "momentum_score": 0.9701
+  },
+  {
+    "symbol": "JAMNAAUTO",
+    "price": 131.66,
+    "return_12m": 32.47,
+    "volatility": 42.64,
+    "momentum_score": 0.547
+  },
+  {
+    "symbol": "JSFB",
+    "price": 482.4,
+    "return_12m": -0.64,
+    "volatility": 42.48,
+    "momentum_score": 0.1694
+  },
+  {
+    "symbol": "JAYNECOIND",
+    "price": 91.28,
+    "return_12m": 26.62,
+    "volatility": 48.6,
+    "momentum_score": 0.7021
+  },
+  {
+    "symbol": "JSLL",
+    "price": 480.8,
+    "return_12m": -38.14,
+    "volatility": 54.32,
+    "momentum_score": -0.6421
+  },
+  {
+    "symbol": "JINDALSAW",
+    "price": 270.3,
+    "return_12m": 32.1,
+    "volatility": 47.33,
+    "momentum_score": 0.9538
+  },
+  {
+    "symbol": "JSL",
+    "price": 732.7,
+    "return_12m": -6.54,
+    "volatility": 30.64,
+    "momentum_score": -0.1883
+  },
+  {
+    "symbol": "JINDALSTEL",
+    "price": 1100.5,
+    "return_12m": 2.41,
+    "volatility": 27.83,
+    "momentum_score": 0.2263
+  },
+  {
+    "symbol": "JIOFIN",
+    "price": 212.5,
+    "return_12m": -29.4,
+    "volatility": 27.84,
+    "momentum_score": -0.6786
+  },
+  {
+    "symbol": "JUBLFOOD",
+    "price": 443.4,
+    "return_12m": -29.24,
+    "volatility": 32.51,
+    "momentum_score": -0.6479
+  },
+  {
+    "symbol": "JUBLINGREA",
+    "price": 638.0,
+    "return_12m": -3.72,
+    "volatility": 36.19,
+    "momentum_score": 0.1075
+  },
+  {
+    "symbol": "JUBLPHARMA",
+    "price": 999.3,
+    "return_12m": -10.27,
+    "volatility": 29.47,
+    "momentum_score": -0.6899
+  },
+  {
+    "symbol": "JWL",
+    "price": 223.93,
+    "return_12m": -34.08,
+    "volatility": 44.73,
+    "momentum_score": -0.6028
+  },
+  {
+    "symbol": "JUSTDIAL",
+    "price": 653.15,
+    "return_12m": -21.51,
+    "volatility": 39.86,
+    "momentum_score": -0.3807
+  },
+  {
+    "symbol": "JYOTHYLAB",
+    "price": 182.91,
+    "return_12m": -40.68,
+    "volatility": 28.5,
+    "momentum_score": -1.1194
+  },
+  {
+    "symbol": "JYOTICNC",
+    "price": 1032.1,
+    "return_12m": 12.08,
+    "volatility": 45.68,
+    "momentum_score": 0.2533
+  },
+  {
+    "symbol": "KPRMILL",
+    "price": 1071.0,
+    "return_12m": 0.52,
+    "volatility": 41.47,
+    "momentum_score": 0.2116
+  },
+  {
+    "symbol": "KEI",
+    "price": 4502.0,
+    "return_12m": 11.64,
+    "volatility": 35.03,
+    "momentum_score": 0.7744
+  },
+  {
+    "symbol": "KNRCON",
+    "price": 113.29,
+    "return_12m": -42.69,
+    "volatility": 38.94,
+    "momentum_score": -0.9722
+  },
+  {
+    "symbol": "KPIGREEN",
+    "price": 345.6,
+    "return_12m": -23.47,
+    "volatility": 45.35,
+    "momentum_score": -0.8286
+  },
+  {
+    "symbol": "KPITTECH",
+    "price": 492.0,
+    "return_12m": -57.05,
+    "volatility": 38.06,
+    "momentum_score": -1.0869
+  },
+  {
+    "symbol": "KRBL",
+    "price": 375.9,
+    "return_12m": 9.1,
+    "volatility": 39.47,
+    "momentum_score": 0.4971
+  },
+  {
+    "symbol": "KRN",
+    "price": 1414.7,
+    "return_12m": 70.72,
+    "volatility": 48.69,
+    "momentum_score": 1.5769
+  },
+  {
+    "symbol": "KSB",
+    "price": 806.45,
+    "return_12m": -0.42,
+    "volatility": 31.47,
+    "momentum_score": 0.0029
+  },
+  {
+    "symbol": "KAJARIACER",
+    "price": 1225.1,
+    "return_12m": 2.75,
+    "volatility": 28.95,
+    "momentum_score": 0.1766
+  },
+  {
+    "symbol": "KPIL",
+    "price": 1356.4,
+    "return_12m": 9.48,
+    "volatility": 29.26,
+    "momentum_score": 0.4718
+  },
+  {
+    "symbol": "KALYANKJIL",
+    "price": 528.5,
+    "return_12m": 7.82,
+    "volatility": 47.23,
+    "momentum_score": 0.3633
+  },
+  {
+    "symbol": "KANSAINER",
+    "price": 175.27,
+    "return_12m": -29.72,
+    "volatility": 28.3,
+    "momentum_score": -0.6909
+  },
+  {
+    "symbol": "KTKBANK",
+    "price": 321.6,
+    "return_12m": 87.68,
+    "volatility": 35.09,
+    "momentum_score": 2.6092
+  },
+  {
+    "symbol": "KARURVYSYA",
+    "price": 325.3,
+    "return_12m": 56.72,
+    "volatility": 36.05,
+    "momentum_score": 1.7689
+  },
+  {
+    "symbol": "KSCL",
+    "price": 715.1,
+    "return_12m": -31.04,
+    "volatility": 36.77,
+    "momentum_score": -0.7359
+  },
+  {
+    "symbol": "KAYNES",
+    "price": 3399.0,
+    "return_12m": -53.27,
+    "volatility": 53.93,
+    "momentum_score": -0.9419
+  },
+  {
+    "symbol": "KEC",
+    "price": 372.35,
+    "return_12m": -55.92,
+    "volatility": 36.35,
+    "momentum_score": -1.3095
+  },
+  {
+    "symbol": "KFINTECH",
+    "price": 832.0,
+    "return_12m": -20.99,
+    "volatility": 33.48,
+    "momentum_score": -0.3188
+  },
+  {
+    "symbol": "KIRLOSBROS",
+    "price": 1767.6,
+    "return_12m": -11.45,
+    "volatility": 38.25,
+    "momentum_score": -0.1414
+  },
+  {
+    "symbol": "KIRLOSENG",
+    "price": 2242.7,
+    "return_12m": 149.67,
+    "volatility": 48.52,
+    "momentum_score": 3.1071
+  },
+  {
+    "symbol": "KIRLPNU",
+    "price": 681.95,
+    "return_12m": 12.67,
+    "volatility": 36.24,
+    "momentum_score": 0.5846
+  },
+  {
+    "symbol": "KITEX",
+    "price": 116.68,
+    "return_12m": -37.67,
+    "volatility": 51.74,
+    "momentum_score": -0.6269
+  },
+  {
+    "symbol": "KMEW",
+    "price": 2950.1,
+    "return_12m": 151.04,
+    "volatility": 59.0,
+    "momentum_score": 2.6677
+  },
+  {
+    "symbol": "KOTAKBANK",
+    "price": 418.35,
+    "return_12m": -0.24,
+    "volatility": 20.91,
+    "momentum_score": 0.0201
+  },
+  {
+    "symbol": "KIMS",
+    "price": 736.25,
+    "return_12m": 6.65,
+    "volatility": 31.57,
+    "momentum_score": 0.3409
+  },
+  {
+    "symbol": "LTF",
+    "price": 264.35,
+    "return_12m": 1.81,
+    "volatility": 35.89,
+    "momentum_score": 0.5124
+  },
+  {
+    "symbol": "LTTS",
+    "price": 3267.8,
+    "return_12m": -22.63,
+    "volatility": 35.99,
+    "momentum_score": -0.4436
+  },
+  {
+    "symbol": "LGEINDIA",
+    "price": 1721.8,
+    "return_12m": 1.89,
+    "volatility": 28.09,
+    "momentum_score": -0.0602
+  },
+  {
+    "symbol": "LICHSGFIN",
+    "price": 509.0,
+    "return_12m": -10.24,
+    "volatility": 26.24,
+    "momentum_score": -0.0807
+  },
+  {
+    "symbol": "LTFOODS",
+    "price": 399.15,
+    "return_12m": -0.66,
+    "volatility": 38.45,
+    "momentum_score": 0.2322
+  },
+  {
+    "symbol": "LTM",
+    "price": 4007.0,
+    "return_12m": -20.38,
+    "volatility": 32.92,
+    "momentum_score": -0.2506
+  },
+  {
+    "symbol": "LT",
+    "price": 3693.4,
+    "return_12m": -0.1,
+    "volatility": 25.0,
+    "momentum_score": 0.2795
+  },
+  {
+    "symbol": "LATENTVIEW",
+    "price": 234.48,
+    "return_12m": -43.59,
+    "volatility": 46.44,
+    "momentum_score": -0.6836
+  },
+  {
+    "symbol": "LAURUSLABS",
+    "price": 1984.0,
+    "return_12m": 129.94,
+    "volatility": 28.35,
+    "momentum_score": 4.3654
+  },
+  {
+    "symbol": "LXCHEM",
+    "price": 181.39,
+    "return_12m": -15.43,
+    "volatility": 43.37,
+    "momentum_score": -0.4321
+  },
+  {
+    "symbol": "IXIGO",
+    "price": 161.9,
+    "return_12m": -43.47,
+    "volatility": 53.02,
+    "momentum_score": -0.817
+  },
+  {
+    "symbol": "THELEELA",
+    "price": 568.95,
+    "return_12m": 31.84,
+    "volatility": 31.33,
+    "momentum_score": 1.0217
+  },
+  {
+    "symbol": "LEMONTREE",
+    "price": 107.67,
+    "return_12m": -37.85,
+    "volatility": 30.43,
+    "momentum_score": -1.3309
+  },
+  {
+    "symbol": "LENSKART",
+    "price": 691.15,
+    "return_12m": 71.46,
+    "volatility": 35.04,
+    "momentum_score": 1.96
+  },
+  {
+    "symbol": "LICI",
+    "price": 391.85,
+    "return_12m": -11.4,
+    "volatility": 25.67,
+    "momentum_score": -0.2099
+  },
+  {
+    "symbol": "LINDEINDIA",
+    "price": 6247.5,
+    "return_12m": 0.52,
+    "volatility": 27.81,
+    "momentum_score": 0.0893
+  },
+  {
+    "symbol": "LLOYDSENGG",
+    "price": 98.31,
+    "return_12m": 59.39,
+    "volatility": 50.95,
+    "momentum_score": 0.8568
+  },
+  {
+    "symbol": "LLOYDSENT",
+    "price": 77.95,
+    "return_12m": 12.95,
+    "volatility": 51.83,
+    "momentum_score": 0.0895
+  },
+  {
+    "symbol": "LLOYDSME",
+    "price": 1776.8,
+    "return_12m": 35.48,
+    "volatility": 36.46,
+    "momentum_score": 1.0798
+  },
+  {
+    "symbol": "LODHA",
+    "price": 1105.6,
+    "return_12m": -0.32,
+    "volatility": 37.69,
+    "momentum_score": 0.2677
+  },
+  {
+    "symbol": "LUMAXTECH",
+    "price": 1978.9,
+    "return_12m": 52.41,
+    "volatility": 51.22,
+    "momentum_score": 1.0297
+  },
+  {
+    "symbol": "LUMAXIND",
+    "price": 5550.0,
+    "return_12m": 5.6,
+    "volatility": 49.6,
+    "momentum_score": 0.3753
+  },
+  {
+    "symbol": "LUPIN",
+    "price": 2031.2,
+    "return_12m": 3.66,
+    "volatility": 19.18,
+    "momentum_score": 0.4375
+  },
+  {
+    "symbol": "MMTC",
+    "price": 56.29,
+    "return_12m": -19.16,
+    "volatility": 44.78,
+    "momentum_score": -0.2117
+  },
+  {
+    "symbol": "MOIL",
+    "price": 232.66,
+    "return_12m": -39.67,
+    "volatility": 39.56,
+    "momentum_score": -0.8211
+  },
+  {
+    "symbol": "MRF",
+    "price": 123715.0,
+    "return_12m": -19.1,
+    "volatility": 22.51,
+    "momentum_score": -0.6172
+  },
+  {
+    "symbol": "MSTCLTD",
+    "price": 705.8,
+    "return_12m": 38.73,
+    "volatility": 47.92,
+    "momentum_score": 0.8928
+  },
+  {
+    "symbol": "MTARTECH",
+    "price": 7797.0,
+    "return_12m": 302.72,
+    "volatility": 61.23,
+    "momentum_score": 4.7103
+  },
+  {
+    "symbol": "MBAPL",
+    "price": 165.83,
+    "return_12m": 110.18,
+    "volatility": 38.42,
+    "momentum_score": 2.8073
+  },
+  {
+    "symbol": "MGL",
+    "price": 1045.4,
+    "return_12m": -16.22,
+    "volatility": 29.14,
+    "momentum_score": -0.4889
+  },
+  {
+    "symbol": "M&MFIN",
+    "price": 319.75,
+    "return_12m": 18.57,
+    "volatility": 39.91,
+    "momentum_score": 0.8403
+  },
+  {
+    "symbol": "M&M",
+    "price": 2860.0,
+    "return_12m": -16.52,
+    "volatility": 26.47,
+    "momentum_score": -0.2764
+  },
+  {
+    "symbol": "MANAPPURAM",
+    "price": 308.9,
+    "return_12m": 8.8,
+    "volatility": 33.45,
+    "momentum_score": 0.5444
+  },
+  {
+    "symbol": "MRPL",
+    "price": 164.76,
+    "return_12m": 17.32,
+    "volatility": 49.23,
+    "momentum_score": 0.4814
+  },
+  {
+    "symbol": "MANKIND",
+    "price": 2535.0,
+    "return_12m": 3.55,
+    "volatility": 26.42,
+    "momentum_score": -0.1311
+  },
+  {
+    "symbol": "MANORAMA",
+    "price": 1880.3,
+    "return_12m": 25.37,
+    "volatility": 44.09,
+    "momentum_score": 0.6738
+  },
+  {
+    "symbol": "MARICO",
+    "price": 781.35,
+    "return_12m": 10.4,
+    "volatility": 18.45,
+    "momentum_score": 0.8655
+  },
+  {
+    "symbol": "MARKSANS",
+    "price": 325.6,
+    "return_12m": 96.06,
+    "volatility": 43.6,
+    "momentum_score": 2.2486
+  },
+  {
+    "symbol": "MARUTI",
+    "price": 11386.0,
+    "return_12m": -27.24,
+    "volatility": 23.62,
+    "momentum_score": -0.669
+  },
+  {
+    "symbol": "MASTEK",
+    "price": 1555.6,
+    "return_12m": -28.48,
+    "volatility": 41.32,
+    "momentum_score": -0.3693
+  },
+  {
+    "symbol": "MFSL",
+    "price": 1392.0,
+    "return_12m": -13.22,
+    "volatility": 28.95,
+    "momentum_score": -0.1308
+  },
+  {
+    "symbol": "MAXHEALTH",
+    "price": 940.95,
+    "return_12m": -11.84,
+    "volatility": 26.58,
+    "momentum_score": -0.2414
+  },
+  {
+    "symbol": "MAZDOCK",
+    "price": 2064.0,
+    "return_12m": -27.86,
+    "volatility": 33.42,
+    "momentum_score": -0.3376
+  },
+  {
+    "symbol": "MEDPLUS",
+    "price": 654.3,
+    "return_12m": -12.37,
+    "volatility": 29.89,
+    "momentum_score": -0.3816
+  },
+  {
+    "symbol": "MEESHO",
+    "price": 218.69,
+    "return_12m": 28.57,
+    "volatility": 55.92,
+    "momentum_score": 0.4347
+  },
+  {
+    "symbol": "METROPOLIS",
+    "price": 537.9,
+    "return_12m": 8.22,
+    "volatility": 29.3,
+    "momentum_score": 0.5919
+  },
+  {
+    "symbol": "MINDACORP",
+    "price": 667.35,
+    "return_12m": 13.68,
+    "volatility": 31.3,
+    "momentum_score": 0.6141
+  },
+  {
+    "symbol": "MIDHANI",
+    "price": 433.6,
+    "return_12m": 8.77,
+    "volatility": 45.18,
+    "momentum_score": 0.0985
+  },
+  {
+    "symbol": "MSUMI",
+    "price": 33.53,
+    "return_12m": -25.63,
+    "volatility": 30.04,
+    "momentum_score": -0.5386
+  },
+  {
+    "symbol": "MOTILALOFS",
+    "price": 989.9,
+    "return_12m": 9.54,
+    "volatility": 39.16,
+    "momentum_score": 0.3013
+  },
+  {
+    "symbol": "MPHASIS",
+    "price": 2250.2,
+    "return_12m": -15.58,
+    "volatility": 29.22,
+    "momentum_score": -0.2273
+  },
+  {
+    "symbol": "BECTORFOOD",
+    "price": 213.03,
+    "return_12m": -12.48,
+    "volatility": 42.07,
+    "momentum_score": -0.1331
+  },
+  {
+    "symbol": "MCX",
+    "price": 3204.0,
+    "return_12m": 97.17,
+    "volatility": 38.28,
+    "momentum_score": 2.5107
+  },
+  {
+    "symbol": "MUTHOOTFIN",
+    "price": 2697.1,
+    "return_12m": -14.13,
+    "volatility": 36.96,
+    "momentum_score": -0.1703
+  },
+  {
+    "symbol": "NATCOPHARM",
+    "price": 821.3,
+    "return_12m": 0.36,
+    "volatility": 36.38,
+    "momentum_score": 0.0657
+  },
+  {
+    "symbol": "NBCC",
+    "price": 77.4,
+    "return_12m": -30.89,
+    "volatility": 34.32,
+    "momentum_score": -0.5935
+  },
+  {
+    "symbol": "NCC",
+    "price": 130.06,
+    "return_12m": -37.22,
+    "volatility": 30.0,
+    "momentum_score": -0.852
+  },
+  {
+    "symbol": "NEOGEN",
+    "price": 2407.1,
+    "return_12m": 60.42,
+    "volatility": 50.05,
+    "momentum_score": 0.9548
+  },
+  {
+    "symbol": "NHPC",
+    "price": 71.75,
+    "return_12m": -15.74,
+    "volatility": 22.75,
+    "momentum_score": -0.4217
+  },
+  {
+    "symbol": "NLCINDIA",
+    "price": 253.2,
+    "return_12m": -9.25,
+    "volatility": 36.26,
+    "momentum_score": -0.0398
+  },
+  {
+    "symbol": "NMDC",
+    "price": 74.64,
+    "return_12m": -0.25,
+    "volatility": 27.88,
+    "momentum_score": 0.398
+  },
+  {
+    "symbol": "NSLNISP",
+    "price": 40.95,
+    "return_12m": -13.24,
+    "volatility": 38.77,
+    "momentum_score": -0.0887
+  },
+  {
+    "symbol": "NTPCGREEN",
+    "price": 91.09,
+    "return_12m": -6.67,
+    "volatility": 29.08,
+    "momentum_score": -0.3208
+  },
+  {
+    "symbol": "NTPC",
+    "price": 315.1,
+    "return_12m": -5.37,
+    "volatility": 19.06,
+    "momentum_score": -0.0312
+  },
+  {
+    "symbol": "NH",
+    "price": 1741.4,
+    "return_12m": -0.44,
+    "volatility": 30.19,
+    "momentum_score": 0.2331
+  },
+  {
+    "symbol": "NATIONALUM",
+    "price": 334.9,
+    "return_12m": 56.82,
+    "volatility": 41.38,
+    "momentum_score": 1.6257
+  },
+  {
+    "symbol": "NFL",
+    "price": 63.85,
+    "return_12m": -32.08,
+    "volatility": 29.73,
+    "momentum_score": -0.8153
+  },
+  {
+    "symbol": "NAVA",
+    "price": 552.5,
+    "return_12m": -14.01,
+    "volatility": 35.34,
+    "momentum_score": -0.3726
+  },
+  {
+    "symbol": "NAVINFLUOR",
+    "price": 8136.5,
+    "return_12m": 77.29,
+    "volatility": 36.6,
+    "momentum_score": 2.2878
+  },
+  {
+    "symbol": "NAZARA",
+    "price": 384.7,
+    "return_12m": 37.12,
+    "volatility": 37.85,
+    "momentum_score": 0.8444
+  },
+  {
+    "symbol": "NESTLEIND",
+    "price": 1307.7,
+    "return_12m": 12.92,
+    "volatility": 20.5,
+    "momentum_score": 1.0036
+  },
+  {
+    "symbol": "NETWEB",
+    "price": 4520.3,
+    "return_12m": 4.9,
+    "volatility": 52.34,
+    "momentum_score": 0.3654
+  },
+  {
+    "symbol": "NETWORK18",
+    "price": 25.43,
+    "return_12m": -51.39,
+    "volatility": 37.22,
+    "momentum_score": -1.1739
+  },
+  {
+    "symbol": "NEULANDLAB",
+    "price": 21505.0,
+    "return_12m": 41.65,
+    "volatility": 37.74,
+    "momentum_score": 1.2638
+  },
+  {
+    "symbol": "NEWGEN",
+    "price": 456.35,
+    "return_12m": -48.25,
+    "volatility": 53.33,
+    "momentum_score": -0.6826
+  },
+  {
+    "symbol": "NAM-INDIA",
+    "price": 1046.0,
+    "return_12m": 20.43,
+    "volatility": 39.17,
+    "momentum_score": 0.7821
+  },
+  {
+    "symbol": "NIVABUPA",
+    "price": 72.98,
+    "return_12m": -9.97,
+    "volatility": 22.8,
+    "momentum_score": -0.0161
+  },
+  {
+    "symbol": "NORTHARC",
+    "price": 288.7,
+    "return_12m": 1.05,
+    "volatility": 39.12,
+    "momentum_score": 0.1603
+  },
+  {
+    "symbol": "NUVAMA",
+    "price": 1701.4,
+    "return_12m": 28.35,
+    "volatility": 35.27,
+    "momentum_score": 1.0163
+  },
+  {
+    "symbol": "NUVOCO",
+    "price": 322.1,
+    "return_12m": -24.1,
+    "volatility": 35.41,
+    "momentum_score": -0.5469
+  },
+  {
+    "symbol": "OBEROIRLTY",
+    "price": 1754.6,
+    "return_12m": 9.82,
+    "volatility": 27.73,
+    "momentum_score": 0.6337
+  },
+  {
+    "symbol": "ONGC",
+    "price": 222.37,
+    "return_12m": -3.89,
+    "volatility": 23.8,
+    "momentum_score": 0.0622
+  },
+  {
+    "symbol": "OIL",
+    "price": 444.0,
+    "return_12m": 9.81,
+    "volatility": 31.05,
+    "momentum_score": 0.6122
+  },
+  {
+    "symbol": "OLAELEC",
+    "price": 37.08,
+    "return_12m": -31.32,
+    "volatility": 58.59,
+    "momentum_score": -0.5168
+  },
+  {
+    "symbol": "OLECTRA",
+    "price": 1096.2,
+    "return_12m": -29.02,
+    "volatility": 43.53,
+    "momentum_score": -0.3933
+  },
+  {
+    "symbol": "PAYTM",
+    "price": 1656.0,
+    "return_12m": 41.78,
+    "volatility": 39.53,
+    "momentum_score": 1.0276
+  },
+  {
+    "symbol": "ONESOURCE",
+    "price": 1508.0,
+    "return_12m": -16.5,
+    "volatility": 42.08,
+    "momentum_score": -0.2899
+  },
+  {
+    "symbol": "OFSS",
+    "price": 10420.0,
+    "return_12m": 21.45,
+    "volatility": 32.73,
+    "momentum_score": 1.0904
+  },
+  {
+    "symbol": "OSWALPUMPS",
+    "price": 264.25,
+    "return_12m": -64.92,
+    "volatility": 45.05,
+    "momentum_score": -1.3196
+  },
+  {
+    "symbol": "PNGJL",
+    "price": 581.95,
+    "return_12m": -7.44,
+    "volatility": 33.97,
+    "momentum_score": -0.1726
+  },
+  {
+    "symbol": "POLICYBZR",
+    "price": 980.0,
+    "return_12m": -42.37,
+    "volatility": 50.69,
+    "momentum_score": 0.103
+  },
+  {
+    "symbol": "PCJEWELLER",
+    "price": 12.82,
+    "return_12m": -4.4,
+    "volatility": 48.94,
+    "momentum_score": -0.5366
+  },
+  {
+    "symbol": "PCBL",
+    "price": 321.5,
+    "return_12m": -13.72,
+    "volatility": 46.61,
+    "momentum_score": -0.3439
+  },
+  {
+    "symbol": "PDSL",
+    "price": 347.55,
+    "return_12m": 10.59,
+    "volatility": 41.93,
+    "momentum_score": 0.2817
+  },
+  {
+    "symbol": "PGEL",
+    "price": 481.1,
+    "return_12m": -6.38,
+    "volatility": 42.55,
+    "momentum_score": 0.1579
+  },
+  {
+    "symbol": "PIIND",
+    "price": 2236.0,
+    "return_12m": -37.86,
+    "volatility": 28.64,
+    "momentum_score": -1.0564
+  },
+  {
+    "symbol": "PNBHOUSING",
+    "price": 1092.0,
+    "return_12m": 23.93,
+    "volatility": 31.99,
+    "momentum_score": 0.8939
+  },
+  {
+    "symbol": "PNCINFRA",
+    "price": 138.16,
+    "return_12m": -53.0,
+    "volatility": 39.65,
+    "momentum_score": -0.7274
+  },
+  {
+    "symbol": "PTC",
+    "price": 154.79,
+    "return_12m": 5.12,
+    "volatility": 32.15,
+    "momentum_score": 0.1683
+  },
+  {
+    "symbol": "PTCIL",
+    "price": 22025.0,
+    "return_12m": 32.3,
+    "volatility": 36.2,
+    "momentum_score": 1.1004
+  },
+  {
+    "symbol": "PVRINOX",
+    "price": 1215.3,
+    "return_12m": 7.81,
+    "volatility": 31.57,
+    "momentum_score": 0.329
+  },
+  {
+    "symbol": "PAGEIND",
+    "price": 36660.0,
+    "return_12m": -13.1,
+    "volatility": 23.96,
+    "momentum_score": -0.639
+  },
+  {
+    "symbol": "PAISALO",
+    "price": 79.9,
+    "return_12m": 112.87,
+    "volatility": 44.1,
+    "momentum_score": 2.2458
+  },
+  {
+    "symbol": "PARADEEP",
+    "price": 151.22,
+    "return_12m": -21.12,
+    "volatility": 39.44,
+    "momentum_score": -0.5219
+  },
+  {
+    "symbol": "PARAS",
+    "price": 1276.0,
+    "return_12m": 75.93,
+    "volatility": 50.84,
+    "momentum_score": 1.6821
+  },
+  {
+    "symbol": "PARKHOSPS",
+    "price": 270.8,
+    "return_12m": 83.03,
+    "volatility": 40.88,
+    "momentum_score": 2.1669
+  },
+  {
+    "symbol": "PATANJALI",
+    "price": 355.15,
+    "return_12m": -38.84,
+    "volatility": 28.55,
+    "momentum_score": -1.4855
+  },
+  {
+    "symbol": "PGIL",
+    "price": 1263.0,
+    "return_12m": 104.18,
+    "volatility": 50.23,
+    "momentum_score": 1.9056
+  },
+  {
+    "symbol": "PERSISTENT",
+    "price": 5367.0,
+    "return_12m": 6.63,
+    "volatility": 34.29,
+    "momentum_score": 0.3429
+  },
+  {
+    "symbol": "PETRONET",
+    "price": 285.5,
+    "return_12m": 6.19,
+    "volatility": 29.12,
+    "momentum_score": 0.2602
+  },
+  {
+    "symbol": "PHOENIXLTD",
+    "price": 1930.0,
+    "return_12m": 23.68,
+    "volatility": 26.2,
+    "momentum_score": 0.9574
+  },
+  {
+    "symbol": "PWL",
+    "price": 120.17,
+    "return_12m": -22.59,
+    "volatility": 52.28,
+    "momentum_score": -0.4253
+  },
+  {
+    "symbol": "PICCADIL",
+    "price": 581.05,
+    "return_12m": -15.59,
+    "volatility": 40.07,
+    "momentum_score": -0.2343
+  },
+  {
+    "symbol": "PIDILITIND",
+    "price": 1464.0,
+    "return_12m": -1.01,
+    "volatility": 22.4,
+    "momentum_score": 0.4297
+  },
+  {
+    "symbol": "PINELABS",
+    "price": 167.59,
+    "return_12m": -33.2,
+    "volatility": 49.99,
+    "momentum_score": -0.806
+  },
+  {
+    "symbol": "PIRAMALFIN",
+    "price": 2023.3,
+    "return_12m": 53.8,
+    "volatility": 33.37,
+    "momentum_score": 1.8933
+  },
+  {
+    "symbol": "PPLPHARMA",
+    "price": 197.97,
+    "return_12m": -0.25,
+    "volatility": 33.59,
+    "momentum_score": 0.2218
+  },
+  {
+    "symbol": "POLYMED",
+    "price": 1638.1,
+    "return_12m": -14.1,
+    "volatility": 42.7,
+    "momentum_score": -0.1572
+  },
+  {
+    "symbol": "POLYCAB",
+    "price": 7990.0,
+    "return_12m": 8.59,
+    "volatility": 30.51,
+    "momentum_score": 0.5858
+  },
+  {
+    "symbol": "POONAWALLA",
+    "price": 433.4,
+    "return_12m": -17.35,
+    "volatility": 36.0,
+    "momentum_score": -0.2927
+  },
+  {
+    "symbol": "PFC",
+    "price": 318.0,
+    "return_12m": -19.06,
+    "volatility": 28.3,
+    "momentum_score": -0.3924
+  },
+  {
+    "symbol": "POWERGRID",
+    "price": 254.55,
+    "return_12m": -9.23,
+    "volatility": 20.29,
+    "momentum_score": -0.2499
+  },
+  {
+    "symbol": "POWERMECH",
+    "price": 2476.2,
+    "return_12m": -10.66,
+    "volatility": 38.54,
+    "momentum_score": -0.3608
+  },
+  {
+    "symbol": "PRAJIND",
+    "price": 303.25,
+    "return_12m": -14.2,
+    "volatility": 39.6,
+    "momentum_score": -0.0752
+  },
+  {
+    "symbol": "PRECWIRE",
+    "price": 501.4,
+    "return_12m": 141.24,
+    "volatility": 59.88,
+    "momentum_score": 2.3125
+  },
+  {
+    "symbol": "PREMIERENE",
+    "price": 878.05,
+    "return_12m": -15.79,
+    "volatility": 33.59,
+    "momentum_score": -0.0861
+  },
+  {
+    "symbol": "PRESTIGE",
+    "price": 1486.1,
+    "return_12m": -2.75,
+    "volatility": 33.57,
+    "momentum_score": 0.1561
+  },
+  {
+    "symbol": "PRICOLLTD",
+    "price": 734.5,
+    "return_12m": 39.5,
+    "volatility": 38.26,
+    "momentum_score": 1.1478
+  },
+  {
+    "symbol": "PFOCUS",
+    "price": 301.55,
+    "return_12m": 70.94,
+    "volatility": 53.27,
+    "momentum_score": 1.2679
+  },
+  {
+    "symbol": "PRIVISCL",
+    "price": 3573.0,
+    "return_12m": 48.14,
+    "volatility": 33.9,
+    "momentum_score": 1.2098
+  },
+  {
+    "symbol": "PGHL",
+    "price": 5360.0,
+    "return_12m": -11.27,
+    "volatility": 24.76,
+    "momentum_score": -0.1764
+  },
+  {
+    "symbol": "PNB",
+    "price": 109.57,
+    "return_12m": -1.41,
+    "volatility": 27.01,
+    "momentum_score": 0.1626
+  },
+  {
+    "symbol": "PURVA",
+    "price": 204.64,
+    "return_12m": -23.41,
+    "volatility": 43.59,
+    "momentum_score": -0.467
+  },
+  {
+    "symbol": "QPOWER",
+    "price": 1564.6,
+    "return_12m": 50.73,
+    "volatility": 55.01,
+    "momentum_score": 0.7416
+  },
+  {
+    "symbol": "QUESS",
+    "price": 336.2,
+    "return_12m": 36.89,
+    "volatility": 37.11,
+    "momentum_score": 1.2171
+  },
+  {
+    "symbol": "RRKABEL",
+    "price": 2518.2,
+    "return_12m": 102.04,
+    "volatility": 38.96,
+    "momentum_score": 2.7168
+  },
+  {
+    "symbol": "RBLBANK",
+    "price": 411.4,
+    "return_12m": 49.5,
+    "volatility": 31.14,
+    "momentum_score": 1.5635
+  },
+  {
+    "symbol": "RECLTD",
+    "price": 287.75,
+    "return_12m": -20.46,
+    "volatility": 27.98,
+    "momentum_score": -0.4368
+  },
+  {
+    "symbol": "RHIM",
+    "price": 384.85,
+    "return_12m": -12.45,
+    "volatility": 40.67,
+    "momentum_score": -0.4236
+  },
+  {
+    "symbol": "RITES",
+    "price": 209.48,
+    "return_12m": -14.5,
+    "volatility": 34.02,
+    "momentum_score": -0.4058
+  },
+  {
+    "symbol": "RADICO",
+    "price": 4237.0,
+    "return_12m": 43.58,
+    "volatility": 33.24,
+    "momentum_score": 1.5235
+  },
+  {
+    "symbol": "RVNL",
+    "price": 197.0,
+    "return_12m": -42.88,
+    "volatility": 34.0,
+    "momentum_score": -1.0883
+  },
+  {
+    "symbol": "RAILTEL",
+    "price": 257.2,
+    "return_12m": -32.93,
+    "volatility": 38.67,
+    "momentum_score": -0.7207
+  },
+  {
+    "symbol": "RAIN",
+    "price": 208.52,
+    "return_12m": 57.55,
+    "volatility": 54.65,
+    "momentum_score": 1.0807
+  },
+  {
+    "symbol": "RAINBOW",
+    "price": 1279.8,
+    "return_12m": -5.27,
+    "volatility": 22.86,
+    "momentum_score": 0.237
+  },
+  {
+    "symbol": "RALLIS",
+    "price": 199.69,
+    "return_12m": -35.11,
+    "volatility": 33.09,
+    "momentum_score": -0.9152
+  },
+  {
+    "symbol": "RKFORGE",
+    "price": 695.45,
+    "return_12m": 26.27,
+    "volatility": 35.43,
+    "momentum_score": 0.8634
+  },
+  {
+    "symbol": "RCF",
+    "price": 106.8,
+    "return_12m": -26.28,
+    "volatility": 33.77,
+    "momentum_score": -0.6125
+  },
+  {
+    "symbol": "RATEGAIN",
+    "price": 840.65,
+    "return_12m": 18.92,
+    "volatility": 42.34,
+    "momentum_score": 0.5259
+  },
+  {
+    "symbol": "RATNAMANI",
+    "price": 2619.4,
+    "return_12m": 8.93,
+    "volatility": 46.49,
+    "momentum_score": 0.2327
+  },
+  {
+    "symbol": "RTNPOWER",
+    "price": 6.74,
+    "return_12m": -42.2,
+    "volatility": 32.48,
+    "momentum_score": -1.0866
+  },
+  {
+    "symbol": "RAYMONDLSL",
+    "price": 627.7,
+    "return_12m": -46.0,
+    "volatility": 41.18,
+    "momentum_score": -1.0415
+  },
+  {
+    "symbol": "REDINGTON",
+    "price": 397.95,
+    "return_12m": 45.32,
+    "volatility": 45.29,
+    "momentum_score": 0.8497
+  },
+  {
+    "symbol": "REFEX",
+    "price": 271.3,
+    "return_12m": -25.52,
+    "volatility": 50.98,
+    "momentum_score": -0.4446
+  },
+  {
+    "symbol": "RELAXO",
+    "price": 285.35,
+    "return_12m": -34.71,
+    "volatility": 43.96,
+    "momentum_score": -0.4232
+  },
+  {
+    "symbol": "RELIANCE",
+    "price": 1167.7,
+    "return_12m": -13.96,
+    "volatility": 20.8,
+    "momentum_score": -0.1735
+  },
+  {
+    "symbol": "RPOWER",
+    "price": 19.41,
+    "return_12m": -58.24,
+    "volatility": 45.69,
+    "momentum_score": -1.0145
+  },
+  {
+    "symbol": "RELIGARE",
+    "price": 224.59,
+    "return_12m": -10.86,
+    "volatility": 37.32,
+    "momentum_score": -0.0006
+  },
+  {
+    "symbol": "RESPONIND",
+    "price": 162.59,
+    "return_12m": -14.06,
+    "volatility": 52.15,
+    "momentum_score": -0.405
+  },
+  {
+    "symbol": "RBA",
+    "price": 92.22,
+    "return_12m": 16.9,
+    "volatility": 38.37,
+    "momentum_score": 0.5913
+  },
+  {
+    "symbol": "ROUTE",
+    "price": 436.4,
+    "return_12m": -43.92,
+    "volatility": 37.22,
+    "momentum_score": -0.8213
+  },
+  {
+    "symbol": "RUBICON",
+    "price": 1630.9,
+    "return_12m": 159.87,
+    "volatility": 45.19,
+    "momentum_score": 3.7178
+  },
+  {
+    "symbol": "SJS",
+    "price": 2159.8,
+    "return_12m": 41.72,
+    "volatility": 37.09,
+    "momentum_score": 1.4057
+  },
+  {
+    "symbol": "SBFC",
+    "price": 84.19,
+    "return_12m": -22.31,
+    "volatility": 30.86,
+    "momentum_score": -0.2134
+  },
+  {
+    "symbol": "SBICARD",
+    "price": 563.2,
+    "return_12m": -36.64,
+    "volatility": 27.29,
+    "momentum_score": -0.8005
+  },
+  {
+    "symbol": "SBILIFE",
+    "price": 1721.6,
+    "return_12m": -3.42,
+    "volatility": 20.98,
+    "momentum_score": -0.1815
+  },
+  {
+    "symbol": "SGMART",
+    "price": 742.2,
+    "return_12m": 103.34,
+    "volatility": 40.96,
+    "momentum_score": 2.7435
+  },
+  {
+    "symbol": "SIGMAADV",
+    "price": 1076.9,
+    "return_12m": 594.37,
+    "volatility": 56.39,
+    "momentum_score": 9.7834
+  },
+  {
+    "symbol": "SJVN",
+    "price": 57.91,
+    "return_12m": -35.36,
+    "volatility": 31.27,
+    "momentum_score": -0.7829
+  },
+  {
+    "symbol": "SKYGOLD",
+    "price": 810.65,
+    "return_12m": 184.99,
+    "volatility": 48.36,
+    "momentum_score": 3.6341
+  },
+  {
+    "symbol": "SMLMAH",
+    "price": 6251.0,
+    "return_12m": 94.02,
+    "volatility": 59.86,
+    "momentum_score": 1.4176
+  },
+  {
+    "symbol": "SHRIPISTON",
+    "price": 4490.5,
+    "return_12m": 64.76,
+    "volatility": 39.2,
+    "momentum_score": 1.6864
+  },
+  {
+    "symbol": "SRF",
+    "price": 2486.2,
+    "return_12m": -14.52,
+    "volatility": 29.41,
+    "momentum_score": -0.3237
+  },
+  {
+    "symbol": "LOTUSDEV",
+    "price": 230.07,
+    "return_12m": 21.49,
+    "volatility": 44.45,
+    "momentum_score": -0.0805
+  },
+  {
+    "symbol": "SAFARI",
+    "price": 1378.8,
+    "return_12m": -36.44,
+    "volatility": 35.4,
+    "momentum_score": -0.8059
+  },
+  {
+    "symbol": "SAGILITY",
+    "price": 43.17,
+    "return_12m": -0.29,
+    "volatility": 34.84,
+    "momentum_score": 0.2142
+  },
+  {
+    "symbol": "SAILIFE",
+    "price": 1541.2,
+    "return_12m": 74.62,
+    "volatility": 33.33,
+    "momentum_score": 2.3032
+  },
+  {
+    "symbol": "SAMHI",
+    "price": 154.37,
+    "return_12m": -23.34,
+    "volatility": 37.05,
+    "momentum_score": -0.6613
+  },
+  {
+    "symbol": "SAMMAANCAP",
+    "price": 132.48,
+    "return_12m": -19.72,
+    "volatility": 36.76,
+    "momentum_score": -0.161
+  },
+  {
+    "symbol": "MOTHERSON",
+    "price": 157.03,
+    "return_12m": 47.92,
+    "volatility": 34.06,
+    "momentum_score": 1.4973
+  },
+  {
+    "symbol": "SANDUMA",
+    "price": 177.67,
+    "return_12m": -8.45,
+    "volatility": 48.65,
+    "momentum_score": 0.0364
+  },
+  {
+    "symbol": "SANSERA",
+    "price": 4276.6,
+    "return_12m": 205.58,
+    "volatility": 42.22,
+    "momentum_score": 4.5624
+  },
+  {
+    "symbol": "SAPPHIRE",
+    "price": 209.82,
+    "return_12m": -28.56,
+    "volatility": 46.12,
+    "momentum_score": -0.4398
+  },
+  {
+    "symbol": "SARDAEN",
+    "price": 494.75,
+    "return_12m": -14.0,
+    "volatility": 31.81,
+    "momentum_score": -0.4638
+  },
+  {
+    "symbol": "SAREGAMA",
+    "price": 494.75,
+    "return_12m": 5.76,
+    "volatility": 42.36,
+    "momentum_score": 0.1306
+  },
+  {
+    "symbol": "SCHAEFFLER",
+    "price": 3885.6,
+    "return_12m": -8.6,
+    "volatility": 28.68,
+    "momentum_score": -0.2425
+  },
+  {
+    "symbol": "SCHNEIDER",
+    "price": 1275.4,
+    "return_12m": 49.05,
+    "volatility": 48.98,
+    "momentum_score": 0.8567
+  },
+  {
+    "symbol": "SENCO",
+    "price": 317.4,
+    "return_12m": -8.6,
+    "volatility": 42.79,
+    "momentum_score": 0.011
+  },
+  {
+    "symbol": "SENORES",
+    "price": 1349.6,
+    "return_12m": 85.33,
+    "volatility": 40.37,
+    "momentum_score": 2.2537
+  },
+  {
+    "symbol": "SHAILY",
+    "price": 3009.1,
+    "return_12m": 38.12,
+    "volatility": 51.28,
+    "momentum_score": 0.8958
+  },
+  {
+    "symbol": "SHAKTIPUMP",
+    "price": 454.1,
+    "return_12m": -44.7,
+    "volatility": 45.72,
+    "momentum_score": -0.8937
+  },
+  {
+    "symbol": "SHARDACROP",
+    "price": 709.2,
+    "return_12m": -15.29,
+    "volatility": 48.59,
+    "momentum_score": -0.1454
+  },
+  {
+    "symbol": "SHAREINDIA",
+    "price": 205.09,
+    "return_12m": 49.1,
+    "volatility": 53.3,
+    "momentum_score": 0.5174
+  },
+  {
+    "symbol": "SFL",
+    "price": 616.65,
+    "return_12m": -8.72,
+    "volatility": 39.08,
+    "momentum_score": -0.1111
+  },
+  {
+    "symbol": "SHILCTECH",
+    "price": 4033.0,
+    "return_12m": -3.3,
+    "volatility": 53.73,
+    "momentum_score": -0.0574
+  },
+  {
+    "symbol": "SHILPAMED",
+    "price": 1064.1,
+    "return_12m": 176.6,
+    "volatility": 42.16,
+    "momentum_score": 3.9191
+  },
+  {
+    "symbol": "SCI",
+    "price": 267.05,
+    "return_12m": 20.17,
+    "volatility": 45.52,
+    "momentum_score": 0.644
+  },
+  {
+    "symbol": "SHREECEM",
+    "price": 21900.0,
+    "return_12m": -24.54,
+    "volatility": 22.41,
+    "momentum_score": -0.7199
+  },
+  {
+    "symbol": "RENUKA",
+    "price": 21.34,
+    "return_12m": -30.1,
+    "volatility": 34.12,
+    "momentum_score": -0.5284
+  },
+  {
+    "symbol": "SHREEJISPG",
+    "price": 775.35,
+    "return_12m": 221.98,
+    "volatility": 44.22,
+    "momentum_score": 4.642
+  },
+  {
+    "symbol": "SHRIRAMFIN",
+    "price": 945.0,
+    "return_12m": 48.05,
+    "volatility": 35.52,
+    "momentum_score": 1.6203
+  },
+  {
+    "symbol": "SHYAMMETL",
+    "price": 1047.8,
+    "return_12m": 8.41,
+    "volatility": 27.97,
+    "momentum_score": 0.3955
+  },
+  {
+    "symbol": "ENRIN",
+    "price": 3334.0,
+    "return_12m": -0.55,
+    "volatility": 39.02,
+    "momentum_score": -0.1592
+  },
+  {
+    "symbol": "SIEMENS",
+    "price": 3804.0,
+    "return_12m": 20.81,
+    "volatility": 30.34,
+    "momentum_score": 0.8709
+  },
+  {
+    "symbol": "SIGNATURE",
+    "price": 737.45,
+    "return_12m": -29.95,
+    "volatility": 36.51,
+    "momentum_score": -0.7205
+  },
+  {
+    "symbol": "SKIPPER",
+    "price": 541.2,
+    "return_12m": 3.25,
+    "volatility": 40.56,
+    "momentum_score": 0.1054
+  },
+  {
+    "symbol": "SOBHA",
+    "price": 1213.1,
+    "return_12m": -17.15,
+    "volatility": 30.31,
+    "momentum_score": -0.4455
+  },
+  {
+    "symbol": "SOLARINDS",
+    "price": 19400.0,
+    "return_12m": 40.12,
+    "volatility": 36.06,
+    "momentum_score": 1.3836
+  },
+  {
+    "symbol": "SONACOMS",
+    "price": 805.0,
+    "return_12m": 92.99,
+    "volatility": 31.27,
+    "momentum_score": 2.9533
+  },
+  {
+    "symbol": "SONATSOFTW",
+    "price": 254.05,
+    "return_12m": -25.48,
+    "volatility": 46.55,
+    "momentum_score": -0.3208
+  },
+  {
+    "symbol": "SOUTHBANK",
+    "price": 47.44,
+    "return_12m": 60.87,
+    "volatility": 42.57,
+    "momentum_score": 1.4426
+  },
+  {
+    "symbol": "STARHEALTH",
+    "price": 537.7,
+    "return_12m": 17.66,
+    "volatility": 23.41,
+    "momentum_score": 0.9195
+  },
+  {
+    "symbol": "SBIN",
+    "price": 954.1,
+    "return_12m": 11.99,
+    "volatility": 23.44,
+    "momentum_score": 0.8004
+  },
+  {
+    "symbol": "SAIL",
+    "price": 174.5,
+    "return_12m": 30.99,
+    "volatility": 36.33,
+    "momentum_score": 1.1354
+  },
+  {
+    "symbol": "SWSOLAR",
+    "price": 164.82,
+    "return_12m": -32.98,
+    "volatility": 43.14,
+    "momentum_score": -0.481
+  },
+  {
+    "symbol": "STLTECH",
+    "price": 955.35,
+    "return_12m": 675.32,
+    "volatility": 61.52,
+    "momentum_score": 10.4248
+  },
+  {
+    "symbol": "STAR",
+    "price": 1084.8,
+    "return_12m": 30.94,
+    "volatility": 38.76,
+    "momentum_score": 0.7219
+  },
+  {
+    "symbol": "STYLAMIND",
+    "price": 3219.9,
+    "return_12m": 87.37,
+    "volatility": 34.26,
+    "momentum_score": 2.5687
+  },
+  {
+    "symbol": "SUBROS",
+    "price": 684.9,
+    "return_12m": -35.52,
+    "volatility": 39.89,
+    "momentum_score": -0.8264
+  },
+  {
+    "symbol": "SUDARSCHEM",
+    "price": 1241.5,
+    "return_12m": -6.73,
+    "volatility": 39.98,
+    "momentum_score": -0.1527
+  },
+  {
+    "symbol": "SUDEEPPHRM",
+    "price": 1199.8,
+    "return_12m": 55.26,
+    "volatility": 47.18,
+    "momentum_score": 1.3236
+  },
+  {
+    "symbol": "SUMICHEM",
+    "price": 417.6,
+    "return_12m": -22.24,
+    "volatility": 35.27,
+    "momentum_score": -0.171
+  },
+  {
+    "symbol": "SPARC",
+    "price": 194.13,
+    "return_12m": 46.95,
+    "volatility": 57.87,
+    "momentum_score": 0.8829
+  },
+  {
+    "symbol": "SUNPHARMA",
+    "price": 1801.0,
+    "return_12m": 11.42,
+    "volatility": 19.32,
+    "momentum_score": 0.9016
+  },
+  {
+    "symbol": "SUNTV",
+    "price": 599.9,
+    "return_12m": 6.27,
+    "volatility": 33.8,
+    "momentum_score": -0.6655
+  },
+  {
+    "symbol": "SUNDARMFIN",
+    "price": 4395.9,
+    "return_12m": 0.45,
+    "volatility": 27.38,
+    "momentum_score": 0.1618
+  },
+  {
+    "symbol": "SUNDRMFAST",
+    "price": 1123.6,
+    "return_12m": 10.53,
+    "volatility": 26.44,
+    "momentum_score": 0.6365
+  },
+  {
+    "symbol": "SUNFLAG",
+    "price": 433.5,
+    "return_12m": 58.76,
+    "volatility": 45.52,
+    "momentum_score": 0.7312
+  },
+  {
+    "symbol": "SUNTECK",
+    "price": 279.45,
+    "return_12m": -36.26,
+    "volatility": 39.2,
+    "momentum_score": -0.781
+  },
+  {
+    "symbol": "SUPREMEIND",
+    "price": 3380.0,
+    "return_12m": -18.91,
+    "volatility": 27.52,
+    "momentum_score": -0.5543
+  },
+  {
+    "symbol": "SPLPETRO",
+    "price": 780.45,
+    "return_12m": -6.55,
+    "volatility": 41.26,
+    "momentum_score": -0.3413
+  },
+  {
+    "symbol": "SUPRIYA",
+    "price": 931.0,
+    "return_12m": 27.49,
+    "volatility": 47.88,
+    "momentum_score": 0.3526
+  },
+  {
+    "symbol": "SURYAROSNI",
+    "price": 220.67,
+    "return_12m": -23.38,
+    "volatility": 38.06,
+    "momentum_score": -0.6629
+  },
+  {
+    "symbol": "SUVEN",
+    "price": 308.3,
+    "return_12m": 47.77,
+    "volatility": 58.21,
+    "momentum_score": 1.1389
+  },
+  {
+    "symbol": "SUZLON",
+    "price": 38.91,
+    "return_12m": -28.55,
+    "volatility": 32.36,
+    "momentum_score": -0.4044
+  },
+  {
+    "symbol": "SWANCORP",
+    "price": 272.8,
+    "return_12m": -40.32,
+    "volatility": 34.43,
+    "momentum_score": -1.0555
+  },
+  {
+    "symbol": "SWIGGY",
+    "price": 238.0,
+    "return_12m": -42.49,
+    "volatility": 37.39,
+    "momentum_score": -0.8256
+  },
+  {
+    "symbol": "SYNGENE",
+    "price": 361.3,
+    "return_12m": -42.99,
+    "volatility": 31.87,
+    "momentum_score": -1.0395
+  },
+  {
+    "symbol": "SYRMA",
+    "price": 1717.9,
+    "return_12m": 107.56,
+    "volatility": 44.17,
+    "momentum_score": 2.022
+  },
+  {
+    "symbol": "TARC",
+    "price": 125.58,
+    "return_12m": -21.82,
+    "volatility": 41.76,
+    "momentum_score": -0.6071
+  },
+  {
+    "symbol": "TBOTEK",
+    "price": 1671.5,
+    "return_12m": 4.44,
+    "volatility": 35.76,
+    "momentum_score": 0.1709
+  },
+  {
+    "symbol": "TDPOWERSYS",
+    "price": 792.15,
+    "return_12m": 146.99,
+    "volatility": 54.6,
+    "momentum_score": 2.5156
+  },
+  {
+    "symbol": "TTKPRESTIG",
+    "price": 506.4,
+    "return_12m": -20.51,
+    "volatility": 36.5,
+    "momentum_score": -0.1981
+  },
+  {
+    "symbol": "TVSMOTOR",
+    "price": 4021.0,
+    "return_12m": 16.75,
+    "volatility": 27.18,
+    "momentum_score": 0.773
+  },
+  {
+    "symbol": "TVSSCS",
+    "price": 128.42,
+    "return_12m": 0.83,
+    "volatility": 40.52,
+    "momentum_score": 0.0417
+  },
+  {
+    "symbol": "TMB",
+    "price": 872.05,
+    "return_12m": 108.61,
+    "volatility": 39.12,
+    "momentum_score": 2.9672
+  },
+  {
+    "symbol": "TANLA",
+    "price": 487.75,
+    "return_12m": -31.23,
+    "volatility": 44.8,
+    "momentum_score": -0.5798
+  },
+  {
+    "symbol": "TATACAP",
+    "price": 319.3,
+    "return_12m": -3.23,
+    "volatility": 27.31,
+    "momentum_score": 0.3993
+  },
+  {
+    "symbol": "TATACHEM",
+    "price": 607.8,
+    "return_12m": -33.32,
+    "volatility": 37.55,
+    "momentum_score": -0.7481
+  },
+  {
+    "symbol": "TATACOMM",
+    "price": 1683.0,
+    "return_12m": 5.24,
+    "volatility": 33.55,
+    "momentum_score": 0.1796
+  },
+  {
+    "symbol": "TCS",
+    "price": 2075.0,
+    "return_12m": -25.53,
+    "volatility": 28.35,
+    "momentum_score": -0.5278
+  },
+  {
+    "symbol": "TATACONSUM",
+    "price": 957.0,
+    "return_12m": -15.16,
+    "volatility": 22.7,
+    "momentum_score": -0.3988
+  },
+  {
+    "symbol": "TATAELXSI",
+    "price": 3092.8,
+    "return_12m": -41.21,
+    "volatility": 31.46,
+    "momentum_score": -0.8775
+  },
+  {
+    "symbol": "TATAINVEST",
+    "price": 615.05,
+    "return_12m": -38.19,
+    "volatility": 38.39,
+    "momentum_score": -0.9014
+  },
+  {
+    "symbol": "TMCV",
+    "price": 415.5,
+    "return_12m": 27.54,
+    "volatility": 37.97,
+    "momentum_score": 0.9821
+  },
+  {
+    "symbol": "TMPV",
+    "price": 279.4,
+    "return_12m": -60.66,
+    "volatility": 50.25,
+    "momentum_score": -0.9992
+  },
+  {
+    "symbol": "TATAPOWER",
+    "price": 350.15,
+    "return_12m": -10.78,
+    "volatility": 21.43,
+    "momentum_score": -0.3047
+  },
+  {
+    "symbol": "TATASTEEL",
+    "price": 178.0,
+    "return_12m": 4.88,
+    "volatility": 25.91,
+    "momentum_score": 0.3184
+  },
+  {
+    "symbol": "TATATECH",
+    "price": 698.8,
+    "return_12m": 0.35,
+    "volatility": 32.9,
+    "momentum_score": 0.412
+  },
+  {
+    "symbol": "TTML",
+    "price": 34.82,
+    "return_12m": -38.4,
+    "volatility": 41.37,
+    "momentum_score": -0.7254
+  },
+  {
+    "symbol": "TECHM",
+    "price": 1533.0,
+    "return_12m": 13.47,
+    "volatility": 27.43,
+    "momentum_score": 0.6395
+  },
+  {
+    "symbol": "TECHNOE",
+    "price": 998.6,
+    "return_12m": -26.7,
+    "volatility": 39.1,
+    "momentum_score": -0.7673
+  },
+  {
+    "symbol": "TEGA",
+    "price": 2093.4,
+    "return_12m": 6.17,
+    "volatility": 36.16,
+    "momentum_score": -0.7964
+  },
+  {
+    "symbol": "TEJASNET",
+    "price": 464.8,
+    "return_12m": -21.31,
+    "volatility": 58.78,
+    "momentum_score": -0.0548
+  },
+  {
+    "symbol": "TENNIND",
+    "price": 495.4,
+    "return_12m": 0.94,
+    "volatility": 36.4,
+    "momentum_score": 0.1339
+  },
+  {
+    "symbol": "TEXRAIL",
+    "price": 126.86,
+    "return_12m": -9.19,
+    "volatility": 44.47,
+    "momentum_score": -0.4847
+  },
+  {
+    "symbol": "THANGAMAYL",
+    "price": 4861.0,
+    "return_12m": 133.54,
+    "volatility": 61.22,
+    "momentum_score": 2.3151
+  },
+  {
+    "symbol": "NIACL",
+    "price": 160.21,
+    "return_12m": -15.29,
+    "volatility": 48.41,
+    "momentum_score": 0.0556
+  },
+  {
+    "symbol": "RAMCOCEM",
+    "price": 830.85,
+    "return_12m": -15.83,
+    "volatility": 25.5,
+    "momentum_score": -0.4687
+  },
+  {
+    "symbol": "THERMAX",
+    "price": 3360.6,
+    "return_12m": 5.83,
+    "volatility": 35.47,
+    "momentum_score": 0.4462
+  },
+  {
+    "symbol": "THOMASCOOK",
+    "price": 100.7,
+    "return_12m": -36.59,
+    "volatility": 43.19,
+    "momentum_score": -0.725
+  },
+  {
+    "symbol": "THYROCARE",
+    "price": 533.6,
+    "return_12m": 38.38,
+    "volatility": 39.64,
+    "momentum_score": 1.1645
+  },
+  {
+    "symbol": "TI",
+    "price": 542.55,
+    "return_12m": 15.84,
+    "volatility": 34.45,
+    "momentum_score": 0.4634
+  },
+  {
+    "symbol": "TIMETECHNO",
+    "price": 179.68,
+    "return_12m": -17.88,
+    "volatility": 35.07,
+    "momentum_score": -0.3867
+  },
+  {
+    "symbol": "TIMKEN",
+    "price": 3098.8,
+    "return_12m": 0.82,
+    "volatility": 28.53,
+    "momentum_score": 0.058
+  },
+  {
+    "symbol": "TIPSMUSIC",
+    "price": 644.2,
+    "return_12m": 13.29,
+    "volatility": 37.45,
+    "momentum_score": 0.387
+  },
+  {
+    "symbol": "TITAGARH",
+    "price": 805.1,
+    "return_12m": -9.18,
+    "volatility": 35.89,
+    "momentum_score": -0.13
+  },
+  {
+    "symbol": "TITAN",
+    "price": 4515.7,
+    "return_12m": 31.19,
+    "volatility": 23.46,
+    "momentum_score": 1.7635
+  },
+  {
+    "symbol": "TORNTPHARM",
+    "price": 4767.3,
+    "return_12m": 36.84,
+    "volatility": 22.06,
+    "momentum_score": 1.7981
+  },
+  {
+    "symbol": "TORNTPOWER",
+    "price": 1242.9,
+    "return_12m": 3.2,
+    "volatility": 30.69,
+    "momentum_score": 0.2214
+  },
+  {
+    "symbol": "TARIL",
+    "price": 280.8,
+    "return_12m": -43.46,
+    "volatility": 59.68,
+    "momentum_score": -0.6192
+  },
+  {
+    "symbol": "TRANSRAILL",
+    "price": 474.9,
+    "return_12m": -34.27,
+    "volatility": 41.07,
+    "momentum_score": -1.1177
+  },
+  {
+    "symbol": "TRENT",
+    "price": 2580.0,
+    "return_12m": -46.35,
+    "volatility": 46.44,
+    "momentum_score": -0.8178
+  },
+  {
+    "symbol": "TRIDENT",
+    "price": 22.16,
+    "return_12m": -20.94,
+    "volatility": 29.5,
+    "momentum_score": -0.4512
+  },
+  {
+    "symbol": "TRITURBINE",
+    "price": 530.0,
+    "return_12m": 2.41,
+    "volatility": 37.34,
+    "momentum_score": 0.2599
+  },
+  {
+    "symbol": "TIINDIA",
+    "price": 2340.0,
+    "return_12m": -25.28,
+    "volatility": 33.54,
+    "momentum_score": -0.3228
+  },
+  {
+    "symbol": "UCOBANK",
+    "price": 22.93,
+    "return_12m": -24.23,
+    "volatility": 27.39,
+    "momentum_score": -0.6316
+  },
+  {
+    "symbol": "UNOMINDA",
+    "price": 1111.0,
+    "return_12m": -15.38,
+    "volatility": 33.33,
+    "momentum_score": -0.088
+  },
+  {
+    "symbol": "UPL",
+    "price": 516.8,
+    "return_12m": -22.58,
+    "volatility": 32.21,
+    "momentum_score": -0.3375
+  },
+  {
+    "symbol": "UTIAMC",
+    "price": 883.7,
+    "return_12m": -30.05,
+    "volatility": 28.22,
+    "momentum_score": -1.0779
+  },
+  {
+    "symbol": "UJJIVANSFB",
+    "price": 65.6,
+    "return_12m": 35.71,
+    "volatility": 38.94,
+    "momentum_score": 0.8105
+  },
+  {
+    "symbol": "ULTRACEMCO",
+    "price": 10710.0,
+    "return_12m": -9.07,
+    "volatility": 23.11,
+    "momentum_score": -0.1757
+  },
+  {
+    "symbol": "UNIMECH",
+    "price": 1773.0,
+    "return_12m": 79.13,
+    "volatility": 48.23,
+    "momentum_score": 1.2051
+  },
+  {
+    "symbol": "UNIONBANK",
+    "price": 167.59,
+    "return_12m": 25.29,
+    "volatility": 32.74,
+    "momentum_score": 1.1184
+  },
+  {
+    "symbol": "UBL",
+    "price": 1188.8,
+    "return_12m": -33.46,
+    "volatility": 22.79,
+    "momentum_score": -1.1422
+  },
+  {
+    "symbol": "UNITDSPR",
+    "price": 1335.1,
+    "return_12m": -0.82,
+    "volatility": 23.89,
+    "momentum_score": 0.3981
+  },
+  {
+    "symbol": "URBANCO",
+    "price": 156.34,
+    "return_12m": -10.35,
+    "volatility": 44.57,
+    "momentum_score": 0.0348
+  },
+  {
+    "symbol": "USHAMART",
+    "price": 491.7,
+    "return_12m": 7.14,
+    "volatility": 32.97,
+    "momentum_score": 0.3573
+  },
+  {
+    "symbol": "VGUARD",
+    "price": 294.55,
+    "return_12m": -19.43,
+    "volatility": 24.99,
+    "momentum_score": -0.25
+  },
+  {
+    "symbol": "VMART",
+    "price": 746.1,
+    "return_12m": -11.34,
+    "volatility": 37.63,
+    "momentum_score": -0.0069
+  },
+  {
+    "symbol": "VIPIND",
+    "price": 280.75,
+    "return_12m": -33.26,
+    "volatility": 37.06,
+    "momentum_score": -0.64
+  },
+  {
+    "symbol": "V2RETAIL",
+    "price": 201.39,
+    "return_12m": -9.4,
+    "volatility": 36.93,
+    "momentum_score": -0.0369
+  },
+  {
+    "symbol": "DBREALTY",
+    "price": 91.7,
+    "return_12m": -43.36,
+    "volatility": 51.21,
+    "momentum_score": -0.6318
+  },
+  {
+    "symbol": "WABAG",
+    "price": 2004.9,
+    "return_12m": 42.89,
+    "volatility": 41.76,
+    "momentum_score": 1.0346
+  },
+  {
+    "symbol": "VAIBHAVGBL",
+    "price": 203.53,
+    "return_12m": -7.53,
+    "volatility": 41.53,
+    "momentum_score": -0.0552
+  },
+  {
+    "symbol": "VTL",
+    "price": 529.25,
+    "return_12m": 30.83,
+    "volatility": 32.33,
+    "momentum_score": 1.2657
+  },
+  {
+    "symbol": "VBL",
+    "price": 425.3,
+    "return_12m": -3.77,
+    "volatility": 29.5,
+    "momentum_score": -0.2791
+  },
+  {
+    "symbol": "MANYAVAR",
+    "price": 519.2,
+    "return_12m": -24.2,
+    "volatility": 35.02,
+    "momentum_score": -0.4826
+  },
+  {
+    "symbol": "VEDL",
+    "price": 252.05,
+    "return_12m": -45.59,
+    "volatility": 74.52,
+    "momentum_score": -0.5202
+  },
+  {
+    "symbol": "VESUVIUS",
+    "price": 404.1,
+    "return_12m": -19.68,
+    "volatility": 32.0,
+    "momentum_score": -0.4965
+  },
+  {
+    "symbol": "VIJAYA",
+    "price": 1428.0,
+    "return_12m": 41.34,
+    "volatility": 32.38,
+    "momentum_score": 1.4319
+  },
+  {
+    "symbol": "VIKRAMSOLR",
+    "price": 154.35,
+    "return_12m": -53.4,
+    "volatility": 44.98,
+    "momentum_score": -0.9633
+  },
+  {
+    "symbol": "VMM",
+    "price": 99.5,
+    "return_12m": -33.66,
+    "volatility": 30.99,
+    "momentum_score": -0.8378
+  },
+  {
+    "symbol": "VIYASH",
+    "price": 231.75,
+    "return_12m": 14.82,
+    "volatility": 42.78,
+    "momentum_score": 0.6039
+  },
+  {
+    "symbol": "IDEA",
+    "price": 12.64,
+    "return_12m": 43.31,
+    "volatility": 45.47,
+    "momentum_score": 1.2319
+  },
+  {
+    "symbol": "VOLTAMP",
+    "price": 10426.0,
+    "return_12m": 46.93,
+    "volatility": 39.98,
+    "momentum_score": 1.343
+  },
+  {
+    "symbol": "VOLTAS",
+    "price": 1053.2,
+    "return_12m": -22.34,
+    "volatility": 31.26,
+    "momentum_score": -0.3757
+  },
+  {
+    "symbol": "WAAREEENER",
+    "price": 2340.0,
+    "return_12m": -31.86,
+    "volatility": 34.99,
+    "momentum_score": -0.6469
+  },
+  {
+    "symbol": "WAAREERTL",
+    "price": 808.8,
+    "return_12m": -22.76,
+    "volatility": 37.75,
+    "momentum_score": -0.4808
+  },
+  {
+    "symbol": "WAKEFIT",
+    "price": 139.88,
+    "return_12m": -27.26,
+    "volatility": 48.92,
+    "momentum_score": -0.4238
+  },
+  {
+    "symbol": "WEWORK",
+    "price": 659.6,
+    "return_12m": 4.92,
+    "volatility": 37.98,
+    "momentum_score": 0.1099
+  },
+  {
+    "symbol": "WEBELSOLAR",
+    "price": 68.7,
+    "return_12m": -42.99,
+    "volatility": 59.43,
+    "momentum_score": -0.5406
+  },
+  {
+    "symbol": "WELCORP",
+    "price": 2605.8,
+    "return_12m": 202.55,
+    "volatility": 43.11,
+    "momentum_score": 4.7297
+  },
+  {
+    "symbol": "WELENT",
+    "price": 724.45,
+    "return_12m": 36.92,
+    "volatility": 37.0,
+    "momentum_score": 1.1404
+  },
+  {
+    "symbol": "WELSPUNLIV",
+    "price": 239.17,
+    "return_12m": 104.18,
+    "volatility": 45.53,
+    "momentum_score": 1.866
+  },
+  {
+    "symbol": "WESTLIFE",
+    "price": 588.05,
+    "return_12m": -12.92,
+    "volatility": 39.79,
+    "momentum_score": -0.5457
+  },
+  {
+    "symbol": "WHIRLPOOL",
+    "price": 861.65,
+    "return_12m": -26.5,
+    "volatility": 42.36,
+    "momentum_score": -0.7937
+  },
+  {
+    "symbol": "WIPRO",
+    "price": 159.35,
+    "return_12m": -31.39,
+    "volatility": 25.07,
+    "momentum_score": -0.8807
+  },
+  {
+    "symbol": "WOCKPHARMA",
+    "price": 2083.9,
+    "return_12m": 42.73,
+    "volatility": 49.08,
+    "momentum_score": 0.7314
+  },
+  {
+    "symbol": "YATHARTH",
+    "price": 1033.7,
+    "return_12m": 38.83,
+    "volatility": 38.99,
+    "momentum_score": 0.8056
+  },
+  {
+    "symbol": "YESBANK",
+    "price": 20.75,
+    "return_12m": -5.03,
+    "volatility": 28.61,
+    "momentum_score": 0.1016
+  },
+  {
+    "symbol": "ZFCVINDIA",
+    "price": 2241.0,
+    "return_12m": -0.73,
+    "volatility": 30.01,
+    "momentum_score": 0.3501
+  },
+  {
+    "symbol": "ZAGGLE",
+    "price": 171.73,
+    "return_12m": -50.55,
+    "volatility": 56.42,
+    "momentum_score": -0.7902
+  },
+  {
+    "symbol": "ZEEL",
+    "price": 71.92,
+    "return_12m": -35.35,
+    "volatility": 46.08,
+    "momentum_score": -0.3408
+  },
+  {
+    "symbol": "ZENTEC",
+    "price": 1576.1,
+    "return_12m": 6.01,
+    "volatility": 36.74,
+    "momentum_score": 0.5158
+  },
+  {
+    "symbol": "ZENSARTECH",
+    "price": 434.35,
+    "return_12m": -41.27,
+    "volatility": 38.18,
+    "momentum_score": -0.9059
+  },
+  {
+    "symbol": "ZYDUSLIFE",
+    "price": 1145.7,
+    "return_12m": 16.03,
+    "volatility": 23.26,
+    "momentum_score": 0.6792
+  },
+  {
+    "symbol": "ZYDUSWELL",
+    "price": 493.25,
+    "return_12m": 6.41,
+    "volatility": 38.33,
+    "momentum_score": 0.3852
+  },
+  {
+    "symbol": "ECLERX",
+    "price": 1802.9,
+    "return_12m": -8.15,
+    "volatility": 46.09,
+    "momentum_score": 0.0089
+  }
+]
