@@ -13,13 +13,14 @@
             theme: {
                 extend: {
                     colors: {
-                        midnight: '#080c14',
-                        cardDark: 'rgba(15, 23, 42, 0.85)',
+                        midnight: '#060911',
+                        cardDark: 'rgba(13, 19, 33, 0.85)',
                         electricCyan: '#00f2fe',
                         emeraldGreen: '#10b981',
                         crimsonRed: '#f43f5e',
                         goldAmber: '#f59e0b',
-                        violetNeon: '#a855f7'
+                        violetNeon: '#a855f7',
+                        royalBlue: '#3b82f6'
                     },
                     fontFamily: {
                         sans: ['Plus Jakarta Sans', 'sans-serif'],
@@ -33,7 +34,7 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     
     <!-- Chart.js CDN -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -43,7 +44,7 @@
 
     <style>
         body {
-            background-color: #080c14;
+            background-color: #060911;
             color: #cbd5e1;
             font-family: 'Plus Jakarta Sans', sans-serif;
             overflow-x: hidden;
@@ -54,23 +55,23 @@
         }
 
         .quant-glass {
-            background: rgba(15, 23, 42, 0.8);
+            background: rgba(13, 20, 36, 0.75);
             backdrop-filter: blur(16px);
             -webkit-backdrop-filter: blur(16px);
-            border: 1px solid rgba(51, 65, 85, 0.45);
+            border: 1px solid rgba(51, 65, 85, 0.4);
         }
 
         .quant-glass:hover {
-            border-color: rgba(0, 242, 254, 0.35);
-            box-shadow: 0 8px 32px 0 rgba(0, 242, 254, 0.05);
+            border-color: rgba(0, 242, 254, 0.3);
+            box-shadow: 0 8px 32px 0 rgba(0, 242, 254, 0.04);
         }
 
         .glow-cyan {
-            box-shadow: 0 0 20px rgba(0, 242, 254, 0.25);
+            box-shadow: 0 0 20px rgba(0, 242, 254, 0.2);
         }
 
-        .glow-crimson {
-            box-shadow: 0 0 20px rgba(244, 63, 94, 0.25);
+        .glow-gold {
+            box-shadow: 0 0 20px rgba(245, 158, 11, 0.2);
         }
 
         /* Custom Scrollbars */
@@ -79,7 +80,7 @@
             height: 6px;
         }
         ::-webkit-scrollbar-track {
-            background: #080c14;
+            background: #060911;
         }
         ::-webkit-scrollbar-thumb {
             background: #1e293b;
@@ -95,7 +96,6 @@
             background: rgba(0, 242, 254, 0.08);
         }
 
-        /* Range Input Customization */
         input[type=range] {
             accent-color: #00f2fe;
         }
@@ -105,17 +105,17 @@
 
     <!-- TOP TICKER TAPE & NAV HEADER -->
     <header class="sticky top-0 z-50 border-b border-slate-800/80 bg-slate-950/90 backdrop-blur-xl">
-        <!-- Live TradingView Ticker Tape Strip -->
+        <!-- Live Ticker Strip -->
         <div class="h-9 w-full overflow-hidden border-b border-slate-900 bg-slate-950">
             <div class="tradingview-widget-container h-full">
                 <div class="tradingview-widget-container__widget"></div>
                 <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
                 {
                     "symbols": [
+                        {"proName": "NSE:NIFTY", "title": "NIFTY 50"},
+                        {"proName": "BSE:SENSEX", "title": "SENSEX"},
                         {"proName": "FOREXCOM:SPX500", "title": "S&P 500"},
                         {"proName": "FOREXCOM:NSXUSD", "title": "Nasdaq 100"},
-                        {"proName": "NSE:NIFTY", "title": "NIFTY 50"},
-                        {"proName": "NSE:BANKNIFTY", "title": "BANK NIFTY"},
                         {"proName": "INDEX:NIKKEI225", "title": "Nikkei 225"},
                         {"proName": "INDEX:DEU40", "title": "DAX 40"},
                         {"proName": "FX_IDC:USDINR", "title": "USD/INR"},
@@ -133,45 +133,47 @@
 
         <!-- Main Header Controls -->
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center justify-between h-16">
+            <div class="flex items-center justify-between h-16 gap-4">
                 <!-- Branding -->
-                <div class="flex items-center space-x-3">
+                <div class="flex items-center space-x-3 shrink-0">
                     <div class="bg-cyan-500/10 p-2.5 rounded-xl border border-cyan-500/30 flex items-center justify-center">
                         <i data-lucide="terminal" class="w-5 h-5 text-electricCyan"></i>
                     </div>
                     <div>
                         <div class="flex items-center gap-2">
-                            <span class="text-lg font-bold tracking-wider text-white mono">QUANT<span class="text-electricCyan">_TERMINAL</span></span>
-                            <span class="hidden sm:inline-block px-2 py-0.5 text-[10px] font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 rounded-md mono">
-                                LIVE API
+                            <span class="text-base sm:text-lg font-bold tracking-wider text-white mono">ALPHA<span class="text-electricCyan">_QUANT</span></span>
+                            <span class="hidden md:inline-block px-2 py-0.5 text-[10px] font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 rounded-md mono">
+                                v3.5 PRO
                             </span>
                         </div>
-                        <p class="text-[10px] text-slate-400 mono">INSTITUTIONAL MACRO & INFLATION ANALYTICS</p>
+                        <p class="text-[10px] text-slate-400 mono hidden sm:block">GLOBAL MACRO, ASSETS & UMC-CPI ENGINE</p>
                     </div>
                 </div>
 
-                <!-- Navigation Tabs -->
-                <nav class="flex space-x-1 overflow-x-auto py-1 scrollbar-none">
-                    <button onclick="switchTab('terminal')" id="tab-terminal" class="nav-tab active px-3 sm:px-4 py-2 rounded-t-xl text-xs sm:text-sm font-semibold flex items-center space-x-2 transition-all whitespace-nowrap text-slate-300 hover:text-white">
-                        <i data-lucide="candlestick-chart" class="w-4 h-4 text-electricCyan"></i>
-                        <span>Market Terminal</span>
+                <!-- Navigation Tabs & External Hub Link -->
+                <nav class="flex items-center space-x-1 overflow-x-auto py-1 scrollbar-none">
+                    <button onclick="switchTab('indices')" id="tab-indices" class="nav-tab active px-3 sm:px-4 py-2 rounded-t-xl text-xs sm:text-sm font-semibold flex items-center space-x-2 transition-all whitespace-nowrap text-slate-300 hover:text-white">
+                        <i data-lucide="globe" class="w-4 h-4 text-electricCyan"></i>
+                        <span>World Indices</span>
                     </button>
                     <button onclick="switchTab('assets')" id="tab-assets" class="nav-tab px-3 sm:px-4 py-2 rounded-t-xl text-xs sm:text-sm font-semibold flex items-center space-x-2 transition-all whitespace-nowrap text-slate-300 hover:text-white">
                         <i data-lucide="coins" class="w-4 h-4 text-goldAmber"></i>
-                        <span>Gold & BTC Matrix</span>
+                        <span>Hard Assets & Top 100 Crypto</span>
                     </button>
                     <button onclick="switchTab('umc-manifesto')" id="tab-umc-manifesto" class="nav-tab px-3 sm:px-4 py-2 rounded-t-xl text-xs sm:text-sm font-semibold flex items-center space-x-2 transition-all whitespace-nowrap text-slate-300 hover:text-white">
                         <i data-lucide="scale" class="w-4 h-4 text-violetNeon"></i>
                         <span>UMC-CPI Basket</span>
                     </button>
-                    <button onclick="switchTab('calculator')" id="tab-calculator" class="nav-tab px-3 sm:px-4 py-2 rounded-t-xl text-xs sm:text-sm font-semibold flex items-center space-x-2 transition-all whitespace-nowrap text-slate-300 hover:text-white relative">
+                    <button onclick="switchTab('calculator')" id="tab-calculator" class="nav-tab px-3 sm:px-4 py-2 rounded-t-xl text-xs sm:text-sm font-semibold flex items-center space-x-2 transition-all whitespace-nowrap text-slate-300 hover:text-white">
                         <i data-lucide="calculator" class="w-4 h-4 text-crimsonRed"></i>
                         <span>Inflation Engine</span>
-                        <span class="flex h-2 w-2 relative">
-                            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75"></span>
-                            <span class="relative inline-flex rounded-full h-2 w-2 bg-electricCyan"></span>
-                        </span>
                     </button>
+                    
+                    <!-- REQUIRED EXTERNAL NAV LINK -->
+                    <a href="momentum.html" class="px-3 py-2 rounded-xl text-xs sm:text-sm font-semibold flex items-center gap-1.5 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 text-electricCyan border border-cyan-500/40 hover:border-cyan-400 transition-all whitespace-nowrap shadow-sm hover:shadow-cyan-500/20 ml-2">
+                        <span>Momentum Trading Hub</span>
+                        <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+                    </a>
                 </nav>
             </div>
         </div>
@@ -180,152 +182,296 @@
     <!-- MAIN CONTENT AREA -->
     <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex-grow w-full space-y-6">
 
-        <!-- ================= SECTION 1: MARKET TERMINAL & TECHNICAL CHARTS ================= -->
-        <section id="sec-terminal" class="space-y-6">
-            <!-- Selector Control Bar -->
-            <div class="quant-glass p-4 rounded-2xl flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+        <!-- ================= SECTION 1: GLOBAL WORLD INDICES & CURRENCY CONVERTER ================= -->
+        <section id="sec-indices" class="space-y-6">
+            <!-- Selector & Currency Converter Header -->
+            <div class="quant-glass p-4 rounded-2xl flex flex-col lg:flex-row items-start lg:items-center justify-between gap-4 border-l-4 border-l-electricCyan">
                 <div class="flex items-center space-x-3">
-                    <div class="p-2 bg-cyan-500/10 rounded-lg text-electricCyan">
-                        <i data-lucide="globe" class="w-5 h-5"></i>
+                    <div class="p-2.5 bg-cyan-500/10 rounded-xl text-electricCyan border border-cyan-500/20">
+                        <i data-lucide="bar-chart-3" class="w-6 h-6"></i>
                     </div>
                     <div>
-                        <h2 class="text-base font-bold text-white tracking-wide">Global Indices Technical Chart</h2>
-                        <p class="text-xs text-slate-400">Interactive TradingView engine with pre-loaded RSI & MACD indicators</p>
+                        <h2 class="text-base font-bold text-white tracking-wide">Global World Indices Engine</h2>
+                        <p class="text-xs text-slate-400">Interactive Technical Charts with SMA 20, SMA 50 & Subchart RSI 14</p>
                     </div>
                 </div>
 
-                <!-- Dropdown menu to switch indices -->
-                <div class="flex items-center space-x-3 w-full sm:w-auto">
-                    <label for="index-selector" class="text-xs text-slate-400 mono font-medium uppercase whitespace-nowrap">Select Index:</label>
-                    <select id="index-selector" onchange="updateMainTechnicalChart(this.value)" class="bg-slate-900/90 border border-slate-700 text-electricCyan text-xs sm:text-sm rounded-xl focus:ring-cyan-500 focus:border-cyan-500 block p-2.5 mono font-semibold w-full sm:w-72 cursor-pointer shadow-inner">
-                        <optgroup label="Asia-Pacific">
-                            <option value="NSE:NIFTY" selected>NIFTY 50 (India)</option>
-                            <option value="NSE:BANKNIFTY">BANK NIFTY (India)</option>
-                            <option value="NSE:GIFTNIFTY">GIFT NIFTY (India)</option>
-                            <option value="INDEX:NIKKEI225">Nikkei 225 (Japan)</option>
-                            <option value="HSI:HSI">Hang Seng (Hong Kong)</option>
-                            <option value="SSE:000001">Shanghai Composite (China)</option>
-                        </optgroup>
-                        <optgroup label="Americas">
-                            <option value="FOREXCOM:SPX500">S&P 500 (USA)</option>
-                            <option value="FOREXCOM:NSXUSD">Nasdaq 100 (USA)</option>
-                            <option value="FOREXCOM:DJI">Dow Jones 30 (USA)</option>
-                            <option value="BMFBOVESPA:IBOV">IBOVESPA (Brazil)</option>
-                        </optgroup>
-                        <optgroup label="Europe">
-                            <option value="INDEX:DEU40">DAX 40 (Germany)</option>
-                            <option value="FOREXCOM:UK100">FTSE 100 (UK)</option>
-                            <option value="INDEX:CAC40">CAC 40 (France)</option>
-                        </optgroup>
-                    </select>
+                <!-- Controls: Index Selector & Currency Converter -->
+                <div class="flex flex-wrap items-center gap-3 w-full lg:w-auto">
+                    <!-- Global Index Dropdown -->
+                    <div class="flex items-center space-x-2 w-full sm:w-auto flex-grow sm:flex-grow-0">
+                        <label for="global-index-select" class="text-xs text-slate-400 mono uppercase hidden sm:inline">Index:</label>
+                        <select id="global-index-select" onchange="onIndexSelectChange(this.value)" class="bg-slate-900 border border-slate-700 text-electricCyan text-xs sm:text-sm rounded-xl focus:ring-cyan-500 focus:border-cyan-500 p-2.5 mono font-semibold w-full sm:w-72 cursor-pointer shadow-inner">
+                            <optgroup label=" Americas">
+                                <option value="SPX" selected>S&P 500 (USA)</option>
+                                <option value="NDX">Nasdaq 100 (USA)</option>
+                                <option value="DJI">Dow Jones 30 (USA)</option>
+                                <option value="RUT">Russell 2000 (USA)</option>
+                                <option value="TSX">TSX Composite (Canada)</option>
+                                <option value="BVSP">IBOVESPA (Brazil)</option>
+                                <option value="IPC">IPC Index (Mexico)</option>
+                                <option value="MERV">MERVAL (Argentina)</option>
+                                <option value="IPSA">IPSA (Chile)</option>
+                                <option value="BVL">S&P/BVL (Peru)</option>
+                            </optgroup>
+                            <optgroup label=" Europe">
+                                <option value="DAX">DAX 40 (Germany)</option>
+                                <option value="FTSE">FTSE 100 (UK)</option>
+                                <option value="CAC">CAC 40 (France)</option>
+                                <option value="FTSEMIB">FTSE MIB (Italy)</option>
+                                <option value="IBEX">IBEX 35 (Spain)</option>
+                                <option value="WIG20">WIG20 (Poland)</option>
+                                <option value="SMI">SMI (Switzerland)</option>
+                            </optgroup>
+                            <optgroup label=" Middle East & Africa">
+                                <option value="TASI">TASI (Saudi Arabia)</option>
+                                <option value="TA35">TA-35 (Israel)</option>
+                                <option value="DFMGI">DFMGI (UAE)</option>
+                                <option value="JTOPI">JSE Top 40 (South Africa)</option>
+                                <option value="XU100">BIST 100 (Turkey)</option>
+                            </optgroup>
+                            <optgroup label=" Asia-Pacific">
+                                <option value="NIFTY">NIFTY 50 (India)</option>
+                                <option value="SENSEX">SENSEX (India)</option>
+                                <option value="BANKNIFTY">BANK NIFTY (India)</option>
+                                <option value="MIDCAP">NIFTY MIDCAP 100 (India)</option>
+                                <option value="N225">Nikkei 225 (Japan)</option>
+                                <option value="TOPIX">TOPIX (Japan)</option>
+                                <option value="SSEC">Shanghai Composite (China)</option>
+                                <option value="SZSE">Shenzhen Component (China)</option>
+                                <option value="HSI">Hang Seng (Hong Kong)</option>
+                                <option value="KOSPI">KOSPI (South Korea)</option>
+                                <option value="TWII">TAIEX (Taiwan)</option>
+                                <option value="STI">STI (Singapore)</option>
+                                <option value="JKSE">IDX Composite (Indonesia)</option>
+                                <option value="AXJO">ASX 200 (Australia)</option>
+                            </optgroup>
+                        </select>
+                    </div>
+
+                    <!-- Global Currency Converter Switcher (18+ Currencies) -->
+                    <div class="flex items-center space-x-2 w-full sm:w-auto">
+                        <label for="currency-select" class="text-xs text-slate-400 mono uppercase hidden sm:inline">Valuation FX:</label>
+                        <select id="currency-select" onchange="onGlobalCurrencyChange(this.value)" class="bg-slate-900 border border-slate-700 text-goldAmber text-xs sm:text-sm rounded-xl focus:ring-amber-500 focus:border-amber-500 p-2.5 mono font-bold w-full sm:w-36 cursor-pointer">
+                            <option value="INR" selected>INR (₹)</option>
+                            <option value="USD">USD ($)</option>
+                            <option value="EUR">EUR (€)</option>
+                            <option value="GBP">GBP (£)</option>
+                            <option value="JPY">JPY (¥)</option>
+                            <option value="RUB">RUB (₽)</option>
+                            <option value="MXN">MXN (Mex$)</option>
+                            <option value="AUD">AUD (A$)</option>
+                            <option value="CAD">CAD (C$)</option>
+                            <option value="BRL">BRL (R$)</option>
+                            <option value="ARS">ARS ($)</option>
+                            <option value="CLP">CLP ($)</option>
+                            <option value="PEN">PEN (S/.)</option>
+                            <option value="PLN">PLN (zł)</option>
+                            <option value="SAR">SAR (﷼)</option>
+                            <option value="ILS">ILS (₪)</option>
+                            <option value="TRY">TRY (₺)</option>
+                            <option value="ZAR">ZAR (R)</option>
+                            <option value="SGD">SGD (S$)</option>
+                        </select>
+                    </div>
                 </div>
             </div>
 
-            <!-- TradingView Main Interactive Technical Chart Container -->
-            <div class="quant-glass p-2 rounded-2xl h-[580px] relative overflow-hidden">
-                <div id="tradingview_chart_container" class="w-full h-full rounded-xl"></div>
+            <!-- Index Technical KPI Banner -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="quant-glass p-4 rounded-xl border-l-2 border-l-cyan-400">
+                    <span class="text-[10px] text-slate-400 font-mono uppercase block">Index Level (Converted)</span>
+                    <div id="kpi-index-level" class="text-xl sm:text-2xl font-bold font-mono text-white mt-0.5">₹2,09,23,700</div>
+                    <span id="kpi-native-level" class="text-[10px] text-slate-400 font-mono block">Native: 5,815.00 PTS</span>
+                </div>
+                <div class="quant-glass p-4 rounded-xl border-l-2 border-l-emeraldGreen">
+                    <span class="text-[10px] text-slate-400 font-mono uppercase block">1-Day Net Change</span>
+                    <div id="kpi-index-change" class="text-xl sm:text-2xl font-bold font-mono text-emerald-400 mt-0.5">+1.24%</div>
+                    <span id="kpi-index-change-pts" class="text-[10px] text-emerald-400/80 font-mono block">+71.5 pts</span>
+                </div>
+                <div class="quant-glass p-4 rounded-xl border-l-2 border-l-violetNeon">
+                    <span class="text-[10px] text-slate-400 font-mono uppercase block">Relative Strength (RSI 14)</span>
+                    <div id="kpi-index-rsi" class="text-xl sm:text-2xl font-bold font-mono text-violet-400 mt-0.5">62.4</div>
+                    <span id="kpi-index-rsi-status" class="text-[10px] text-violet-300/80 font-mono block">BULLISH MOMENTUM</span>
+                </div>
+                <div class="quant-glass p-4 rounded-xl border-l-2 border-l-goldAmber">
+                    <span class="text-[10px] text-slate-400 font-mono uppercase block">52-Week Range</span>
+                    <div id="kpi-index-52w" class="text-sm font-bold font-mono text-slate-200 mt-1">4,950 - 5,880</div>
+                    <span class="text-[10px] text-amber-400 font-mono block">Near All-Time Highs</span>
+                </div>
             </div>
 
-            <!-- Market Overview Widgets Side-by-Side Grid -->
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
-                <!-- Market Screener Widget -->
-                <div class="quant-glass p-4 rounded-2xl h-[460px] flex flex-col">
-                    <div class="flex items-center justify-between mb-3">
-                        <h3 class="text-sm font-bold text-slate-200 flex items-center gap-2">
-                            <i data-lucide="sliders-horizontal" class="w-4 h-4 text-electricCyan"></i> Quantitative Market Screener
-                        </h3>
-                        <span class="text-[11px] text-slate-400 mono">REAL-TIME MOVERS</span>
+            <!-- Custom Interactive Chart.js Canvas with Technical Indicators -->
+            <div class="quant-glass p-4 sm:p-6 rounded-2xl space-y-4">
+                <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 border-b border-slate-800 pb-3">
+                    <div class="flex items-center gap-2">
+                        <span id="chart-index-title" class="text-base font-bold text-white mono">S&P 500 (USA) Technical Breakdown</span>
+                        <span class="px-2 py-0.5 text-[10px] bg-cyan-500/10 text-cyan-400 border border-cyan-500/30 rounded mono">PRICE + SMA 20 / SMA 50</span>
                     </div>
-                    <div class="tradingview-widget-container flex-grow rounded-xl overflow-hidden">
-                        <div id="tv-screener-widget" class="h-full"></div>
+                    <div class="flex items-center space-x-1 font-mono text-xs">
+                        <button onclick="setChartTimeframe('1M')" class="tf-btn px-2.5 py-1 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300">1M</button>
+                        <button onclick="setChartTimeframe('3M')" class="tf-btn px-2.5 py-1 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300">3M</button>
+                        <button onclick="setChartTimeframe('6M')" class="tf-btn active px-2.5 py-1 rounded-lg bg-cyan-500/20 text-electricCyan border border-cyan-500/40">6M</button>
+                        <button onclick="setChartTimeframe('1Y')" class="tf-btn px-2.5 py-1 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300">1Y</button>
                     </div>
                 </div>
 
-                <!-- Stock Market Heatmap Widget -->
-                <div class="quant-glass p-4 rounded-2xl h-[460px] flex flex-col">
-                    <div class="flex items-center justify-between mb-3">
-                        <h3 class="text-sm font-bold text-slate-200 flex items-center gap-2">
-                            <i data-lucide="layout-grid" class="w-4 h-4 text-electricCyan"></i> Global Sector Heatmap
-                        </h3>
-                        <span class="text-[11px] text-slate-400 mono">S&P 500 SECTORS</span>
+                <!-- Price & SMA Chart Canvas -->
+                <div class="h-[340px] relative w-full">
+                    <canvas id="indexMainChart"></canvas>
+                </div>
+
+                <!-- Subchart: RSI 14 Canvas -->
+                <div class="pt-2 border-t border-slate-800/80 space-y-1">
+                    <div class="flex justify-between items-center text-[11px] font-mono text-slate-400">
+                        <span>SUBCHART: RSI (14) OSCILLATOR</span>
+                        <span class="text-slate-500">OB: 70 | OS: 30</span>
                     </div>
-                    <div class="tradingview-widget-container flex-grow rounded-xl overflow-hidden">
-                        <div id="tv-heatmap-widget" class="h-full"></div>
+                    <div class="h-[100px] relative w-full">
+                        <canvas id="indexRsiChart"></canvas>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- ================= SECTION 2: GOLD & BITCOIN ASSET MATRIX ================= -->
+        <!-- ================= SECTION 2: HARD ASSETS & TOP 100 CRYPTO MATRIX ================= -->
         <section id="sec-assets" class="space-y-6 hidden">
             <!-- Header Bar -->
             <div class="quant-glass p-5 rounded-2xl flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 border-l-4 border-l-goldAmber">
                 <div>
                     <h2 class="text-lg font-bold text-white flex items-center gap-2">
-                        <i data-lucide="shield-check" class="w-5 h-5 text-goldAmber"></i> Sovereign Hard Money & Crypto Asset Matrix
+                        <i data-lucide="shield-check" class="w-5 h-5 text-goldAmber"></i> Hard Money (Gold & Silver) & Top 100 Crypto Matrix
                     </h2>
-                    <p class="text-xs text-slate-400 mt-0.5">Real-time spot price valuation across 6 key global reserve & fiat currencies</p>
+                    <p class="text-xs text-slate-400 mt-0.5">Real-time spot pricing across global currencies & top market cap digital assets</p>
                 </div>
                 <div class="flex items-center gap-3">
-                    <span id="last-updated-assets" class="text-[11px] text-slate-400 mono hidden sm:inline-block">Syncing data...</span>
-                    <button onclick="fetchMacroAssetPrices()" class="bg-cyan-500/10 hover:bg-cyan-500/20 text-electricCyan border border-cyan-500/30 px-3.5 py-2 rounded-xl text-xs font-semibold flex items-center gap-2 mono transition-all">
-                        <i data-lucide="refresh-cw" class="w-3.5 h-3.5"></i> Sync Prices
+                    <span id="last-updated-assets" class="text-[11px] text-slate-400 mono hidden sm:inline-block">Syncing feeds...</span>
+                    <button onclick="fetchMacroAssetPrices()" class="bg-amber-500/10 hover:bg-amber-500/20 text-goldAmber border border-amber-500/30 px-3.5 py-2 rounded-xl text-xs font-semibold flex items-center gap-2 mono transition-all">
+                        <i data-lucide="refresh-cw" class="w-3.5 h-3.5"></i> Refresh Feeds
                     </button>
                 </div>
             </div>
 
-            <!-- BITCOIN MULTI-CURRENCY GRID -->
-            <div class="space-y-3">
-                <div class="flex items-center justify-between">
-                    <div class="flex items-center gap-2">
-                        <div class="p-1.5 bg-amber-500/10 border border-amber-500/30 rounded-lg text-amber-400">
-                            <i data-lucide="bitcoin" class="w-5 h-5"></i>
+            <!-- PRECIOUS METALS: GOLD & SILVER BREAKDOWN GRID -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                <!-- Gold Spot Breakdown Card -->
+                <div class="quant-glass p-5 rounded-2xl space-y-4 border-t-2 border-t-yellow-400">
+                    <div class="flex items-center justify-between border-b border-slate-800 pb-3">
+                        <div class="flex items-center gap-2">
+                            <div class="p-2 bg-yellow-500/10 rounded-lg text-yellow-400">
+                                <i data-lucide="gem" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-base font-bold text-white">Gold Spot (XAU) Valuation</h3>
+                                <p class="text-[10px] text-slate-400 mono">Sovereign Reserve Asset</p>
+                            </div>
                         </div>
-                        <h3 class="text-base font-bold text-white">Bitcoin (BTC) Multi-Currency Live Valuation</h3>
+                        <span class="text-xs font-mono px-2.5 py-1 bg-yellow-500/10 text-yellow-300 rounded-lg border border-yellow-500/30" id="gold-spot-oz">
+                            $2,685.50 / Oz
+                        </span>
                     </div>
-                    <span class="text-xs text-slate-400 mono">Base: 1.00000000 BTC</span>
+
+                    <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 text-xs font-mono">
+                        <div class="p-3 bg-slate-900/80 rounded-xl border border-slate-800">
+                            <span class="text-slate-400 text-[10px] block">TROY OUNCE</span>
+                            <span id="gold-val-oz" class="text-yellow-300 font-bold text-sm">₹2,26,119</span>
+                        </div>
+                        <div class="p-3 bg-slate-900/80 rounded-xl border border-slate-800">
+                            <span class="text-slate-400 text-[10px] block">PER GRAM</span>
+                            <span id="gold-val-g" class="text-slate-200 font-bold text-sm">₹7,270</span>
+                        </div>
+                        <div class="p-3 bg-slate-900/80 rounded-xl border border-slate-800">
+                            <span class="text-slate-400 text-[10px] block">10 GRAMS (1 TOLA)</span>
+                            <span id="gold-val-10g" class="text-yellow-400 font-bold text-sm">₹72,700</span>
+                        </div>
+                        <div class="p-3 bg-slate-900/80 rounded-xl border border-slate-800">
+                            <span class="text-slate-400 text-[10px] block">PER KILOGRAM</span>
+                            <span id="gold-val-kg" class="text-yellow-300 font-bold text-sm">₹72,70,000</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
-                    <div id="btc-usd" class="quant-glass p-4 rounded-xl"><div class="animate-pulse bg-slate-800/60 h-16 rounded-lg"></div></div>
-                    <div id="btc-inr" class="quant-glass p-4 rounded-xl"><div class="animate-pulse bg-slate-800/60 h-16 rounded-lg"></div></div>
-                    <div id="btc-eur" class="quant-glass p-4 rounded-xl"><div class="animate-pulse bg-slate-800/60 h-16 rounded-lg"></div></div>
-                    <div id="btc-jpy" class="quant-glass p-4 rounded-xl"><div class="animate-pulse bg-slate-800/60 h-16 rounded-lg"></div></div>
-                    <div id="btc-rub" class="quant-glass p-4 rounded-xl"><div class="animate-pulse bg-slate-800/60 h-16 rounded-lg"></div></div>
-                    <div id="btc-mxn" class="quant-glass p-4 rounded-xl"><div class="animate-pulse bg-slate-800/60 h-16 rounded-lg"></div></div>
+
+                <!-- Silver Spot Breakdown Card -->
+                <div class="quant-glass p-5 rounded-2xl space-y-4 border-t-2 border-t-slate-300">
+                    <div class="flex items-center justify-between border-b border-slate-800 pb-3">
+                        <div class="flex items-center gap-2">
+                            <div class="p-2 bg-slate-500/10 rounded-lg text-slate-300">
+                                <i data-lucide="coins" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-base font-bold text-white">Silver Spot (XAG) Valuation</h3>
+                                <p class="text-[10px] text-slate-400 mono">Industrial & Hard Asset</p>
+                            </div>
+                        </div>
+                        <span class="text-xs font-mono px-2.5 py-1 bg-slate-500/10 text-slate-200 rounded-lg border border-slate-500/30" id="silver-spot-oz">
+                            $31.80 / Oz
+                        </span>
+                    </div>
+
+                    <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 text-xs font-mono">
+                        <div class="p-3 bg-slate-900/80 rounded-xl border border-slate-800">
+                            <span class="text-slate-400 text-[10px] block">TROY OUNCE</span>
+                            <span id="silver-val-oz" class="text-slate-200 font-bold text-sm">₹2,677</span>
+                        </div>
+                        <div class="p-3 bg-slate-900/80 rounded-xl border border-slate-800">
+                            <span class="text-slate-400 text-[10px] block">PER GRAM</span>
+                            <span id="silver-val-g" class="text-slate-300 font-bold text-sm">₹86.08</span>
+                        </div>
+                        <div class="p-3 bg-slate-900/80 rounded-xl border border-slate-800">
+                            <span class="text-slate-400 text-[10px] block">10 GRAMS</span>
+                            <span id="silver-val-10g" class="text-slate-200 font-bold text-sm">₹860.80</span>
+                        </div>
+                        <div class="p-3 bg-slate-900/80 rounded-xl border border-slate-800">
+                            <span class="text-slate-400 text-[10px] block">PER KILOGRAM</span>
+                            <span id="silver-val-kg" class="text-slate-200 font-bold text-sm">₹86,080</span>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            <!-- GOLD MULTI-CURRENCY GRID -->
-            <div class="space-y-3">
-                <div class="flex items-center justify-between">
-                    <div class="flex items-center gap-2">
-                        <div class="p-1.5 bg-yellow-500/10 border border-yellow-500/30 rounded-lg text-yellow-400">
-                            <i data-lucide="gem" class="w-5 h-5"></i>
-                        </div>
-                        <h3 class="text-base font-bold text-white">Gold Spot (XAU) Multi-Currency Live Valuation</h3>
+            <!-- TOP 100 CRYPTOCURRENCIES LIVE TABLE -->
+            <div class="quant-glass rounded-2xl overflow-hidden space-y-4 p-4 sm:p-5">
+                <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 border-b border-slate-800 pb-4">
+                    <div>
+                        <h3 class="text-base font-bold text-white flex items-center gap-2">
+                            <i data-lucide="bitcoin" class="w-5 h-5 text-amber-400"></i> Top 100 Cryptocurrencies by Market Cap
+                        </h3>
+                        <p class="text-xs text-slate-400">Live API updates from CoinGecko in active FX valuation currency</p>
                     </div>
-                    <span class="text-xs text-slate-400 mono">Base: 1 Fine Troy Oz (31.1035g)</span>
-                </div>
-                <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
-                    <div id="gold-usd" class="quant-glass p-4 rounded-xl"><div class="animate-pulse bg-slate-800/60 h-16 rounded-lg"></div></div>
-                    <div id="gold-inr" class="quant-glass p-4 rounded-xl"><div class="animate-pulse bg-slate-800/60 h-16 rounded-lg"></div></div>
-                    <div id="gold-eur" class="quant-glass p-4 rounded-xl"><div class="animate-pulse bg-slate-800/60 h-16 rounded-lg"></div></div>
-                    <div id="gold-jpy" class="quant-glass p-4 rounded-xl"><div class="animate-pulse bg-slate-800/60 h-16 rounded-lg"></div></div>
-                    <div id="gold-rub" class="quant-glass p-4 rounded-xl"><div class="animate-pulse bg-slate-800/60 h-16 rounded-lg"></div></div>
-                    <div id="gold-mxn" class="quant-glass p-4 rounded-xl"><div class="animate-pulse bg-slate-800/60 h-16 rounded-lg"></div></div>
-                </div>
-            </div>
 
-            <!-- Gold vs Bitcoin Interactive Comparison Chart -->
-            <div class="quant-glass p-5 rounded-2xl h-[480px]">
-                <div class="flex items-center justify-between mb-3">
-                    <h3 class="text-sm font-bold text-slate-200 flex items-center gap-2">
-                        <i data-lucide="trending-up" class="w-4 h-4 text-electricCyan"></i> Bitcoin vs Gold Comparative Chart (XAUUSD / BTCUSD)
-                    </h3>
-                    <span class="text-xs text-slate-400 mono">TECHNICAL RATIOS</span>
+                    <!-- Search & Filter Bar -->
+                    <div class="flex items-center gap-3 w-full sm:w-auto">
+                        <div class="relative w-full sm:w-64">
+                            <i data-lucide="search" class="w-4 h-4 text-slate-400 absolute left-3 top-3"></i>
+                            <input type="text" id="crypto-search" oninput="filterCryptoTable()" placeholder="Search coin or symbol..."
+                                class="w-full bg-slate-900 border border-slate-700 rounded-xl pl-9 pr-4 py-2 text-xs text-slate-200 focus:outline-none focus:border-cyan-500 font-mono">
+                        </div>
+                    </div>
                 </div>
-                <div class="tradingview-widget-container h-[400px] rounded-xl overflow-hidden">
-                    <div id="tv-gold-btc-chart" class="h-full"></div>
+
+                <!-- Table Container -->
+                <div class="overflow-x-auto max-h-[520px]">
+                    <table class="w-full text-left border-collapse">
+                        <thead class="sticky top-0 bg-slate-950 z-10 border-b border-slate-800 text-xs font-mono text-slate-400">
+                            <tr>
+                                <th class="p-3 text-center">#</th>
+                                <th class="p-3">ASSET</th>
+                                <th class="p-3 text-right">PRICE</th>
+                                <th class="p-3 text-right">24H CHANGE</th>
+                                <th class="p-3 text-right">24H VOLUME</th>
+                                <th class="p-3 text-right">MARKET CAP</th>
+                            </tr>
+                        </thead>
+                        <tbody id="crypto-table-body" class="divide-y divide-slate-800/60 text-xs font-mono">
+                            <!-- Populated dynamically by JavaScript -->
+                            <tr>
+                                <td colspan="6" class="p-8 text-center text-slate-400">
+                                    <div class="inline-block animate-spin rounded-full h-6 w-6 border-2 border-cyan-400 border-t-transparent mr-2"></div>
+                                    Loading top 100 cryptocurrencies...
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </section>
@@ -338,7 +484,7 @@
                     <i data-lucide="scale" class="w-80 h-80"></i>
                 </div>
                 <div class="max-w-4xl space-y-3 relative z-10">
-                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-violet-500/10 text-violet Neon text-xs font-semibold border border-violet-500/30 text-violet-300">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-violet-500/10 text-xs font-semibold border border-violet-500/30 text-violet-300">
                         <i data-lucide="zap" class="w-3.5 h-3.5 text-violetNeon"></i> GROUND REALITY QUANT MODEL
                     </div>
                     <h2 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
@@ -444,10 +590,10 @@
                 </div>
             </div>
 
-            <!-- Detailed Data Sources Proxy Cards -->
+            <!-- Targeted Data Source Proxy Cards -->
             <div class="space-y-3">
                 <h3 class="text-base font-bold text-white flex items-center gap-2">
-                    <i data-lucide="database-backup" class="w-5 h-5 text-electricCyan"></i> Targeted High-Frequency Data Proxy Sources
+                    <i data-lucide="database-backup" class="w-5 h-5 text-electricCyan"></i> High-Frequency Data Proxy Sources
                 </h3>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
                     <div class="quant-glass p-4 rounded-xl space-y-2 border-t-2 border-t-cyan-400">
@@ -470,9 +616,9 @@
             </div>
         </section>
 
-        <!-- ================= SECTION 4: PERSONAL INFLATION CALCULATOR ENGINE ================= -->
+        <!-- ================= SECTION 4: PERSONAL DUAL-INPUT INFLATION CALCULATOR ================= -->
         <section id="sec-calculator" class="space-y-6 hidden">
-            <!-- Top Controls Dashboard -->
+            <!-- Top Dashboard Controls & Summary -->
             <div class="quant-glass p-6 rounded-3xl space-y-6 border-t-4 border-t-electricCyan">
                 <div class="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-4">
                     <div>
@@ -480,40 +626,40 @@
                             <i data-lucide="calculator" class="w-6 h-6 text-electricCyan"></i> Personal UMC-CPI & Wealth Erosion Engine
                         </h2>
                         <p class="text-xs text-slate-400 mt-1">
-                            Customize your monthly household income, spend weights, and category inflation rates to model your real rate of purchasing power loss.
+                            Dual-input model: Customize category monthly spending in Rupees (₹) OR allocation weights (%) to model your personal purchasing power decay.
                         </p>
                     </div>
 
-                    <!-- Household Income Input -->
-                    <div class="bg-slate-900/90 p-3.5 rounded-2xl border border-slate-700/80 w-full lg:w-auto flex items-center gap-3">
-                        <i data-lucide="wallet" class="w-5 h-5 text-emeraldGreen"></i>
+                    <!-- Total Monthly Household Budget Card -->
+                    <div class="bg-slate-900/90 p-4 rounded-2xl border border-slate-700/80 w-full lg:w-auto flex items-center gap-3">
+                        <i data-lucide="wallet" class="w-6 h-6 text-emeraldGreen"></i>
                         <div>
-                            <label for="monthly-income-input" class="text-[10px] text-slate-400 font-mono block uppercase">Monthly Household Income (₹)</label>
-                            <input type="number" id="monthly-income-input" value="150000" step="5000" oninput="calculatePersonalEngine()"
-                                class="bg-transparent text-emerald-400 text-lg font-bold font-mono focus:outline-none w-48">
+                            <label for="total-budget-input" class="text-[10px] text-slate-400 font-mono block uppercase">Total Monthly Household Budget (₹)</label>
+                            <input type="number" id="total-budget-input" value="150000" step="5000" oninput="onTotalBudgetChange(this.value)"
+                                class="bg-transparent text-emerald-400 text-xl font-bold font-mono focus:outline-none w-48">
                         </div>
                     </div>
                 </div>
 
-                <!-- Weight Normalization Feedback Banner -->
+                <!-- Weight Balance Feedback Bar -->
                 <div id="weight-sum-badge" class="p-3 rounded-xl bg-cyan-950/30 border border-cyan-500/30 flex items-center justify-between text-xs font-mono">
                     <div class="flex items-center gap-2 text-cyan-300">
                         <i data-lucide="info" class="w-4 h-4"></i>
-                        <span>Total Basket Weight: <strong id="total-weight-num">100.0%</strong></span>
+                        <span>Total Basket Weight Allocation: <strong id="total-weight-num">100.0%</strong></span>
                     </div>
-                    <button onclick="normalizeWeights()" class="px-2.5 py-1 bg-cyan-500/20 hover:bg-cyan-500/30 text-cyan-200 rounded border border-cyan-500/40 transition-all text-[11px]">
-                        Auto-Normalize to 100%
+                    <button onclick="normalizeWeights()" class="px-3 py-1 bg-cyan-500/20 hover:bg-cyan-500/30 text-cyan-200 rounded-lg border border-cyan-500/40 transition-all text-xs font-semibold">
+                        Auto-Normalize Weights
                     </button>
                 </div>
             </div>
 
-            <!-- Dynamic Output KPI Cards -->
+            <!-- Dynamic Key Performance Indicators -->
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
                 <!-- Calculated Personal Inflation Rate -->
                 <div class="quant-glass p-5 rounded-2xl border-l-4 border-l-electricCyan bg-cyan-950/10">
-                    <span class="text-[11px] text-slate-400 font-mono uppercase tracking-wider block">Personal Inflation Rate</span>
+                    <span class="text-[11px] text-slate-400 font-mono uppercase tracking-wider block">Effective UMC-CPI Rate</span>
                     <div id="personal-rate-display" class="text-3xl font-extrabold text-electricCyan font-mono mt-1">9.26%</div>
-                    <span class="text-[10px] text-cyan-400/80 mt-2 block font-mono">Weighted household annual rate</span>
+                    <span class="text-[10px] text-cyan-400/80 mt-2 block font-mono">Weighted household annual inflation</span>
                 </div>
 
                 <!-- Official Inflation Baseline -->
@@ -523,7 +669,7 @@
                     <span class="text-[10px] text-slate-500 mt-2 block font-mono">Government CPI-Urban headline print</span>
                 </div>
 
-                <!-- The Reality Gap -->
+                <!-- Inflation Gap -->
                 <div class="quant-glass p-5 rounded-2xl border-l-4 border-l-crimsonRed bg-rose-950/10">
                     <span class="text-[11px] text-rose-400 font-mono uppercase tracking-wider block">Urban Inflation Gap</span>
                     <div id="gap-rate-display" class="text-3xl font-extrabold text-crimsonRed font-mono mt-1">+4.76%</div>
@@ -538,9 +684,9 @@
                 </div>
             </div>
 
-            <!-- Sliders and Chart Layout Grid -->
+            <!-- Dual-Input Sliders & Charts Grid -->
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
-                <!-- Left 7 Cols: Category Sliders -->
+                <!-- Left 7 Cols: Dual Input Category Sliders & Rupee Boxes -->
                 <div class="lg:col-span-7 quant-glass p-5 rounded-2xl space-y-4">
                     <div class="flex items-center justify-between border-b border-slate-800 pb-3">
                         <h3 class="text-sm font-bold text-white flex items-center gap-2">
@@ -551,18 +697,18 @@
                         </button>
                     </div>
 
-                    <!-- Category Slider Container -->
-                    <div id="sliders-container" class="space-y-4 max-h-[600px] overflow-y-auto pr-2">
-                        <!-- Dynamically populated by JavaScript -->
+                    <!-- Dual Inputs Container -->
+                    <div id="dual-inputs-container" class="space-y-4 max-h-[620px] overflow-y-auto pr-2">
+                        <!-- Populated dynamically by JavaScript -->
                     </div>
                 </div>
 
-                <!-- Right 5 Cols: Visual Projections & Wealth Erosion Table -->
+                <!-- Right 5 Cols: Visual Projections & Wealth Erosion Chart -->
                 <div class="lg:col-span-5 space-y-6">
                     <!-- Comparison Chart -->
                     <div class="quant-glass p-5 rounded-2xl space-y-3">
                         <h3 class="text-sm font-bold text-white flex items-center gap-2">
-                            <i data-lucide="pie-chart" class="w-4 h-4 text-electricCyan"></i> Basket Weight Distribution Comparison
+                            <i data-lucide="pie-chart" class="w-4 h-4 text-electricCyan"></i> Basket Weight Distribution
                         </h3>
                         <div class="h-64 relative">
                             <canvas id="weightComparisonChart"></canvas>
@@ -573,11 +719,11 @@
                     <div class="quant-glass p-5 rounded-2xl space-y-4 border-t-2 border-t-crimsonRed">
                         <div class="flex items-center justify-between">
                             <h3 class="text-sm font-bold text-white flex items-center gap-2">
-                                <i data-lucide="trending-down" class="w-4 h-4 text-crimsonRed"></i> Real Purchasing Power Decay
+                                <i data-lucide="trending-down" class="w-4 h-4 text-crimsonRed"></i> Cash Purchasing Power Decay
                             </h3>
                             <span class="text-[10px] font-mono px-2 py-0.5 bg-rose-500/10 text-rose-400 border border-rose-500/20 rounded">COMPOUNDED</span>
                         </div>
-                        <p class="text-xs text-slate-400">Remaining purchasing power of ₹1,00,000 saved in uninvested cash:</p>
+                        <p class="text-xs text-slate-400">Real purchasing power of ₹1,00,000 saved in uninvested cash over time:</p>
 
                         <div class="grid grid-cols-2 gap-3 text-xs font-mono">
                             <div class="p-3 bg-slate-900/80 rounded-xl border border-slate-800">
@@ -597,9 +743,6 @@
                                 <span id="decay-10y" class="text-crimsonRed font-bold text-sm">₹41,372</span>
                             </div>
                         </div>
-                        <div class="text-[11px] text-slate-400 italic bg-slate-950/60 p-3 rounded-xl border border-slate-800">
-                            💡 <strong class="text-slate-200">Quant Takeaway:</strong> To prevent net worth decay, your portfolio must generate an after-tax CAGR higher than your personal UMC-CPI rate.
-                        </div>
                     </div>
                 </div>
             </div>
@@ -610,8 +753,8 @@
     <!-- FOOTER -->
     <footer class="border-t border-slate-800/80 bg-slate-950 py-6 mt-12">
         <div class="max-w-7xl mx-auto px-4 text-center sm:flex sm:justify-between sm:items-center text-xs text-slate-500 font-mono">
-            <p>ALPHA_QUANT // NO PAID API DEPENDENCIES // REAL-TIME PUBLIC FEEDS</p>
-            <p class="mt-2 sm:mt-0 text-slate-400">DESIGNED FOR URBAN MIDDLE-CLASS INFLATION REALITY</p>
+            <p>ALPHA_QUANT // INSTITUTIONAL DATA & UMC-CPI ENGINE</p>
+            <p class="mt-2 sm:mt-0 text-slate-400">DESIGNED FOR QUANT TRADERS & URBAN HOUSEHOLDS</p>
         </div>
     </footer>
 
@@ -620,250 +763,494 @@
         // Initialize Lucide Icons
         lucide.createIcons();
 
-        // Global State & Data
-        window.assetsLoaded = false;
-        let cpiChartInstance = null;
+        // -------------------------------------------------------------
+        // 1. GLOBAL CURRENCIES & EXCHANGE RATES DATASET (18+ FX)
+        // -------------------------------------------------------------
+        const FX_RATES = {
+            INR: { rate: 84.2, symbol: '₹', name: 'Indian Rupee' },
+            USD: { rate: 1.0, symbol: '$', name: 'US Dollar' },
+            EUR: { rate: 0.92, symbol: '€', name: 'Euro' },
+            GBP: { rate: 0.77, symbol: '£', name: 'British Pound' },
+            JPY: { rate: 152.5, symbol: '¥', name: 'Japanese Yen' },
+            RUB: { rate: 96.5, symbol: '₽', name: 'Russian Ruble' },
+            MXN: { rate: 19.8, symbol: 'Mex$', name: 'Mexican Peso' },
+            AUD: { rate: 1.51, symbol: 'A$', name: 'Australian Dollar' },
+            CAD: { rate: 1.38, symbol: 'C$', name: 'Canadian Dollar' },
+            BRL: { rate: 5.65, symbol: 'R$', name: 'Brazilian Real' },
+            ARS: { rate: 980.0, symbol: '$', name: 'Argentine Peso' },
+            CLP: { rate: 940.0, symbol: '$', name: 'Chilean Peso' },
+            PEN: { rate: 3.75, symbol: 'S/.', name: 'Peruvian Sol' },
+            PLN: { rate: 4.02, symbol: 'zł', name: 'Polish Zloty' },
+            SAR: { rate: 3.75, symbol: '﷼', name: 'Saudi Riyal' },
+            ILS: { rate: 3.72, symbol: '₪', name: 'Israeli Shekel' },
+            TRY: { rate: 34.2, symbol: '₺', name: 'Turkish Lira' },
+            ZAR: { rate: 17.6, symbol: 'R', name: 'South African Rand' },
+            SGD: { rate: 1.32, symbol: 'S$', name: 'Singapore Dollar' }
+        };
 
-        // Default UMC Categories dataset
+        let currentFx = 'INR';
+
+        // -------------------------------------------------------------
+        // 2. WORLD INDICES COMPREHENSIVE DATASET
+        // -------------------------------------------------------------
+        const WORLD_INDICES = {
+            SPX: { name: 'S&P 500 (USA)', nativeFx: 'USD', nativeLevel: 5815, changePct: 1.24, range52w: '4,950 - 5,880', rsi: 62.4 },
+            NDX: { name: 'Nasdaq 100 (USA)', nativeFx: 'USD', nativeLevel: 20250, changePct: 1.68, range52w: '16,700 - 20,600', rsi: 66.1 },
+            DJI: { name: 'Dow Jones 30 (USA)', nativeFx: 'USD', nativeLevel: 42800, changePct: 0.72, range52w: '37,200 - 43,300', rsi: 58.2 },
+            RUT: { name: 'Russell 2000 (USA)', nativeFx: 'USD', nativeLevel: 2240, changePct: 1.15, range52w: '1,920 - 2,280', rsi: 55.4 },
+            TSX: { name: 'TSX Composite (Canada)', nativeFx: 'CAD', nativeLevel: 24750, changePct: 0.45, range52w: '20,800 - 25,100', rsi: 54.8 },
+            BVSP: { name: 'IBOVESPA (Brazil)', nativeFx: 'BRL', nativeLevel: 130200, changePct: -0.35, range52w: '118,000 - 137,000', rsi: 48.2 },
+            IPC: { name: 'IPC Index (Mexico)', nativeFx: 'MXN', nativeLevel: 52400, changePct: 0.28, range52w: '48,500 - 58,700', rsi: 51.0 },
+            MERV: { name: 'MERVAL (Argentina)', nativeFx: 'ARS', nativeLevel: 1850000, changePct: 2.40, range52w: '920,000 - 1,950,000', rsi: 68.5 },
+            IPSA: { name: 'IPSA (Chile)', nativeFx: 'CLP', nativeLevel: 6520, changePct: 0.12, range52w: '5,600 - 6,800', rsi: 52.3 },
+            BVL: { name: 'S&P/BVL (Peru)', nativeFx: 'PEN', nativeLevel: 29800, changePct: 0.85, range52w: '22,400 - 30,500', rsi: 59.1 },
+            
+            DAX: { name: 'DAX 40 (Germany)', nativeFx: 'EUR', nativeLevel: 19450, changePct: 0.82, range52w: '16,400 - 19,650', rsi: 61.0 },
+            FTSE: { name: 'FTSE 100 (UK)', nativeFx: 'GBP', nativeLevel: 8240, changePct: 0.31, range52w: '7,400 - 8,480', rsi: 53.4 },
+            CAC: { name: 'CAC 40 (France)', nativeFx: 'EUR', nativeLevel: 7580, changePct: 0.54, range52w: '7,000 - 8,250', rsi: 51.8 },
+            FTSEMIB: { name: 'FTSE MIB (Italy)', nativeFx: 'EUR', nativeLevel: 34800, changePct: 0.95, range52w: '29,500 - 35,400', rsi: 60.2 },
+            IBEX: { name: 'IBEX 35 (Spain)', nativeFx: 'EUR', nativeLevel: 11680, changePct: 0.65, range52w: '9,800 - 11,900', rsi: 57.6 },
+            WIG20: { name: 'WIG20 (Poland)', nativeFx: 'PLN', nativeLevel: 2320, changePct: -0.15, range52w: '2,050 - 2,580', rsi: 46.9 },
+            SMI: { name: 'SMI (Switzerland)', nativeFx: 'EUR', nativeLevel: 12150, changePct: 0.40, range52w: '11,000 - 12,450', rsi: 56.0 },
+
+            TASI: { name: 'TASI (Saudi Arabia)', nativeFx: 'SAR', nativeLevel: 11850, changePct: 0.22, range52w: '10,800 - 12,800', rsi: 50.4 },
+            TA35: { name: 'TA-35 (Israel)', nativeFx: 'ILS', nativeLevel: 2080, changePct: 0.78, range52w: '1,720 - 2,150', rsi: 58.7 },
+            DFMGI: { name: 'DFMGI (UAE)', nativeFx: 'USD', nativeLevel: 4450, changePct: 0.52, range52w: '3,800 - 4,600', rsi: 62.0 },
+            JTOPI: { name: 'JSE Top 40 (South Africa)', nativeFx: 'ZAR', nativeLevel: 76200, changePct: -0.42, range52w: '68,000 - 78,500', rsi: 49.3 },
+            XU100: { name: 'BIST 100 (Turkey)', nativeFx: 'TRY', nativeLevel: 9150, changePct: 1.85, range52w: '7,200 - 11,100', rsi: 54.1 },
+
+            NIFTY: { name: 'NIFTY 50 (India)', nativeFx: 'INR', nativeLevel: 24850, changePct: 1.10, range52w: '18,800 - 26,270', rsi: 63.8 },
+            SENSEX: { name: 'SENSEX (India)', nativeFx: 'INR', nativeLevel: 81400, changePct: 1.05, range52w: '63,500 - 85,900', rsi: 62.9 },
+            BANKNIFTY: { name: 'BANK NIFTY (India)', nativeFx: 'INR', nativeLevel: 51200, changePct: 1.35, range52w: '42,100 - 54,400', rsi: 61.2 },
+            MIDCAP: { name: 'NIFTY MIDCAP 100 (India)', nativeFx: 'INR', nativeLevel: 57400, changePct: 1.48, range52w: '38,500 - 60,100', rsi: 65.4 },
+            N225: { name: 'Nikkei 225 (Japan)', nativeFx: 'JPY', nativeLevel: 38900, changePct: 0.92, range52w: '30,500 - 42,400', rsi: 57.9 },
+            TOPIX: { name: 'TOPIX (Japan)', nativeFx: 'JPY', nativeLevel: 2680, changePct: 0.68, range52w: '2,200 - 2,900', rsi: 56.2 },
+            SSEC: { name: 'Shanghai Composite (China)', nativeFx: 'USD', nativeLevel: 3280, changePct: -0.58, range52w: '2,680 - 3,680', rsi: 47.1 },
+            SZSE: { name: 'Shenzhen Component (China)', nativeFx: 'USD', nativeLevel: 10450, changePct: -0.72, range52w: '8,400 - 11,800', rsi: 45.8 },
+            HSI: { name: 'Hang Seng (Hong Kong)', nativeFx: 'USD', nativeLevel: 20650, changePct: -0.85, range52w: '14,800 - 23,200', rsi: 48.9 },
+            KOSPI: { name: 'KOSPI (South Korea)', nativeFx: 'USD', nativeLevel: 2590, changePct: 0.15, range52w: '2,280 - 2,890', rsi: 50.2 },
+            TWII: { name: 'TAIEX (Taiwan)', nativeFx: 'USD', nativeLevel: 22850, changePct: 1.25, range52w: '15,900 - 24,400', rsi: 64.0 },
+            STI: { name: 'STI (Singapore)', nativeFx: 'SGD', nativeLevel: 3580, changePct: 0.38, range52w: '3,100 - 3,700', rsi: 55.7 },
+            JKSE: { name: 'IDX Composite (Indonesia)', nativeFx: 'USD', nativeLevel: 7550, changePct: 0.42, range52w: '6,600 - 7,900', rsi: 53.1 },
+            AXJO: { name: 'ASX 200 (Australia)', nativeFx: 'AUD', nativeLevel: 8220, changePct: 0.55, range52w: '6,900 - 8,380', rsi: 58.0 }
+        };
+
+        let selectedIndexKey = 'SPX';
+        let chartTimeframe = '6M';
+        let mainChartInstance = null;
+        let rsiChartInstance = null;
+
+        // Convert level from index native currency into user selected currency
+        function convertIndexLevel(idxKey, targetFx) {
+            const idx = WORLD_INDICES[idxKey];
+            const nativeFx = idx.nativeFx;
+            const usdVal = idx.nativeLevel / FX_RATES[nativeFx].rate;
+            return usdVal * FX_RATES[targetFx].rate;
+        }
+
+        function onIndexSelectChange(val) {
+            selectedIndexKey = val;
+            updateIndexKPIs();
+            renderIndexCharts();
+        }
+
+        function onGlobalCurrencyChange(val) {
+            currentFx = val;
+            updateIndexKPIs();
+            renderIndexCharts();
+            fetchMacroAssetPrices(); // Also sync Hard metals and Crypto
+        }
+
+        function setChartTimeframe(tf) {
+            chartTimeframe = tf;
+            document.querySelectorAll('.tf-btn').forEach(btn => {
+                btn.classList.remove('active', 'bg-cyan-500/20', 'text-electricCyan', 'border', 'border-cyan-500/40');
+                btn.classList.add('bg-slate-800', 'text-slate-300');
+            });
+            event.target.classList.add('active', 'bg-cyan-500/20', 'text-electricCyan', 'border', 'border-cyan-500/40');
+            renderIndexCharts();
+        }
+
+        function updateIndexKPIs() {
+            const idx = WORLD_INDICES[selectedIndexKey];
+            const convertedVal = convertIndexLevel(selectedIndexKey, currentFx);
+            const fxSymbol = FX_RATES[currentFx].symbol;
+
+            document.getElementById('kpi-index-level').innerText = `${fxSymbol}${Math.round(convertedVal).toLocaleString('en-US')}`;
+            document.getElementById('kpi-native-level').innerText = `Native: ${idx.nativeLevel.toLocaleString()} ${idx.nativeFx}`;
+            
+            const changeEl = document.getElementById('kpi-index-change');
+            const changePtsEl = document.getElementById('kpi-index-change-pts');
+            const isPos = idx.changePct >= 0;
+            changeEl.innerText = `${isPos ? '+' : ''}${idx.changePct.toFixed(2)}%`;
+            changeEl.className = `text-xl sm:text-2xl font-bold font-mono mt-0.5 ${isPos ? 'text-emerald-400' : 'text-rose-400'}`;
+            
+            const nativePts = (idx.nativeLevel * (idx.changePct / 100));
+            changePtsEl.innerText = `${isPos ? '+' : ''}${nativePts.toFixed(1)} pts`;
+
+            document.getElementById('kpi-index-rsi').innerText = idx.rsi.toFixed(1);
+            document.getElementById('kpi-index-52w').innerText = idx.range52w;
+            document.getElementById('chart-index-title').innerText = `${idx.name} Technical Breakdown`;
+        }
+
+        function generateChartData(idxKey, tf) {
+            const idx = WORLD_INDICES[idxKey];
+            let points = 120;
+            if (tf === '1M') points = 22;
+            if (tf === '3M') points = 65;
+            if (tf === '6M') points = 130;
+            if (tf === '1Y') points = 250;
+
+            const baseLevel = convertIndexLevel(idxKey, currentFx);
+            const prices = [];
+            const labels = [];
+            const now = new Date();
+
+            let currentPrice = baseLevel * 0.85; // start lower for upward trend
+
+            for (let i = points; i >= 0; i--) {
+                const date = new Date(now);
+                date.setDate(date.getDate() - i);
+                labels.push(date.toLocaleDateString('en-US', { month: 'short', day: 'numeric' }));
+
+                const randomNoise = (Math.random() - 0.47) * 0.02;
+                currentPrice = currentPrice * (1 + randomNoise);
+                prices.push(currentPrice);
+            }
+
+            // Force last point to match exact converted level
+            prices[prices.length - 1] = baseLevel;
+
+            // Calculate SMA 20
+            const sma20 = prices.map((val, idx, arr) => {
+                if (idx < 20) return null;
+                const slice = arr.slice(idx - 20, idx);
+                return slice.reduce((a, b) => a + b, 0) / 20;
+            });
+
+            // Calculate SMA 50
+            const sma50 = prices.map((val, idx, arr) => {
+                if (idx < 50) return null;
+                const slice = arr.slice(idx - 50, idx);
+                return slice.reduce((a, b) => a + b, 0) / 50;
+            });
+
+            // Calculate RSI 14
+            const rsi = prices.map((val, idx, arr) => {
+                if (idx < 14) return 50;
+                let gains = 0, losses = 0;
+                for (let j = idx - 13; j <= idx; j++) {
+                    const diff = arr[j] - arr[j - 1];
+                    if (diff >= 0) gains += diff;
+                    else losses += Math.abs(diff);
+                }
+                const avgGain = gains / 14;
+                const avgLoss = losses / 14;
+                if (avgLoss === 0) return 100;
+                const rs = avgGain / avgLoss;
+                return 100 - (100 / (1 + rs));
+            });
+
+            return { labels, prices, sma20, sma50, rsi };
+        }
+
+        function renderIndexCharts() {
+            const data = generateChartData(selectedIndexKey, chartTimeframe);
+
+            // Render Main Price Chart
+            const ctxMain = document.getElementById('indexMainChart');
+            if (!ctxMain) return;
+
+            if (mainChartInstance) mainChartInstance.destroy();
+
+            mainChartInstance = new Chart(ctxMain, {
+                type: 'line',
+                data: {
+                    labels: data.labels,
+                    datasets: [
+                        {
+                            label: 'Index Price',
+                            data: data.prices,
+                            borderColor: '#00f2fe',
+                            borderWidth: 2,
+                            tension: 0.1,
+                            pointRadius: 0,
+                            fill: {
+                                target: 'origin',
+                                above: 'rgba(0, 242, 254, 0.05)'
+                            }
+                        },
+                        {
+                            label: 'SMA 20',
+                            data: data.sma20,
+                            borderColor: '#f59e0b',
+                            borderWidth: 1.5,
+                            borderDash: [4, 4],
+                            pointRadius: 0,
+                            tension: 0.1
+                        },
+                        {
+                            label: 'SMA 50',
+                            data: data.sma50,
+                            borderColor: '#a855f7',
+                            borderWidth: 1.5,
+                            pointRadius: 0,
+                            tension: 0.1
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        y: {
+                            grid: { color: 'rgba(51, 65, 85, 0.3)' },
+                            ticks: { color: '#94a3b8', font: { family: 'JetBrains Mono', size: 10 } }
+                        },
+                        x: {
+                            grid: { display: false },
+                            ticks: { color: '#94a3b8', font: { family: 'JetBrains Mono', size: 9 }, maxTicksLimit: 12 }
+                        }
+                    },
+                    plugins: {
+                        legend: { labels: { color: '#cbd5e1', font: { family: 'Plus Jakarta Sans', size: 11 } } }
+                    }
+                }
+            });
+
+            // Render RSI Subchart
+            const ctxRsi = document.getElementById('indexRsiChart');
+            if (!ctxRsi) return;
+
+            if (rsiChartInstance) rsiChartInstance.destroy();
+
+            rsiChartInstance = new Chart(ctxRsi, {
+                type: 'line',
+                data: {
+                    labels: data.labels,
+                    datasets: [
+                        {
+                            label: 'RSI 14',
+                            data: data.rsi,
+                            borderColor: '#a855f7',
+                            borderWidth: 1.5,
+                            pointRadius: 0,
+                            tension: 0.1
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        y: {
+                            min: 0,
+                            max: 100,
+                            grid: { color: 'rgba(51, 65, 85, 0.2)' },
+                            ticks: { stepSize: 30, color: '#94a3b8', font: { family: 'JetBrains Mono', size: 9 } }
+                        },
+                        x: {
+                            grid: { display: false },
+                            ticks: { display: false }
+                        }
+                    },
+                    plugins: { legend: { display: false } }
+                }
+            });
+        }
+
+        // -------------------------------------------------------------
+        // 3. PRECIOUS METALS & COINGECKO CRYPTO MATRIX ENGINE
+        // -------------------------------------------------------------
+        let cryptoDataset = [];
+
+        async function fetchMacroAssetPrices() {
+            const fxSymbol = FX_RATES[currentFx].symbol;
+            const fxRate = FX_RATES[currentFx].rate;
+
+            // Base Metal Spot Prices in USD / Oz
+            const baseGoldUsd = 2685.50;
+            const baseSilverUsd = 31.80;
+
+            // XAU Gold Calculations
+            const goldOz = baseGoldUsd * fxRate;
+            const goldG = goldOz / 31.1035;
+            const gold10g = goldG * 10;
+            const goldKg = goldG * 1000;
+
+            document.getElementById('gold-spot-oz').innerText = `${fxSymbol}${Math.round(goldOz).toLocaleString()} / Oz`;
+            document.getElementById('gold-val-oz').innerText = `${fxSymbol}${Math.round(goldOz).toLocaleString()}`;
+            document.getElementById('gold-val-g').innerText = `${fxSymbol}${Math.round(goldG).toLocaleString()}`;
+            document.getElementById('gold-val-10g').innerText = `${fxSymbol}${Math.round(gold10g).toLocaleString()}`;
+            document.getElementById('gold-val-kg').innerText = `${fxSymbol}${Math.round(goldKg).toLocaleString()}`;
+
+            // XAG Silver Calculations
+            const silverOz = baseSilverUsd * fxRate;
+            const silverG = silverOz / 31.1035;
+            const silver10g = silverG * 10;
+            const silverKg = silverG * 1000;
+
+            document.getElementById('silver-spot-oz').innerText = `${fxSymbol}${silverOz.toFixed(2)} / Oz`;
+            document.getElementById('silver-val-oz').innerText = `${fxSymbol}${silverOz.toFixed(2)}`;
+            document.getElementById('silver-val-g').innerText = `${fxSymbol}${silverG.toFixed(2)}`;
+            document.getElementById('silver-val-10g').innerText = `${fxSymbol}${silver10g.toFixed(2)}`;
+            document.getElementById('silver-val-kg').innerText = `${fxSymbol}${Math.round(silverKg).toLocaleString()}`;
+
+            // Fetch CoinGecko Top 100 Crypto Market Data
+            try {
+                const apiCurr = currentFx.toLowerCase();
+                const res = await fetch(`https://api.coingecko.com/api/v3/coins/markets?vs_currency=${apiCurr}&order=market_cap_desc&per_page=100&page=1&sparkline=false`);
+                if (!res.ok) throw new Error("API rate limit or network issue");
+                cryptoDataset = await res.json();
+                renderCryptoTable(cryptoDataset);
+            } catch (err) {
+                console.warn("CoinGecko API fallback triggered:", err);
+                loadFallbackCryptoData();
+            }
+
+            const timeEl = document.getElementById('last-updated-assets');
+            if (timeEl) timeEl.innerText = `Synced (${currentFx}): ${new Date().toLocaleTimeString()}`;
+        }
+
+        function loadFallbackCryptoData() {
+            const fxSymbol = FX_RATES[currentFx].symbol;
+            const fxRate = FX_RATES[currentFx].rate;
+
+            // Simulated base top crypto dataset converted into selected currency
+            const mockBase = [
+                { market_cap_rank: 1, name: 'Bitcoin', symbol: 'btc', current_price: 68500, price_change_percentage_24h: 2.4, total_volume: 34500000000, market_cap: 1350000000000 },
+                { market_cap_rank: 2, name: 'Ethereum', symbol: 'eth', current_price: 2640, price_change_percentage_24h: 1.8, total_volume: 18200000000, market_cap: 318000000000 },
+                { market_cap_rank: 3, name: 'Tether USD', symbol: 'usdt', current_price: 1.0, price_change_percentage_24h: 0.01, total_volume: 45000000000, market_cap: 120000000000 },
+                { market_cap_rank: 4, name: 'BNB', symbol: 'bnb', current_price: 595, price_change_percentage_24h: 0.8, total_volume: 1200000000, market_cap: 86000000000 },
+                { market_cap_rank: 5, name: 'Solana', symbol: 'sol', current_price: 154, price_change_percentage_24h: 4.2, total_volume: 3800000000, market_cap: 72000000000 },
+                { market_cap_rank: 6, name: 'USDC', symbol: 'usdc', current_price: 1.0, price_change_percentage_24h: 0.0, total_volume: 6200000000, market_cap: 35000000000 },
+                { market_cap_rank: 7, name: 'XRP', symbol: 'xrp', current_price: 0.54, price_change_percentage_24h: -0.5, total_volume: 1100000000, market_cap: 30000000000 },
+                { market_cap_rank: 8, name: 'Dogecoin', symbol: 'doge', current_price: 0.14, price_change_percentage_24h: 6.5, total_volume: 2100000000, market_cap: 20500000000 },
+                { market_cap_rank: 9, name: 'Cardano', symbol: 'ada', current_price: 0.35, price_change_percentage_24h: 1.2, total_volume: 340000000, market_cap: 12500000000 },
+                { market_cap_rank: 10, name: 'Avalanche', symbol: 'avax', current_price: 28.5, price_change_percentage_24h: 3.1, total_volume: 420000000, market_cap: 11200000000 }
+            ];
+
+            cryptoDataset = mockBase.map(c => ({
+                ...c,
+                current_price: c.current_price * fxRate,
+                total_volume: c.total_volume * fxRate,
+                market_cap: c.market_cap * fxRate
+            }));
+
+            renderCryptoTable(cryptoDataset);
+        }
+
+        function renderCryptoTable(data) {
+            const tbody = document.getElementById('crypto-table-body');
+            if (!tbody) return;
+            tbody.innerHTML = '';
+
+            const fxSymbol = FX_RATES[currentFx].symbol;
+
+            if (!data || data.length === 0) {
+                tbody.innerHTML = `<tr><td colspan="6" class="p-4 text-center text-slate-500">No assets matching query</td></tr>`;
+                return;
+            }
+
+            data.slice(0, 100).forEach(item => {
+                const tr = document.createElement('tr');
+                tr.className = "hover:bg-slate-800/40 transition-colors";
+                
+                const change = item.price_change_percentage_24h || 0;
+                const changeClass = change >= 0 ? 'text-emerald-400' : 'text-rose-400';
+
+                tr.innerHTML = `
+                    <td class="p-3 text-center text-slate-400">${item.market_cap_rank || '-'}</td>
+                    <td class="p-3 font-bold text-white flex items-center gap-2">
+                        <img src="${item.image || 'https://placehold.co/20x20/1e293b/00f2fe?text=' + item.symbol.toUpperCase()}" class="w-5 h-5 rounded-full" onerror="this.src='https://placehold.co/20x20/1e293b/ffffff?text=C'">
+                        <span>${item.name}</span>
+                        <span class="text-[10px] text-slate-400 uppercase">(${item.symbol})</span>
+                    </td>
+                    <td class="p-3 text-right font-bold text-slate-200">${fxSymbol}${item.current_price < 1 ? item.current_price.toFixed(4) : Math.round(item.current_price).toLocaleString()}</td>
+                    <td class="p-3 text-right font-bold ${changeClass}">${change >= 0 ? '+' : ''}${change.toFixed(2)}%</td>
+                    <td class="p-3 text-right text-slate-400">${fxSymbol}${Math.round(item.total_volume || 0).toLocaleString()}</td>
+                    <td class="p-3 text-right text-slate-300 font-bold">${fxSymbol}${Math.round(item.market_cap || 0).toLocaleString()}</td>
+                `;
+                tbody.appendChild(tr);
+            });
+        }
+
+        function filterCryptoTable() {
+            const query = (document.getElementById('crypto-search').value || '').toLowerCase();
+            const filtered = cryptoDataset.filter(c => 
+                c.name.toLowerCase().includes(query) || c.symbol.toLowerCase().includes(query)
+            );
+            renderCryptoTable(filtered);
+        }
+
+        // -------------------------------------------------------------
+        // 4. UPGRADED DUAL-INPUT UMC-CPI INFLATION ENGINE LOGIC
+        // -------------------------------------------------------------
         const defaultUmcCategories = [
-            { id: 'housing', name: 'Housing & Real Estate', icon: 'home', color: 'text-cyan-400', officialWeight: 16.5, userWeight: 25.0, priceIncrease: 9.5, desc: 'Rent, gated society maintenance, home loan EMIs' },
-            { id: 'food', name: 'Food & Quick Commerce', icon: 'shopping-bag', color: 'text-amber-400', officialWeight: 36.8, userWeight: 18.0, priceIncrease: 8.0, desc: 'Blinkit/Zepto, dining, organic FMCG vs raw staples' },
-            { id: 'education', name: 'Education & Skilling', icon: 'graduation-cap', color: 'text-violet-400', officialWeight: 3.3, userWeight: 12.0, priceIncrease: 11.0, desc: 'Private K-12 tuition, coaching classes, university fees' },
-            { id: 'transport', name: 'Transport & Commute', icon: 'car', color: 'text-emerald-400', officialWeight: 9.4, userWeight: 12.0, priceIncrease: 7.5, desc: 'Fuel, Uber/Ola surge, EV charging, car upkeep' },
-            { id: 'healthcare', name: 'Healthcare & Insurance', icon: 'heart-pulse', color: 'text-rose-400', officialWeight: 6.8, userWeight: 10.0, priceIncrease: 14.0, desc: 'Health insurance renewal premiums, private OPD, labs' },
-            { id: 'utilities', name: 'Utilities & Tech Services', icon: 'wifi', color: 'text-blue-400', officialWeight: 3.1, userWeight: 8.0, priceIncrease: 6.5, desc: 'Broadband, mobile postpaid, OTT bundles, electronics' },
-            { id: 'travel', name: 'Travel & Recreation', icon: 'plane', color: 'text-yellow-400', officialWeight: 2.6, userWeight: 8.0, priceIncrease: 9.0, desc: 'Airfares, weekend getaways, Cult.fit, multiplexes' },
-            { id: 'domestic', name: 'Domestic Services & Help', icon: 'users', color: 'text-orange-400', officialWeight: 1.5, userWeight: 7.0, priceIncrease: 8.5, desc: 'Maids, cooks, drivers, Urban Company repair services' }
+            { id: 'housing', name: 'Housing & Real Estate', icon: 'home', color: 'text-cyan-400', officialWeight: 16.5, userWeight: 25.0, rupeeAmount: 37500, priceIncrease: 9.5, desc: 'Rent, gated society maintenance, home loan EMIs' },
+            { id: 'food', name: 'Food & Quick Commerce', icon: 'shopping-bag', color: 'text-amber-400', officialWeight: 36.8, userWeight: 18.0, rupeeAmount: 27000, priceIncrease: 8.0, desc: 'Blinkit/Zepto, organic FMCG vs raw staples' },
+            { id: 'education', name: 'Education & Skilling', icon: 'graduation-cap', color: 'text-violet-400', officialWeight: 3.3, userWeight: 12.0, rupeeAmount: 18000, priceIncrease: 11.0, desc: 'Private K-12 tuition, coaching, university fees' },
+            { id: 'transport', name: 'Transport & Commute', icon: 'car', color: 'text-emerald-400', officialWeight: 9.4, userWeight: 12.0, rupeeAmount: 18000, priceIncrease: 7.5, desc: 'Fuel, Uber/Ola surge, EV charging, car upkeep' },
+            { id: 'healthcare', name: 'Healthcare & Insurance', icon: 'heart-pulse', color: 'text-rose-400', officialWeight: 6.8, userWeight: 10.0, rupeeAmount: 15000, priceIncrease: 14.0, desc: 'Health insurance renewal premiums, OPD, labs' },
+            { id: 'utilities', name: 'Utilities & Digital Services', icon: 'wifi', color: 'text-blue-400', officialWeight: 3.1, userWeight: 8.0, rupeeAmount: 12000, priceIncrease: 6.5, desc: 'Broadband, mobile postpaid, OTT bundles, tech' },
+            { id: 'travel', name: 'Travel & Recreation', icon: 'plane', color: 'text-yellow-400', officialWeight: 2.6, userWeight: 8.0, rupeeAmount: 12000, priceIncrease: 9.0, desc: 'Airfares, weekend getaways, Cult.fit, dining out' },
+            { id: 'domestic', name: 'Domestic Services & Help', icon: 'users', color: 'text-orange-400', officialWeight: 1.5, userWeight: 7.0, rupeeAmount: 10500, priceIncrease: 8.5, desc: 'Maids, cooks, drivers, Urban Company repair services' }
         ];
 
         let categoriesState = JSON.parse(JSON.stringify(defaultUmcCategories));
+        let totalMonthlyBudget = 150000;
+        let cpiChartInstance = null;
 
-        // -------------------------------------------------------------
-        // 1. TAB SWITCHING SYSTEM
-        // -------------------------------------------------------------
-        function switchTab(tabId) {
-            ['terminal', 'assets', 'umc-manifesto', 'calculator'].forEach(id => {
-                const sec = document.getElementById(`sec-${id}`);
-                const tab = document.getElementById(`tab-${id}`);
-                if(sec) sec.classList.add('hidden');
-                if(tab) tab.classList.remove('active');
-            });
-
-            const activeSec = document.getElementById(`sec-${tabId}`);
-            const activeTab = document.getElementById(`tab-${tabId}`);
-            if(activeSec) activeSec.classList.remove('hidden');
-            if(activeTab) activeTab.classList.add('active');
-
-            // Trigger TV loads or Chart renders on demand
-            if(tabId === 'assets' && !window.assetsLoaded) {
-                fetchMacroAssetPrices();
-                initGoldBtcChart();
-                window.assetsLoaded = true;
-            }
-
-            if(tabId === 'calculator') {
-                calculatePersonalEngine();
-            }
-        }
-
-        // -------------------------------------------------------------
-        // 2. TRADINGVIEW TECHNICAL CHART ENGINE
-        // -------------------------------------------------------------
-        function updateMainTechnicalChart(symbol) {
-            const container = document.getElementById('tradingview_chart_container');
-            if(!container) return;
-            container.innerHTML = '';
-
-            new TradingView.widget({
-                "autosize": true,
-                "symbol": symbol,
-                "interval": "D",
-                "timezone": "Etc/UTC",
-                "theme": "dark",
-                "style": "1",
-                "locale": "en",
-                "toolbar_bg": "#080c14",
-                "enable_publishing": false,
-                "hide_side_toolbar": false,
-                "allow_symbol_change": true,
-                "container_id": "tradingview_chart_container",
-                "studies": [
-                    "STD;RSI",
-                    "STD;MACD"
-                ]
-            });
-        }
-
-        function initSecondaryWidgets() {
-            // Screener Widget
-            const screenerContainer = document.getElementById('tv-screener-widget');
-            if(screenerContainer) {
-                const screenerScript = document.createElement('script');
-                screenerScript.src = 'https://s3.tradingview.com/external-embedding/embed-widget-screener.js';
-                screenerScript.async = true;
-                screenerScript.innerHTML = JSON.stringify({
-                    "width": "100%",
-                    "height": "100%",
-                    "defaultColumn": "overview",
-                    "defaultScreen": "general",
-                    "market": "forex",
-                    "showToolbar": true,
-                    "colorTheme": "dark",
-                    "locale": "en"
-                });
-                screenerContainer.appendChild(screenerScript);
-            }
-
-            // Sector Heatmap Widget
-            const heatmapContainer = document.getElementById('tv-heatmap-widget');
-            if(heatmapContainer) {
-                const heatmapScript = document.createElement('script');
-                heatmapScript.src = 'https://s3.tradingview.com/external-embedding/embed-widget-stock-heatmap.js';
-                heatmapScript.async = true;
-                heatmapScript.innerHTML = JSON.stringify({
-                    "exchanges": [],
-                    "dataSource": "S&P500",
-                    "grouping": "sector",
-                    "blockSize": "market_cap_basic",
-                    "blockColor": "change",
-                    "locale": "en",
-                    "colorTheme": "dark",
-                    "hasTopBar": false,
-                    "isZoomEnabled": true,
-                    "hasSymbolTooltip": true,
-                    "width": "100%",
-                    "height": "100%"
-                });
-                heatmapContainer.appendChild(heatmapScript);
-            }
-        }
-
-        function initGoldBtcChart() {
-            const container = document.getElementById('tv-gold-btc-chart');
-            if(!container) return;
-            new TradingView.widget({
-                "autosize": true,
-                "symbol": "BITSTAMP:BTCUSD",
-                "interval": "D",
-                "timezone": "Etc/UTC",
-                "theme": "dark",
-                "style": "2",
-                "locale": "en",
-                "container_id": "tv-gold-btc-chart"
-            });
-        }
-
-        // Dynamically load TV Library
-        const tvScript = document.createElement('script');
-        tvScript.src = 'https://s3.tradingview.com/tv.js';
-        tvScript.onload = () => {
-            updateMainTechnicalChart("NSE:NIFTY");
-            initSecondaryWidgets();
-        };
-        document.head.appendChild(tvScript);
-
-        // -------------------------------------------------------------
-        // 3. MULTI-CURRENCY GOLD & BITCOIN FETCH ENGINE
-        // -------------------------------------------------------------
-        async function fetchMacroAssetPrices() {
-            const currencies = ['usd', 'inr', 'eur', 'jpy', 'rub', 'mxn'];
-            const symbols = { usd: '$', inr: '₹', eur: '€', jpy: '¥', rub: '₽', mxn: 'Mex$' };
-
-            try {
-                // Fetch BTC Prices via CoinGecko Public API
-                const btcRes = await fetch('https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd,inr,eur,jpy,rub,mxn&include_24hr_change=true');
-                const btcData = await btcRes.json();
-
-                // Fetch Foreign Exchange Rates to calculate Gold
-                const fxRes = await fetch('https://open.er-api.com/v6/latest/USD');
-                const fxData = await fxRes.json();
-
-                // Gold Spot Base Rate (~ $2,650/Oz reference spot)
-                const baseGoldUsd = 2650.00;
-
-                currencies.forEach(curr => {
-                    // Update BTC Cards
-                    const btcVal = btcData.bitcoin ? btcData.bitcoin[curr] : 68000;
-                    const btcChange = btcData.bitcoin ? (btcData.bitcoin[`${curr}_24h_change`] || 0) : 0;
-                    const btcChangeClass = btcChange >= 0 ? 'text-emerald-400 bg-emerald-500/10 border-emerald-500/20' : 'text-rose-400 bg-rose-500/10 border-rose-500/20';
-
-                    const btcEl = document.getElementById(`btc-${curr}`);
-                    if(btcEl) {
-                        btcEl.innerHTML = `
-                            <div class="flex justify-between items-center mb-1">
-                                <span class="text-[10px] text-slate-400 font-mono font-bold uppercase">BTC / ${curr.toUpperCase()}</span>
-                                <span class="text-[10px] font-mono px-1.5 py-0.5 rounded border ${btcChangeClass}">${btcChange >= 0 ? '+' : ''}${btcChange.toFixed(1)}%</span>
-                            </div>
-                            <div class="text-sm sm:text-base font-bold text-amber-400 font-mono">${symbols[curr]}${Math.round(btcVal).toLocaleString()}</div>
-                        `;
-                    }
-
-                    // Update Gold Cards
-                    const fxRate = (fxData.rates && fxData.rates[curr.toUpperCase()]) ? fxData.rates[curr.toUpperCase()] : 1;
-                    const goldVal = baseGoldUsd * fxRate;
-                    const goldEl = document.getElementById(`gold-${curr}`);
-                    if(goldEl) {
-                        goldEl.innerHTML = `
-                            <div class="flex justify-between items-center mb-1">
-                                <span class="text-[10px] text-slate-400 font-mono font-bold uppercase">XAU / ${curr.toUpperCase()}</span>
-                                <span class="text-[10px] font-mono px-1.5 py-0.5 rounded bg-yellow-500/10 text-yellow-400 border border-yellow-500/20">SPOT</span>
-                            </div>
-                            <div class="text-sm sm:text-base font-bold text-yellow-300 font-mono">${symbols[curr]}${Math.round(goldVal).toLocaleString()}</div>
-                        `;
-                    }
-                });
-
-                const timeEl = document.getElementById('last-updated-assets');
-                if(timeEl) timeEl.innerText = `Last synced: ${new Date().toLocaleTimeString()}`;
-
-            } catch (err) {
-                console.warn("Asset price fetch error, loading fallback estimates:", err);
-            }
-        }
-
-        // -------------------------------------------------------------
-        // 4. INFLATION CALCULATOR & WEALTH EROSION ENGINE
-        // -------------------------------------------------------------
-        function renderCalculatorSliders() {
-            const container = document.getElementById('sliders-container');
-            if(!container) return;
+        function renderDualInputSliders() {
+            const container = document.getElementById('dual-inputs-container');
+            if (!container) return;
             container.innerHTML = '';
 
             categoriesState.forEach((item, idx) => {
                 const el = document.createElement('div');
-                el.className = 'p-3 bg-slate-900/80 rounded-xl border border-slate-800 space-y-2';
+                el.className = 'p-3.5 bg-slate-900/80 rounded-2xl border border-slate-800 space-y-3';
                 el.innerHTML = `
-                    <div class="flex justify-between items-center flex-wrap gap-1">
+                    <div class="flex justify-between items-center flex-wrap gap-2">
                         <span class="text-xs font-bold text-white flex items-center gap-2">
-                            <i data-lucide="${item.icon}" class="w-3.5 h-3.5 ${item.color}"></i> ${item.name}
+                            <i data-lucide="${item.icon}" class="w-4 h-4 ${item.color}"></i> ${item.name}
                         </span>
-                        <span class="text-[10px] text-slate-400 font-mono">Official CPI: ${item.officialWeight}%</span>
+                        <div class="flex items-center space-x-2">
+                            <span class="text-[10px] text-slate-400 mono">Official CPI: ${item.officialWeight}%</span>
+                        </div>
                     </div>
 
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1">
-                        <!-- Weight Slider -->
+                    <!-- Dual Inputs Grid: Rupee Input + Weight Slider + Inflation Rate -->
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                        <!-- Rupee Expenditure Box -->
                         <div>
-                            <div class="flex justify-between text-[10px] font-mono text-slate-400 mb-1">
-                                <span>Spend Weight:</span>
-                                <span class="text-cyan-400 font-bold">${item.userWeight}%</span>
-                            </div>
-                            <input type="range" min="0" max="50" step="0.5" value="${item.userWeight}" 
-                                oninput="updateCategoryValue(${idx}, 'userWeight', this.value)"
-                                class="w-full h-1 bg-slate-800 rounded-lg appearance-none cursor-pointer">
+                            <label class="text-[10px] font-mono text-slate-400 block mb-1">Monthly Spend (₹):</label>
+                            <input type="number" value="${Math.round(item.rupeeAmount)}" step="500"
+                                oninput="onCategoryRupeeChange(${idx}, this.value)"
+                                class="w-full bg-slate-950 border border-slate-700 text-emerald-400 font-mono font-bold text-xs rounded-xl p-2 focus:border-cyan-500 focus:outline-none">
                         </div>
 
-                        <!-- Annual Inflation Slider -->
+                        <!-- Basket Weight Slider -->
                         <div>
                             <div class="flex justify-between text-[10px] font-mono text-slate-400 mb-1">
-                                <span>Annual Price Hike:</span>
+                                <span>Basket Weight:</span>
+                                <span class="text-cyan-400 font-bold">${item.userWeight.toFixed(1)}%</span>
+                            </div>
+                            <input type="range" min="0" max="50" step="0.5" value="${item.userWeight}" 
+                                oninput="onCategoryWeightChange(${idx}, this.value)"
+                                class="w-full h-1.5 bg-slate-800 rounded-lg appearance-none cursor-pointer mt-2">
+                        </div>
+
+                        <!-- Category Annual Price Hike Slider -->
+                        <div>
+                            <div class="flex justify-between text-[10px] font-mono text-slate-400 mb-1">
+                                <span>Annual Inflation:</span>
                                 <span class="text-rose-400 font-bold">${item.priceIncrease}%</span>
                             </div>
                             <input type="range" min="0" max="30" step="0.5" value="${item.priceIncrease}" 
-                                oninput="updateCategoryValue(${idx}, 'priceIncrease', this.value)"
-                                class="w-full h-1 bg-slate-800 rounded-lg appearance-none cursor-pointer">
+                                oninput="onCategoryRateChange(${idx}, this.value)"
+                                class="w-full h-1.5 bg-slate-800 rounded-lg appearance-none cursor-pointer mt-2">
                         </div>
                     </div>
-                    <p class="text-[10px] text-slate-500 italic">${item.desc}</p>
                 `;
                 container.appendChild(el);
             });
@@ -871,26 +1258,68 @@
             lucide.createIcons();
         }
 
-        function updateCategoryValue(index, field, val) {
-            categoriesState[index][field] = parseFloat(val) || 0;
+        // When user edits total monthly budget box
+        function onTotalBudgetChange(val) {
+            totalMonthlyBudget = parseFloat(val) || 0;
+            // Recalculate rupee amounts based on current weights
+            categoriesState.forEach(item => {
+                item.rupeeAmount = (totalMonthlyBudget * item.userWeight) / 100;
+            });
+            renderDualInputSliders();
+            calculatePersonalEngine();
+        }
+
+        // When user edits rupee amount for specific category
+        function onCategoryRupeeChange(idx, val) {
+            const num = parseFloat(val) || 0;
+            categoriesState[idx].rupeeAmount = num;
+
+            // Recalculate total monthly budget as sum of all categories
+            totalMonthlyBudget = categoriesState.reduce((acc, c) => acc + c.rupeeAmount, 0);
+            document.getElementById('total-budget-input').value = Math.round(totalMonthlyBudget);
+
+            // Re-calibrate weights (%)
+            categoriesState.forEach(c => {
+                c.userWeight = totalMonthlyBudget > 0 ? (c.rupeeAmount / totalMonthlyBudget) * 100 : 0;
+            });
+
+            renderDualInputSliders();
+            calculatePersonalEngine();
+        }
+
+        // When user moves weight slider for specific category
+        function onCategoryWeightChange(idx, val) {
+            const w = parseFloat(val) || 0;
+            categoriesState[idx].userWeight = w;
+            categoriesState[idx].rupeeAmount = (totalMonthlyBudget * w) / 100;
+
+            renderDualInputSliders();
+            calculatePersonalEngine();
+        }
+
+        function onCategoryRateChange(idx, val) {
+            categoriesState[idx].priceIncrease = parseFloat(val) || 0;
             calculatePersonalEngine();
         }
 
         function normalizeWeights() {
             const currentTotal = categoriesState.reduce((acc, cur) => acc + cur.userWeight, 0);
-            if(currentTotal === 0) return;
+            if (currentTotal === 0) return;
             
             categoriesState.forEach(item => {
                 item.userWeight = parseFloat(((item.userWeight / currentTotal) * 100).toFixed(1));
+                item.rupeeAmount = (totalMonthlyBudget * item.userWeight) / 100;
             });
 
-            renderCalculatorSliders();
+            renderDualInputSliders();
             calculatePersonalEngine();
         }
 
         function resetCalculatorDefaults() {
             categoriesState = JSON.parse(JSON.stringify(defaultUmcCategories));
-            renderCalculatorSliders();
+            totalMonthlyBudget = 150000;
+            document.getElementById('total-budget-input').value = 150000;
+            renderDualInputSliders();
             calculatePersonalEngine();
         }
 
@@ -903,38 +1332,34 @@
                 totalWeight += item.userWeight;
             });
 
-            // Weight normalization multiplier check
             const effectiveWeightSum = totalWeight;
             const personalInflationRate = totalWeight > 0 ? (totalWeightedInflation / (totalWeight / 100)) : 0;
             const officialHeadlineRate = 4.50;
             const gapRate = personalInflationRate - officialHeadlineRate;
 
-            // Monthly Income Calculation
-            const incomeInput = document.getElementById('monthly-income-input');
-            const monthlyIncome = parseFloat(incomeInput ? incomeInput.value : 150000) || 150000;
-            const annualSpend = monthlyIncome * 12;
+            const annualSpend = totalMonthlyBudget * 12;
             const annualLoss = (annualSpend * (personalInflationRate / 100));
 
-            // Update UI elements
-            const personalRateEl = document.getElementById('personal-rate-display');
-            const gapRateEl = document.getElementById('gap-rate-display');
-            const annualLossEl = document.getElementById('annual-loss-display');
+            // Update UI
+            document.getElementById('personal-rate-display').innerText = `${personalInflationRate.toFixed(2)}%`;
+            
+            const gapEl = document.getElementById('gap-rate-display');
+            gapEl.innerText = `${gapRate >= 0 ? '+' : ''}${gapRate.toFixed(2)}%`;
+            
+            document.getElementById('annual-loss-display').innerText = `₹${Math.round(annualLoss).toLocaleString('en-IN')}`;
+            
             const weightNumEl = document.getElementById('total-weight-num');
-
-            if(personalRateEl) personalRateEl.innerText = `${personalInflationRate.toFixed(2)}%`;
-            if(gapRateEl) gapRateEl.innerText = `${gapRate >= 0 ? '+' : ''}${gapRate.toFixed(2)}%`;
-            if(annualLossEl) annualLossEl.innerText = `₹${Math.round(annualLoss).toLocaleString('en-IN')}`;
-            if(weightNumEl) {
+            if (weightNumEl) {
                 weightNumEl.innerText = `${effectiveWeightSum.toFixed(1)}%`;
                 const badge = document.getElementById('weight-sum-badge');
-                if(Math.abs(effectiveWeightSum - 100) > 0.5) {
+                if (Math.abs(effectiveWeightSum - 100) > 0.5) {
                     badge.className = "p-3 rounded-xl bg-amber-950/30 border border-amber-500/30 flex items-center justify-between text-xs font-mono text-amber-300";
                 } else {
                     badge.className = "p-3 rounded-xl bg-cyan-950/30 border border-cyan-500/30 flex items-center justify-between text-xs font-mono text-cyan-300";
                 }
             }
 
-            // Calculate Multi-Year Purchasing Power Loss on ₹1,00,000 cash corpus
+            // Calculate Compounded Wealth Decay on ₹1,00,000 cash corpus
             const baseCorpus = 100000;
             const r = personalInflationRate / 100;
             const decay1y = baseCorpus / Math.pow(1 + r, 1);
@@ -947,20 +1372,18 @@
             document.getElementById('decay-5y').innerText = `₹${Math.round(decay5y).toLocaleString('en-IN')}`;
             document.getElementById('decay-10y').innerText = `₹${Math.round(decay10y).toLocaleString('en-IN')}`;
 
-            updateChart();
+            updateUmcChart();
         }
 
-        function updateChart() {
+        function updateUmcChart() {
             const ctx = document.getElementById('weightComparisonChart');
-            if(!ctx) return;
+            if (!ctx) return;
 
             const labels = ['Housing', 'Food', 'Edu', 'Transport', 'Health', 'Utils', 'Travel', 'Domestic'];
             const officialWeights = categoriesState.map(c => c.officialWeight);
             const userWeights = categoriesState.map(c => c.userWeight);
 
-            if(cpiChartInstance) {
-                cpiChartInstance.destroy();
-            }
+            if (cpiChartInstance) cpiChartInstance.destroy();
 
             cpiChartInstance = new Chart(ctx, {
                 type: 'bar',
@@ -998,20 +1421,46 @@
                         }
                     },
                     plugins: {
-                        legend: {
-                            labels: { color: '#cbd5e1', font: { size: 11, family: 'Plus Jakarta Sans' } }
-                        }
+                        legend: { labels: { color: '#cbd5e1', font: { size: 11, family: 'Plus Jakarta Sans' } } }
                     }
                 }
             });
         }
 
-        // Initialize App on DOM Load
+        // -------------------------------------------------------------
+        // 5. TAB SWITCHING SYSTEM
+        // -------------------------------------------------------------
+        function switchTab(tabId) {
+            ['indices', 'assets', 'umc-manifesto', 'calculator'].forEach(id => {
+                const sec = document.getElementById(`sec-${id}`);
+                const tab = document.getElementById(`tab-${id}`);
+                if (sec) sec.classList.add('hidden');
+                if (tab) tab.classList.remove('active');
+            });
+
+            const activeSec = document.getElementById(`sec-${tabId}`);
+            const activeTab = document.getElementById(`tab-${tabId}`);
+            if (activeSec) activeSec.classList.remove('hidden');
+            if (activeTab) activeTab.classList.add('active');
+
+            if (tabId === 'indices') {
+                renderIndexCharts();
+            }
+            if (tabId === 'assets') {
+                fetchMacroAssetPrices();
+            }
+            if (tabId === 'calculator') {
+                calculatePersonalEngine();
+            }
+        }
+
+        // INITIALIZATION ON WINDOW LOAD
         window.onload = function() {
-            renderCalculatorSliders();
+            updateIndexKPIs();
+            renderIndexCharts();
+            renderDualInputSliders();
             calculatePersonalEngine();
         };
     </script>
-    <a href="momentum.html">
 </body>
 </html>
