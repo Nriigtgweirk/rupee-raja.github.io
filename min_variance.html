@@ -1,4 +1,92 @@
-// Redirect with top 30 momentum stock symbols in LocalStorage
-const top30 = data.sort((a,b) => b.momentum_score - a.momentum_score).slice(0, 30).map(s => s.symbol);
-localStorage.setItem('selectedStocks', JSON.stringify(top30));
-window.location.href = 'min_variance.html';
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Nifty Total Market - Momentum Scores</title>
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; padding: 2rem; background: #f8f9fa; }
+    .card { background: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); max-width: 1100px; margin: 0 auto; }
+    h1 { margin-top: 0; color: #1a202c; }
+    .nav-link { display: inline-block; margin-bottom: 1rem; color: #2b6cb0; font-weight: bold; text-decoration: none; }
+    .btn-action { background: #3182ce; color: white; border: none; padding: 0.6rem 1.2rem; border-radius: 6px; cursor: pointer; font-weight: bold; }
+    .btn-action:hover { background: #2b6cb0; }
+    .controls { margin-bottom: 1.5rem; display: flex; align-items: center; gap: 10px; }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <a class="nav-link" href="index.html">← Back to Main Home</a>
+    <h1>Nifty Total Market Momentum Scores</h1>
+    <p>Ranked by 12M Risk-Adjusted Momentum Score. Click headers to sort ascending or descending.</p>
+
+    <!-- Controls to send top momentum stocks to optimization page -->
+    <div class="controls">
+      <label for="topN"><strong>Select Top Stocks for Allocation:</strong></label>
+      <select id="topN" style="padding: 0.4rem;">
+        <option value="10">Top 10 Stocks</option>
+        <option value="20">Top 20 Stocks</option>
+        <option value="30" selected>Top 30 Stocks</option>
+        <option value="50">Top 50 Stocks</option>
+      </select>
+      <button class="btn-action" onclick="optimizeSelected()">Calculate Minimum Variance Allocation →</button>
+    </div>
+
+    <table id="momentumTable" class="display" style="width:100%">
+      <thead>
+        <tr>
+          <th>Symbol</th>
+          <th>Price (₹)</th>
+          <th>12M Return (%)</th>
+          <th>Volatility (%)</th>
+          <th>Momentum Score</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+  <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+  <script>
+    let globalData = [];
+
+    $(document).ready(function() {
+      fetch('data.json')
+        .then(response => response.json())
+        .then(data => {
+          globalData = data;
+          $('#momentumTable').DataTable({
+            data: data,
+            columns: [
+              { data: 'symbol' },
+              { data: 'price' },
+              { data: 'return_12m' },
+              { data: 'volatility' },
+              { data: 'momentum_score' }
+            ],
+            order: [[4, 'desc']], // Default sort by Momentum Score descending
+            pageLength: 25
+          });
+        })
+        .catch(err => console.error('Error loading data.json:', err));
+    });
+
+    // Function to pass selected tickers to min_variance.html
+    function optimizeSelected() {
+      const n = parseInt(document.getElementById('topN').value, 10);
+      
+      // Sort data descending by momentum score and slice top N
+      const topTickers = globalData
+        .sort((a, b) => b.momentum_score - a.momentum_score)
+        .slice(0, n)
+        .map(item => item.symbol);
+
+      // Save to localStorage and redirect
+      localStorage.setItem('selectedStocks', JSON.stringify(topTickers));
+      window.location.href = 'min_variance.html';
+    }
+  </script>
+</body>
+</html>
