@@ -1,0 +1,4 @@
+// Redirect with top 30 momentum stock symbols in LocalStorage
+const top30 = data.sort((a,b) => b.momentum_score - a.momentum_score).slice(0, 30).map(s => s.symbol);
+localStorage.setItem('selectedStocks', JSON.stringify(top30));
+window.location.href = 'min_variance.html';
