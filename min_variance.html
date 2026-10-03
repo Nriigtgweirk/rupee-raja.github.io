@@ -2,91 +2,131 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Nifty Total Market - Momentum Scores</title>
-  <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
+  <title>Minimum Variance Portfolio Allocation</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/11.8.0/math.js"></script>
   <style>
-    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; padding: 2rem; background: #f8f9fa; }
-    .card { background: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); max-width: 1100px; margin: 0 auto; }
-    h1 { margin-top: 0; color: #1a202c; }
-    .nav-link { display: inline-block; margin-bottom: 1rem; color: #2b6cb0; font-weight: bold; text-decoration: none; }
-    .btn-action { background: #3182ce; color: white; border: none; padding: 0.6rem 1.2rem; border-radius: 6px; cursor: pointer; font-weight: bold; }
-    .btn-action:hover { background: #2b6cb0; }
-    .controls { margin-bottom: 1.5rem; display: flex; align-items: center; gap: 10px; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; padding: 20px; background: #f8f9fa; }
+    .card { background: white; padding: 24px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.06); max-width: 1000px; margin: 0 auto; }
+    .cap-section { margin-top: 2rem; border-top: 2px solid #e2e8f0; padding-top: 1rem; }
+    .cap-header { font-size: 1.25rem; font-weight: bold; color: #2b6cb0; margin-bottom: 10px; display: flex; justify-content: space-between; }
+    table { width: 100%; border-collapse: collapse; margin-top: 8px; }
+    th, td { padding: 10px; border: 1px solid #e2e8f0; text-align: left; }
+    th { background: #edf2f7; }
+    .btn-back { display: inline-block; padding: 8px 16px; background: #4a5568; color: white; text-decoration: none; border-radius: 6px; font-weight: bold; margin-bottom: 15px; }
+    .metric-badge { background: #e2e8f0; padding: 4px 8px; border-radius: 4px; font-size: 0.9rem; }
   </style>
 </head>
 <body>
 
   <div class="card">
-    <a class="nav-link" href="index.html">← Back to Main Home</a>
-    <h1>Nifty Total Market Momentum Scores</h1>
-    <p>Ranked by 12M Risk-Adjusted Momentum Score. Click headers to sort ascending or descending.</p>
+    <a href="momentum.html" class="btn-back">← Back to Momentum Dashboard</a>
+    <h1>Minimum Variance Portfolio Weights</h1>
+    <p id="subheading">Loading selected stock parameters and solving covariance optimization...</p>
 
-    <!-- Controls to send top momentum stocks to optimization page -->
-    <div class="controls">
-      <label for="topN"><strong>Select Top Stocks for Allocation:</strong></label>
-      <select id="topN" style="padding: 0.4rem;">
-        <option value="10">Top 10 Stocks</option>
-        <option value="20">Top 20 Stocks</option>
-        <option value="30" selected>Top 30 Stocks</option>
-        <option value="50">Top 50 Stocks</option>
-      </select>
-      <button class="btn-action" onclick="optimizeSelected()">Calculate Minimum Variance Allocation →</button>
+    <div id="section-Large Cap" class="cap-section" style="display:none;">
+      <div class="cap-header"><span>Large Cap Allocation</span><span class="metric-badge" id="badge-Large Cap"></span></div>
+      <table id="table-Large Cap"><thead><tr><th>Symbol</th><th>Company Name</th><th>Industry</th><th>Market Cap (₹ Cr)</th><th>Weight (%)</th><th>Allocation (₹1,00,000)</th></tr></thead><tbody></tbody></table>
     </div>
 
-    <table id="momentumTable" class="display" style="width:100%">
-      <thead>
-        <tr>
-          <th>Symbol</th>
-          <th>Price (₹)</th>
-          <th>12M Return (%)</th>
-          <th>Volatility (%)</th>
-          <th>Momentum Score</th>
-        </tr>
-      </thead>
-      <tbody></tbody>
-    </table>
+    <div id="section-Mid Cap" class="cap-section" style="display:none;">
+      <div class="cap-header"><span>Mid Cap Allocation</span><span class="metric-badge" id="badge-Mid Cap"></span></div>
+      <table id="table-Mid Cap"><thead><tr><th>Symbol</th><th>Company Name</th><th>Industry</th><th>Market Cap (₹ Cr)</th><th>Weight (%)</th><th>Allocation (₹1,00,000)</th></tr></thead><tbody></tbody></table>
+    </div>
+
+    <div id="section-Small Cap" class="cap-section" style="display:none;">
+      <div class="cap-header"><span>Small Cap Allocation</span><span class="metric-badge" id="badge-Small Cap"></span></div>
+      <table id="table-Small Cap"><thead><tr><th>Symbol</th><th>Company Name</th><th>Industry</th><th>Market Cap (₹ Cr)</th><th>Weight (%)</th><th>Allocation (₹1,00,000)</th></tr></thead><tbody></tbody></table>
+    </div>
+
+    <div id="section-Micro Cap" class="cap-section" style="display:none;">
+      <div class="cap-header"><span>Micro Cap Allocation</span><span class="metric-badge" id="badge-Micro Cap"></span></div>
+      <table id="table-Micro Cap"><thead><tr><th>Symbol</th><th>Company Name</th><th>Industry</th><th>Market Cap (₹ Cr)</th><th>Weight (%)</th><th>Allocation (₹1,00,000)</th></tr></thead><tbody></tbody></table>
+    </div>
   </div>
 
-  <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
-  <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
   <script>
-    let globalData = [];
-
-    $(document).ready(function() {
-      fetch('data.json')
-        .then(response => response.json())
-        .then(data => {
-          globalData = data;
-          $('#momentumTable').DataTable({
-            data: data,
-            columns: [
-              { data: 'symbol' },
-              { data: 'price' },
-              { data: 'return_12m' },
-              { data: 'volatility' },
-              { data: 'momentum_score' }
-            ],
-            order: [[4, 'desc']], // Default sort by Momentum Score descending
-            pageLength: 25
-          });
-        })
-        .catch(err => console.error('Error loading data.json:', err));
-    });
-
-    // Function to pass selected tickers to min_variance.html
-    function optimizeSelected() {
-      const n = parseInt(document.getElementById('topN').value, 10);
+    document.addEventListener("DOMContentLoaded", async () => {
+      const stored = localStorage.getItem("selectedStocks");
+      const category = localStorage.getItem("selectedCategory") || "Large Cap";
+      const count = localStorage.getItem("selectedN") || 10;
       
-      // Sort data descending by momentum score and slice top N
-      const topTickers = globalData
-        .sort((a, b) => b.momentum_score - a.momentum_score)
-        .slice(0, n)
-        .map(item => item.symbol);
+      if (!stored) {
+        document.getElementById("subheading").innerText = "No stocks selected. Please return to momentum page and click an optimization button.";
+        return;
+      }
 
-      // Save to localStorage and redirect
-      localStorage.setItem('selectedStocks', JSON.stringify(topTickers));
-      window.location.href = 'min_variance.html';
-    }
+      const selectedStocks = JSON.parse(stored);
+      document.getElementById("subheading").innerText = `Optimized Minimum Variance Weights for Top ${count} ${category} Stocks`;
+
+      try {
+        const covResponse = await fetch("cov_matrix.json");
+        const fullCovMap = await covResponse.json();
+
+        // 1. Filter covariance matrix for selected stocks
+        const validList = selectedStocks.filter(s => fullCovMap[s.symbol]);
+        const N = validList.length;
+
+        if (N === 0) {
+          document.getElementById("subheading").innerText = "Error: Covariance matrix data missing for selected symbols.";
+          return;
+        }
+
+        // 2. Build sub-matrix
+        let subMatrix = [];
+        for (let i = 0; i < N; i++) {
+          let row = [];
+          for (let j = 0; j < N; j++) {
+            row.push(fullCovMap[validList[i].symbol][validList[j].symbol]);
+          }
+          subMatrix.push(row);
+        }
+
+        // 3. Minimum Variance Matrix Formula: w = (Sigma^-1 * 1) / (1^T * Sigma^-1 * 1)
+        const Sigma = math.matrix(subMatrix);
+        const SigmaInv = math.inv(Sigma);
+        const ones = math.ones(N, 1);
+
+        const num = math.multiply(SigmaInv, ones);
+        const den = math.multiply(math.transpose(ones), num).get([0, 0]);
+        let weights = math.divide(num, den).toArray().map(r => r[0]);
+
+        // 4. Apply Long-Only Bounds (Floor non-negative weights and re-normalize)
+        let sumPos = 0;
+        weights = weights.map(w => {
+          let clamped = Math.max(0, w);
+          sumPos += clamped;
+          return clamped;
+        });
+        weights = weights.map(w => sumPos > 0 ? w / sumPos : 1 / N);
+
+        // 5. Render to target Market Cap Section
+        const sec = document.getElementById(`section-${category}`);
+        const tbody = document.querySelector(`#table-${category.replace(' ', '\\ ')} tbody`);
+        sec.style.display = "block";
+
+        let totalAllocated = 0;
+        validList.forEach((item, idx) => {
+          const weightPct = (weights[idx] * 100).toFixed(2);
+          const val = Math.round(weights[idx] * 100000);
+          totalAllocated += val;
+
+          tbody.innerHTML += `<tr>
+            <td><strong>${item.symbol}</strong></td>
+            <td>${item.name}</td>
+            <td>${item.industry}</td>
+            <td>₹${item.marketCapCr.toLocaleString('en-IN')} Cr</td>
+            <td><strong>${weightPct}%</strong></td>
+            <td>₹${val.toLocaleString('en-IN')}</td>
+          </tr>`;
+        });
+
+        document.getElementById(`badge-${category}`).innerText = `Total Portfolio: ₹1,00,000 (${N} Stocks)`;
+
+      } catch (err) {
+        console.error(err);
+        document.getElementById("subheading").innerText = "Failed to calculate minimum variance portfolio. Check browser console for details.";
+      }
+    });
   </script>
 </body>
 </html>
