@@ -1,10 +1,1016 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
 <head>
     <meta charset="UTF-8">
-    <title>My Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ALPHA_QUANT // Trading Terminal & UMC-CPI Engine</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        midnight: '#080c14',
+                        cardDark: 'rgba(15, 23, 42, 0.85)',
+                        electricCyan: '#00f2fe',
+                        emeraldGreen: '#10b981',
+                        crimsonRed: '#f43f5e',
+                        goldAmber: '#f59e0b',
+                        violetNeon: '#a855f7'
+                    },
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Chart.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        body {
+            background-color: #080c14;
+            color: #cbd5e1;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            overflow-x: hidden;
+        }
+
+        .mono {
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        .quant-glass {
+            background: rgba(15, 23, 42, 0.8);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(51, 65, 85, 0.45);
+        }
+
+        .quant-glass:hover {
+            border-color: rgba(0, 242, 254, 0.35);
+            box-shadow: 0 8px 32px 0 rgba(0, 242, 254, 0.05);
+        }
+
+        .glow-cyan {
+            box-shadow: 0 0 20px rgba(0, 242, 254, 0.25);
+        }
+
+        .glow-crimson {
+            box-shadow: 0 0 20px rgba(244, 63, 94, 0.25);
+        }
+
+        /* Custom Scrollbars */
+        ::-webkit-scrollbar {
+            width: 6px;
+            height: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #080c14;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #1e293b;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #00f2fe;
+        }
+
+        .nav-tab.active {
+            color: #00f2fe;
+            border-bottom: 2px solid #00f2fe;
+            background: rgba(0, 242, 254, 0.08);
+        }
+
+        /* Range Input Customization */
+        input[type=range] {
+            accent-color: #00f2fe;
+        }
+    </style>
 </head>
-<body>
-    <h1>Hello, world! Welcome to my personal site.</h1>
+<body class="min-h-screen flex flex-col justify-between selection:bg-cyan-500/30 selection:text-cyan-200">
+
+    <!-- TOP TICKER TAPE & NAV HEADER -->
+    <header class="sticky top-0 z-50 border-b border-slate-800/80 bg-slate-950/90 backdrop-blur-xl">
+        <!-- Live TradingView Ticker Tape Strip -->
+        <div class="h-9 w-full overflow-hidden border-b border-slate-900 bg-slate-950">
+            <div class="tradingview-widget-container h-full">
+                <div class="tradingview-widget-container__widget"></div>
+                <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
+                {
+                    "symbols": [
+                        {"proName": "FOREXCOM:SPX500", "title": "S&P 500"},
+                        {"proName": "FOREXCOM:NSXUSD", "title": "Nasdaq 100"},
+                        {"proName": "NSE:NIFTY", "title": "NIFTY 50"},
+                        {"proName": "NSE:BANKNIFTY", "title": "BANK NIFTY"},
+                        {"proName": "INDEX:NIKKEI225", "title": "Nikkei 225"},
+                        {"proName": "INDEX:DEU40", "title": "DAX 40"},
+                        {"proName": "FX_IDC:USDINR", "title": "USD/INR"},
+                        {"proName": "BITSTAMP:BTCUSD", "title": "BTC/USD"}
+                    ],
+                    "showSymbolLogo": true,
+                    "colorTheme": "dark",
+                    "isTransparent": true,
+                    "displayMode": "adaptive",
+                    "locale": "en"
+                }
+                </script>
+            </div>
+        </div>
+
+        <!-- Main Header Controls -->
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <!-- Branding -->
+                <div class="flex items-center space-x-3">
+                    <div class="bg-cyan-500/10 p-2.5 rounded-xl border border-cyan-500/30 flex items-center justify-center">
+                        <i data-lucide="terminal" class="w-5 h-5 text-electricCyan"></i>
+                    </div>
+                    <div>
+                        <div class="flex items-center gap-2">
+                            <span class="text-lg font-bold tracking-wider text-white mono">QUANT<span class="text-electricCyan">_TERMINAL</span></span>
+                            <span class="hidden sm:inline-block px-2 py-0.5 text-[10px] font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 rounded-md mono">
+                                LIVE API
+                            </span>
+                        </div>
+                        <p class="text-[10px] text-slate-400 mono">INSTITUTIONAL MACRO & INFLATION ANALYTICS</p>
+                    </div>
+                </div>
+
+                <!-- Navigation Tabs -->
+                <nav class="flex space-x-1 overflow-x-auto py-1 scrollbar-none">
+                    <button onclick="switchTab('terminal')" id="tab-terminal" class="nav-tab active px-3 sm:px-4 py-2 rounded-t-xl text-xs sm:text-sm font-semibold flex items-center space-x-2 transition-all whitespace-nowrap text-slate-300 hover:text-white">
+                        <i data-lucide="candlestick-chart" class="w-4 h-4 text-electricCyan"></i>
+                        <span>Market Terminal</span>
+                    </button>
+                    <button onclick="switchTab('assets')" id="tab-assets" class="nav-tab px-3 sm:px-4 py-2 rounded-t-xl text-xs sm:text-sm font-semibold flex items-center space-x-2 transition-all whitespace-nowrap text-slate-300 hover:text-white">
+                        <i data-lucide="coins" class="w-4 h-4 text-goldAmber"></i>
+                        <span>Gold & BTC Matrix</span>
+                    </button>
+                    <button onclick="switchTab('umc-manifesto')" id="tab-umc-manifesto" class="nav-tab px-3 sm:px-4 py-2 rounded-t-xl text-xs sm:text-sm font-semibold flex items-center space-x-2 transition-all whitespace-nowrap text-slate-300 hover:text-white">
+                        <i data-lucide="scale" class="w-4 h-4 text-violetNeon"></i>
+                        <span>UMC-CPI Basket</span>
+                    </button>
+                    <button onclick="switchTab('calculator')" id="tab-calculator" class="nav-tab px-3 sm:px-4 py-2 rounded-t-xl text-xs sm:text-sm font-semibold flex items-center space-x-2 transition-all whitespace-nowrap text-slate-300 hover:text-white relative">
+                        <i data-lucide="calculator" class="w-4 h-4 text-crimsonRed"></i>
+                        <span>Inflation Engine</span>
+                        <span class="flex h-2 w-2 relative">
+                            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75"></span>
+                            <span class="relative inline-flex rounded-full h-2 w-2 bg-electricCyan"></span>
+                        </span>
+                    </button>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT AREA -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex-grow w-full space-y-6">
+
+        <!-- ================= SECTION 1: MARKET TERMINAL & TECHNICAL CHARTS ================= -->
+        <section id="sec-terminal" class="space-y-6">
+            <!-- Selector Control Bar -->
+            <div class="quant-glass p-4 rounded-2xl flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+                <div class="flex items-center space-x-3">
+                    <div class="p-2 bg-cyan-500/10 rounded-lg text-electricCyan">
+                        <i data-lucide="globe" class="w-5 h-5"></i>
+                    </div>
+                    <div>
+                        <h2 class="text-base font-bold text-white tracking-wide">Global Indices Technical Chart</h2>
+                        <p class="text-xs text-slate-400">Interactive TradingView engine with pre-loaded RSI & MACD indicators</p>
+                    </div>
+                </div>
+
+                <!-- Dropdown menu to switch indices -->
+                <div class="flex items-center space-x-3 w-full sm:w-auto">
+                    <label for="index-selector" class="text-xs text-slate-400 mono font-medium uppercase whitespace-nowrap">Select Index:</label>
+                    <select id="index-selector" onchange="updateMainTechnicalChart(this.value)" class="bg-slate-900/90 border border-slate-700 text-electricCyan text-xs sm:text-sm rounded-xl focus:ring-cyan-500 focus:border-cyan-500 block p-2.5 mono font-semibold w-full sm:w-72 cursor-pointer shadow-inner">
+                        <optgroup label="Asia-Pacific">
+                            <option value="NSE:NIFTY" selected>NIFTY 50 (India)</option>
+                            <option value="NSE:BANKNIFTY">BANK NIFTY (India)</option>
+                            <option value="NSE:GIFTNIFTY">GIFT NIFTY (India)</option>
+                            <option value="INDEX:NIKKEI225">Nikkei 225 (Japan)</option>
+                            <option value="HSI:HSI">Hang Seng (Hong Kong)</option>
+                            <option value="SSE:000001">Shanghai Composite (China)</option>
+                        </optgroup>
+                        <optgroup label="Americas">
+                            <option value="FOREXCOM:SPX500">S&P 500 (USA)</option>
+                            <option value="FOREXCOM:NSXUSD">Nasdaq 100 (USA)</option>
+                            <option value="FOREXCOM:DJI">Dow Jones 30 (USA)</option>
+                            <option value="BMFBOVESPA:IBOV">IBOVESPA (Brazil)</option>
+                        </optgroup>
+                        <optgroup label="Europe">
+                            <option value="INDEX:DEU40">DAX 40 (Germany)</option>
+                            <option value="FOREXCOM:UK100">FTSE 100 (UK)</option>
+                            <option value="INDEX:CAC40">CAC 40 (France)</option>
+                        </optgroup>
+                    </select>
+                </div>
+            </div>
+
+            <!-- TradingView Main Interactive Technical Chart Container -->
+            <div class="quant-glass p-2 rounded-2xl h-[580px] relative overflow-hidden">
+                <div id="tradingview_chart_container" class="w-full h-full rounded-xl"></div>
+            </div>
+
+            <!-- Market Overview Widgets Side-by-Side Grid -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                <!-- Market Screener Widget -->
+                <div class="quant-glass p-4 rounded-2xl h-[460px] flex flex-col">
+                    <div class="flex items-center justify-between mb-3">
+                        <h3 class="text-sm font-bold text-slate-200 flex items-center gap-2">
+                            <i data-lucide="sliders-horizontal" class="w-4 h-4 text-electricCyan"></i> Quantitative Market Screener
+                        </h3>
+                        <span class="text-[11px] text-slate-400 mono">REAL-TIME MOVERS</span>
+                    </div>
+                    <div class="tradingview-widget-container flex-grow rounded-xl overflow-hidden">
+                        <div id="tv-screener-widget" class="h-full"></div>
+                    </div>
+                </div>
+
+                <!-- Stock Market Heatmap Widget -->
+                <div class="quant-glass p-4 rounded-2xl h-[460px] flex flex-col">
+                    <div class="flex items-center justify-between mb-3">
+                        <h3 class="text-sm font-bold text-slate-200 flex items-center gap-2">
+                            <i data-lucide="layout-grid" class="w-4 h-4 text-electricCyan"></i> Global Sector Heatmap
+                        </h3>
+                        <span class="text-[11px] text-slate-400 mono">S&P 500 SECTORS</span>
+                    </div>
+                    <div class="tradingview-widget-container flex-grow rounded-xl overflow-hidden">
+                        <div id="tv-heatmap-widget" class="h-full"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= SECTION 2: GOLD & BITCOIN ASSET MATRIX ================= -->
+        <section id="sec-assets" class="space-y-6 hidden">
+            <!-- Header Bar -->
+            <div class="quant-glass p-5 rounded-2xl flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 border-l-4 border-l-goldAmber">
+                <div>
+                    <h2 class="text-lg font-bold text-white flex items-center gap-2">
+                        <i data-lucide="shield-check" class="w-5 h-5 text-goldAmber"></i> Sovereign Hard Money & Crypto Asset Matrix
+                    </h2>
+                    <p class="text-xs text-slate-400 mt-0.5">Real-time spot price valuation across 6 key global reserve & fiat currencies</p>
+                </div>
+                <div class="flex items-center gap-3">
+                    <span id="last-updated-assets" class="text-[11px] text-slate-400 mono hidden sm:inline-block">Syncing data...</span>
+                    <button onclick="fetchMacroAssetPrices()" class="bg-cyan-500/10 hover:bg-cyan-500/20 text-electricCyan border border-cyan-500/30 px-3.5 py-2 rounded-xl text-xs font-semibold flex items-center gap-2 mono transition-all">
+                        <i data-lucide="refresh-cw" class="w-3.5 h-3.5"></i> Sync Prices
+                    </button>
+                </div>
+            </div>
+
+            <!-- BITCOIN MULTI-CURRENCY GRID -->
+            <div class="space-y-3">
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center gap-2">
+                        <div class="p-1.5 bg-amber-500/10 border border-amber-500/30 rounded-lg text-amber-400">
+                            <i data-lucide="bitcoin" class="w-5 h-5"></i>
+                        </div>
+                        <h3 class="text-base font-bold text-white">Bitcoin (BTC) Multi-Currency Live Valuation</h3>
+                    </div>
+                    <span class="text-xs text-slate-400 mono">Base: 1.00000000 BTC</span>
+                </div>
+                <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
+                    <div id="btc-usd" class="quant-glass p-4 rounded-xl"><div class="animate-pulse bg-slate-800/60 h-16 rounded-lg"></div></div>
+                    <div id="btc-inr" class="quant-glass p-4 rounded-xl"><div class="animate-pulse bg-slate-800/60 h-16 rounded-lg"></div></div>
+                    <div id="btc-eur" class="quant-glass p-4 rounded-xl"><div class="animate-pulse bg-slate-800/60 h-16 rounded-lg"></div></div>
+                    <div id="btc-jpy" class="quant-glass p-4 rounded-xl"><div class="animate-pulse bg-slate-800/60 h-16 rounded-lg"></div></div>
+                    <div id="btc-rub" class="quant-glass p-4 rounded-xl"><div class="animate-pulse bg-slate-800/60 h-16 rounded-lg"></div></div>
+                    <div id="btc-mxn" class="quant-glass p-4 rounded-xl"><div class="animate-pulse bg-slate-800/60 h-16 rounded-lg"></div></div>
+                </div>
+            </div>
+
+            <!-- GOLD MULTI-CURRENCY GRID -->
+            <div class="space-y-3">
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center gap-2">
+                        <div class="p-1.5 bg-yellow-500/10 border border-yellow-500/30 rounded-lg text-yellow-400">
+                            <i data-lucide="gem" class="w-5 h-5"></i>
+                        </div>
+                        <h3 class="text-base font-bold text-white">Gold Spot (XAU) Multi-Currency Live Valuation</h3>
+                    </div>
+                    <span class="text-xs text-slate-400 mono">Base: 1 Fine Troy Oz (31.1035g)</span>
+                </div>
+                <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
+                    <div id="gold-usd" class="quant-glass p-4 rounded-xl"><div class="animate-pulse bg-slate-800/60 h-16 rounded-lg"></div></div>
+                    <div id="gold-inr" class="quant-glass p-4 rounded-xl"><div class="animate-pulse bg-slate-800/60 h-16 rounded-lg"></div></div>
+                    <div id="gold-eur" class="quant-glass p-4 rounded-xl"><div class="animate-pulse bg-slate-800/60 h-16 rounded-lg"></div></div>
+                    <div id="gold-jpy" class="quant-glass p-4 rounded-xl"><div class="animate-pulse bg-slate-800/60 h-16 rounded-lg"></div></div>
+                    <div id="gold-rub" class="quant-glass p-4 rounded-xl"><div class="animate-pulse bg-slate-800/60 h-16 rounded-lg"></div></div>
+                    <div id="gold-mxn" class="quant-glass p-4 rounded-xl"><div class="animate-pulse bg-slate-800/60 h-16 rounded-lg"></div></div>
+                </div>
+            </div>
+
+            <!-- Gold vs Bitcoin Interactive Comparison Chart -->
+            <div class="quant-glass p-5 rounded-2xl h-[480px]">
+                <div class="flex items-center justify-between mb-3">
+                    <h3 class="text-sm font-bold text-slate-200 flex items-center gap-2">
+                        <i data-lucide="trending-up" class="w-4 h-4 text-electricCyan"></i> Bitcoin vs Gold Comparative Chart (XAUUSD / BTCUSD)
+                    </h3>
+                    <span class="text-xs text-slate-400 mono">TECHNICAL RATIOS</span>
+                </div>
+                <div class="tradingview-widget-container h-[400px] rounded-xl overflow-hidden">
+                    <div id="tv-gold-btc-chart" class="h-full"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= SECTION 3: UMC-CPI MANIFESTO & BASKET ================= -->
+        <section id="sec-umc-manifesto" class="space-y-6 hidden">
+            <!-- Manifesto Banner Card -->
+            <div class="quant-glass p-6 sm:p-8 rounded-3xl border-l-4 border-l-violetNeon relative overflow-hidden">
+                <div class="absolute -right-12 -bottom-12 opacity-5 pointer-events-none text-violetNeon">
+                    <i data-lucide="scale" class="w-80 h-80"></i>
+                </div>
+                <div class="max-w-4xl space-y-3 relative z-10">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-violet-500/10 text-violet Neon text-xs font-semibold border border-violet-500/30 text-violet-300">
+                        <i data-lucide="zap" class="w-3.5 h-3.5 text-violetNeon"></i> GROUND REALITY QUANT MODEL
+                    </div>
+                    <h2 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
+                        The Urban Middle-Class Inflation Index (<span class="text-violet-400">UMC-CPI</span>)
+                    </h2>
+                    <p class="text-sm sm:text-base text-slate-300 leading-relaxed">
+                        Official CPI measures (such as India's CPI-Urban) fail urban middle-class households earning <span class="text-white font-semibold underline decoration-violet-400">₹80,000 to ₹2,500,000+ monthly</span> in Tier-1 and Tier-2 cities. By allocating over <span class="text-rose-400 font-semibold">36.8% to raw staples</span> while under-representing modern expense drivers like private education, health insurance, gated society maintenance, and digital lifestyle services, official prints severely understate real purchasing power erosion.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Comparison Breakdown Table -->
+            <div class="quant-glass rounded-2xl overflow-hidden border border-slate-800">
+                <div class="p-5 bg-slate-900/90 border-b border-slate-800 flex items-center justify-between flex-wrap gap-4">
+                    <div>
+                        <h3 class="text-base font-bold text-white flex items-center gap-2">
+                            <i data-lucide="layers" class="w-5 h-5 text-electricCyan"></i> Official CPI vs Proposed UMC-CPI Weight Basket
+                        </h3>
+                        <p class="text-xs text-slate-400">Detailed structural misalignment breakdown of consumer expenditure buckets</p>
+                    </div>
+                    <span class="text-xs font-mono px-3 py-1 bg-slate-800 text-slate-300 rounded-lg border border-slate-700">
+                        BASE SAMPLE: TIER 1/2 URBAN
+                    </span>
+                </div>
+
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left border-collapse">
+                        <thead>
+                            <tr class="bg-slate-950/80 border-b border-slate-800 text-xs font-mono text-slate-400">
+                                <th class="p-4">CATEGORY</th>
+                                <th class="p-4 text-center">OFFICIAL CPI (URBAN)</th>
+                                <th class="p-4 text-center text-electricCyan">PROPOSED UMC-CPI BASKET</th>
+                                <th class="p-4">PRIMARY MISALIGNMENT IN OFFICIAL CPI</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-slate-800/60 text-xs sm:text-sm">
+                            <tr class="hover:bg-slate-800/30 transition-colors">
+                                <td class="p-4 font-bold text-white flex items-center gap-2">
+                                    <i data-lucide="home" class="w-4 h-4 text-cyan-400"></i> Housing & Real Estate
+                                </td>
+                                <td class="p-4 text-center font-mono text-slate-400">~16.5%</td>
+                                <td class="p-4 text-center font-mono font-bold text-cyan-300 bg-cyan-950/20">25.0%</td>
+                                <td class="p-4 text-slate-300">Official CPI tracks frozen state rents/rent-control samples; ignores gated society maintenance fees & home loan EMIs.</td>
+                            </tr>
+                            <tr class="hover:bg-slate-800/30 transition-colors">
+                                <td class="p-4 font-bold text-white flex items-center gap-2">
+                                    <i data-lucide="shopping-bag" class="w-4 h-4 text-amber-400"></i> Food, Dining & Quick Commerce
+                                </td>
+                                <td class="p-4 text-center font-mono text-slate-400">~36.8%</td>
+                                <td class="p-4 text-center font-mono font-bold text-cyan-300 bg-cyan-950/20">18.0%</td>
+                                <td class="p-4 text-slate-300">Official CPI focuses on raw staples; middle class spends heavily on quick-commerce delivery (Blinkit/Zepto), packaged foods, and dining apps.</td>
+                            </tr>
+                            <tr class="hover:bg-slate-800/30 transition-colors">
+                                <td class="p-4 font-bold text-white flex items-center gap-2">
+                                    <i data-lucide="graduation-cap" class="w-4 h-4 text-violet-400"></i> Education & Skilling
+                                </td>
+                                <td class="p-4 text-center font-mono text-slate-400">~3.3%</td>
+                                <td class="p-4 text-center font-mono font-bold text-cyan-300 bg-cyan-950/20">12.0%</td>
+                                <td class="p-4 text-slate-300">Includes subsidized state schooling; ignores private school fee hikes (8–12% yearly), coaching (JEE/NEET), and college tuition.</td>
+                            </tr>
+                            <tr class="hover:bg-slate-800/30 transition-colors">
+                                <td class="p-4 font-bold text-white flex items-center gap-2">
+                                    <i data-lucide="car" class="w-4 h-4 text-emerald-400"></i> Transport & Commute
+                                </td>
+                                <td class="p-4 text-center font-mono text-slate-400">~9.4%</td>
+                                <td class="p-4 text-center font-mono font-bold text-cyan-300 bg-cyan-950/20">12.0%</td>
+                                <td class="p-4 text-slate-300">Ignores cab aggregators (Uber/Ola), personal car ownership, EV charging, parking, and annual auto insurance renewals.</td>
+                            </tr>
+                            <tr class="hover:bg-slate-800/30 transition-colors">
+                                <td class="p-4 font-bold text-white flex items-center gap-2">
+                                    <i data-lucide="heart-pulse" class="w-4 h-4 text-rose-400"></i> Healthcare & Insurance
+                                </td>
+                                <td class="p-4 text-center font-mono text-slate-400">~6.8%</td>
+                                <td class="p-4 text-center font-mono font-bold text-cyan-300 bg-cyan-950/20">10.0%</td>
+                                <td class="p-4 text-slate-300">Ignores 12–18% annual health insurance premium hikes and out-of-pocket private hospital/diagnostic inflation.</td>
+                            </tr>
+                            <tr class="hover:bg-slate-800/30 transition-colors">
+                                <td class="p-4 font-bold text-white flex items-center gap-2">
+                                    <i data-lucide="wifi" class="w-4 h-4 text-blue-400"></i> Utilities, Tech & Digital
+                                </td>
+                                <td class="p-4 text-center font-mono text-slate-400">~3.1%</td>
+                                <td class="p-4 text-center font-mono font-bold text-cyan-300 bg-cyan-950/20">8.0%</td>
+                                <td class="p-4 text-slate-300">Undercounts high-speed broadband, OTT subscriptions, SaaS, mobile post-paid, and household electronics/gadget upgrades.</td>
+                            </tr>
+                            <tr class="hover:bg-slate-800/30 transition-colors">
+                                <td class="p-4 font-bold text-white flex items-center gap-2">
+                                    <i data-lucide="plane" class="w-4 h-4 text-yellow-400"></i> Travel, Lifestyle & Recreation
+                                </td>
+                                <td class="p-4 text-center font-mono text-slate-400">~2.6%</td>
+                                <td class="p-4 text-center font-mono font-bold text-cyan-300 bg-cyan-950/20">8.0%</td>
+                                <td class="p-4 text-slate-300">Ignores airfares on major metro routes, weekend hotel getaways, gym memberships (Cult.fit), and movie tickets.</td>
+                            </tr>
+                            <tr class="hover:bg-slate-800/30 transition-colors">
+                                <td class="p-4 font-bold text-white flex items-center gap-2">
+                                    <i data-lucide="users" class="w-4 h-4 text-orange-400"></i> Household Services & Maids
+                                </td>
+                                <td class="p-4 text-center font-mono text-slate-400">~1.5%</td>
+                                <td class="p-4 text-center font-mono font-bold text-cyan-300 bg-cyan-950/20">7.0%</td>
+                                <td class="p-4 text-slate-300">Ignores urban domestic help costs (cooks, maids, drivers, security, and Urban Company home repair tariffs).</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Detailed Data Sources Proxy Cards -->
+            <div class="space-y-3">
+                <h3 class="text-base font-bold text-white flex items-center gap-2">
+                    <i data-lucide="database-backup" class="w-5 h-5 text-electricCyan"></i> Targeted High-Frequency Data Proxy Sources
+                </h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                    <div class="quant-glass p-4 rounded-xl space-y-2 border-t-2 border-t-cyan-400">
+                        <div class="text-xs font-bold text-cyan-400 mono uppercase">Housing Proxy</div>
+                        <p class="text-xs text-slate-300">MagicBricks PropIndex, Housing.com Research, Anarock Property Reports & RBI DBIE Repo Rate Tables.</p>
+                    </div>
+                    <div class="quant-glass p-4 rounded-xl space-y-2 border-t-2 border-t-amber-400">
+                        <div class="text-xs font-bold text-amber-400 mono uppercase">Food & Quick Commerce</div>
+                        <p class="text-xs text-slate-300">BigBasket/Blinkit API scrapes, NielsenIQ FMCG index, Swiggy & Zomato investor filings.</p>
+                    </div>
+                    <div class="quant-glass p-4 rounded-xl space-y-2 border-t-2 border-t-violet-400">
+                        <div class="text-xs font-bold text-violet-400 mono uppercase">Education & Skilling</div>
+                        <p class="text-xs text-slate-300">Annual fee circulars published on private school portals across metro cities & EdTech filings.</p>
+                    </div>
+                    <div class="quant-glass p-4 rounded-xl space-y-2 border-t-2 border-t-rose-400">
+                        <div class="text-xs font-bold text-rose-400 mono uppercase">Healthcare & Protection</div>
+                        <p class="text-xs text-slate-300">PolicyBazaar Health Index, IRDAI annual reports, 1mg, PharmEasy & Thyrocare diagnostic packages.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= SECTION 4: PERSONAL INFLATION CALCULATOR ENGINE ================= -->
+        <section id="sec-calculator" class="space-y-6 hidden">
+            <!-- Top Controls Dashboard -->
+            <div class="quant-glass p-6 rounded-3xl space-y-6 border-t-4 border-t-electricCyan">
+                <div class="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-4">
+                    <div>
+                        <h2 class="text-xl font-bold text-white flex items-center gap-2">
+                            <i data-lucide="calculator" class="w-6 h-6 text-electricCyan"></i> Personal UMC-CPI & Wealth Erosion Engine
+                        </h2>
+                        <p class="text-xs text-slate-400 mt-1">
+                            Customize your monthly household income, spend weights, and category inflation rates to model your real rate of purchasing power loss.
+                        </p>
+                    </div>
+
+                    <!-- Household Income Input -->
+                    <div class="bg-slate-900/90 p-3.5 rounded-2xl border border-slate-700/80 w-full lg:w-auto flex items-center gap-3">
+                        <i data-lucide="wallet" class="w-5 h-5 text-emeraldGreen"></i>
+                        <div>
+                            <label for="monthly-income-input" class="text-[10px] text-slate-400 font-mono block uppercase">Monthly Household Income (₹)</label>
+                            <input type="number" id="monthly-income-input" value="150000" step="5000" oninput="calculatePersonalEngine()"
+                                class="bg-transparent text-emerald-400 text-lg font-bold font-mono focus:outline-none w-48">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Weight Normalization Feedback Banner -->
+                <div id="weight-sum-badge" class="p-3 rounded-xl bg-cyan-950/30 border border-cyan-500/30 flex items-center justify-between text-xs font-mono">
+                    <div class="flex items-center gap-2 text-cyan-300">
+                        <i data-lucide="info" class="w-4 h-4"></i>
+                        <span>Total Basket Weight: <strong id="total-weight-num">100.0%</strong></span>
+                    </div>
+                    <button onclick="normalizeWeights()" class="px-2.5 py-1 bg-cyan-500/20 hover:bg-cyan-500/30 text-cyan-200 rounded border border-cyan-500/40 transition-all text-[11px]">
+                        Auto-Normalize to 100%
+                    </button>
+                </div>
+            </div>
+
+            <!-- Dynamic Output KPI Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                <!-- Calculated Personal Inflation Rate -->
+                <div class="quant-glass p-5 rounded-2xl border-l-4 border-l-electricCyan bg-cyan-950/10">
+                    <span class="text-[11px] text-slate-400 font-mono uppercase tracking-wider block">Personal Inflation Rate</span>
+                    <div id="personal-rate-display" class="text-3xl font-extrabold text-electricCyan font-mono mt-1">9.26%</div>
+                    <span class="text-[10px] text-cyan-400/80 mt-2 block font-mono">Weighted household annual rate</span>
+                </div>
+
+                <!-- Official Inflation Baseline -->
+                <div class="quant-glass p-5 rounded-2xl border-l-4 border-l-slate-600">
+                    <span class="text-[11px] text-slate-400 font-mono uppercase tracking-wider block">Official CPI Baseline</span>
+                    <div class="text-3xl font-extrabold text-slate-300 font-mono mt-1">4.50%</div>
+                    <span class="text-[10px] text-slate-500 mt-2 block font-mono">Government CPI-Urban headline print</span>
+                </div>
+
+                <!-- The Reality Gap -->
+                <div class="quant-glass p-5 rounded-2xl border-l-4 border-l-crimsonRed bg-rose-950/10">
+                    <span class="text-[11px] text-rose-400 font-mono uppercase tracking-wider block">Urban Inflation Gap</span>
+                    <div id="gap-rate-display" class="text-3xl font-extrabold text-crimsonRed font-mono mt-1">+4.76%</div>
+                    <span class="text-[10px] text-rose-400/80 mt-2 block font-mono">Unaccounted annual price pressure</span>
+                </div>
+
+                <!-- Annual Rupee Value Loss -->
+                <div class="quant-glass p-5 rounded-2xl border-l-4 border-l-goldAmber bg-amber-950/10">
+                    <span class="text-[11px] text-amber-400 font-mono uppercase tracking-wider block">Annual Purchasing Loss</span>
+                    <div id="annual-loss-display" class="text-2xl font-extrabold text-goldAmber font-mono mt-1">₹1,66,680</div>
+                    <span class="text-[10px] text-amber-400/80 mt-2 block font-mono">Real rupee value lost / year</span>
+                </div>
+            </div>
+
+            <!-- Sliders and Chart Layout Grid -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+                <!-- Left 7 Cols: Category Sliders -->
+                <div class="lg:col-span-7 quant-glass p-5 rounded-2xl space-y-4">
+                    <div class="flex items-center justify-between border-b border-slate-800 pb-3">
+                        <h3 class="text-sm font-bold text-white flex items-center gap-2">
+                            <i data-lucide="sliders" class="w-4 h-4 text-electricCyan"></i> 8-Category Spend & Price Controls
+                        </h3>
+                        <button onclick="resetCalculatorDefaults()" class="text-xs text-slate-400 hover:text-electricCyan font-mono transition-colors">
+                            Reset Defaults
+                        </button>
+                    </div>
+
+                    <!-- Category Slider Container -->
+                    <div id="sliders-container" class="space-y-4 max-h-[600px] overflow-y-auto pr-2">
+                        <!-- Dynamically populated by JavaScript -->
+                    </div>
+                </div>
+
+                <!-- Right 5 Cols: Visual Projections & Wealth Erosion Table -->
+                <div class="lg:col-span-5 space-y-6">
+                    <!-- Comparison Chart -->
+                    <div class="quant-glass p-5 rounded-2xl space-y-3">
+                        <h3 class="text-sm font-bold text-white flex items-center gap-2">
+                            <i data-lucide="pie-chart" class="w-4 h-4 text-electricCyan"></i> Basket Weight Distribution Comparison
+                        </h3>
+                        <div class="h-64 relative">
+                            <canvas id="weightComparisonChart"></canvas>
+                        </div>
+                    </div>
+
+                    <!-- Multi-Year Wealth Erosion Projection Card -->
+                    <div class="quant-glass p-5 rounded-2xl space-y-4 border-t-2 border-t-crimsonRed">
+                        <div class="flex items-center justify-between">
+                            <h3 class="text-sm font-bold text-white flex items-center gap-2">
+                                <i data-lucide="trending-down" class="w-4 h-4 text-crimsonRed"></i> Real Purchasing Power Decay
+                            </h3>
+                            <span class="text-[10px] font-mono px-2 py-0.5 bg-rose-500/10 text-rose-400 border border-rose-500/20 rounded">COMPOUNDED</span>
+                        </div>
+                        <p class="text-xs text-slate-400">Remaining purchasing power of ₹1,00,000 saved in uninvested cash:</p>
+
+                        <div class="grid grid-cols-2 gap-3 text-xs font-mono">
+                            <div class="p-3 bg-slate-900/80 rounded-xl border border-slate-800">
+                                <span class="text-slate-400 block text-[10px]">1 YEAR POWER</span>
+                                <span id="decay-1y" class="text-slate-200 font-bold text-sm">₹91,525</span>
+                            </div>
+                            <div class="p-3 bg-slate-900/80 rounded-xl border border-slate-800">
+                                <span class="text-slate-400 block text-[10px]">3 YEARS POWER</span>
+                                <span id="decay-3y" class="text-amber-400 font-bold text-sm">₹76,734</span>
+                            </div>
+                            <div class="p-3 bg-slate-900/80 rounded-xl border border-slate-800">
+                                <span class="text-slate-400 block text-[10px]">5 YEARS POWER</span>
+                                <span id="decay-5y" class="text-orange-400 font-bold text-sm">₹64,321</span>
+                            </div>
+                            <div class="p-3 bg-slate-900/80 rounded-xl border border-slate-800">
+                                <span class="text-slate-400 block text-[10px]">10 YEARS POWER</span>
+                                <span id="decay-10y" class="text-crimsonRed font-bold text-sm">₹41,372</span>
+                            </div>
+                        </div>
+                        <div class="text-[11px] text-slate-400 italic bg-slate-950/60 p-3 rounded-xl border border-slate-800">
+                            💡 <strong class="text-slate-200">Quant Takeaway:</strong> To prevent net worth decay, your portfolio must generate an after-tax CAGR higher than your personal UMC-CPI rate.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="border-t border-slate-800/80 bg-slate-950 py-6 mt-12">
+        <div class="max-w-7xl mx-auto px-4 text-center sm:flex sm:justify-between sm:items-center text-xs text-slate-500 font-mono">
+            <p>ALPHA_QUANT // NO PAID API DEPENDENCIES // REAL-TIME PUBLIC FEEDS</p>
+            <p class="mt-2 sm:mt-0 text-slate-400">DESIGNED FOR URBAN MIDDLE-CLASS INFLATION REALITY</p>
+        </div>
+    </footer>
+
+    <!-- JAVASCRIPT LOGIC ENGINE -->
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Global State & Data
+        window.assetsLoaded = false;
+        let cpiChartInstance = null;
+
+        // Default UMC Categories dataset
+        const defaultUmcCategories = [
+            { id: 'housing', name: 'Housing & Real Estate', icon: 'home', color: 'text-cyan-400', officialWeight: 16.5, userWeight: 25.0, priceIncrease: 9.5, desc: 'Rent, gated society maintenance, home loan EMIs' },
+            { id: 'food', name: 'Food & Quick Commerce', icon: 'shopping-bag', color: 'text-amber-400', officialWeight: 36.8, userWeight: 18.0, priceIncrease: 8.0, desc: 'Blinkit/Zepto, dining, organic FMCG vs raw staples' },
+            { id: 'education', name: 'Education & Skilling', icon: 'graduation-cap', color: 'text-violet-400', officialWeight: 3.3, userWeight: 12.0, priceIncrease: 11.0, desc: 'Private K-12 tuition, coaching classes, university fees' },
+            { id: 'transport', name: 'Transport & Commute', icon: 'car', color: 'text-emerald-400', officialWeight: 9.4, userWeight: 12.0, priceIncrease: 7.5, desc: 'Fuel, Uber/Ola surge, EV charging, car upkeep' },
+            { id: 'healthcare', name: 'Healthcare & Insurance', icon: 'heart-pulse', color: 'text-rose-400', officialWeight: 6.8, userWeight: 10.0, priceIncrease: 14.0, desc: 'Health insurance renewal premiums, private OPD, labs' },
+            { id: 'utilities', name: 'Utilities & Tech Services', icon: 'wifi', color: 'text-blue-400', officialWeight: 3.1, userWeight: 8.0, priceIncrease: 6.5, desc: 'Broadband, mobile postpaid, OTT bundles, electronics' },
+            { id: 'travel', name: 'Travel & Recreation', icon: 'plane', color: 'text-yellow-400', officialWeight: 2.6, userWeight: 8.0, priceIncrease: 9.0, desc: 'Airfares, weekend getaways, Cult.fit, multiplexes' },
+            { id: 'domestic', name: 'Domestic Services & Help', icon: 'users', color: 'text-orange-400', officialWeight: 1.5, userWeight: 7.0, priceIncrease: 8.5, desc: 'Maids, cooks, drivers, Urban Company repair services' }
+        ];
+
+        let categoriesState = JSON.parse(JSON.stringify(defaultUmcCategories));
+
+        // -------------------------------------------------------------
+        // 1. TAB SWITCHING SYSTEM
+        // -------------------------------------------------------------
+        function switchTab(tabId) {
+            ['terminal', 'assets', 'umc-manifesto', 'calculator'].forEach(id => {
+                const sec = document.getElementById(`sec-${id}`);
+                const tab = document.getElementById(`tab-${id}`);
+                if(sec) sec.classList.add('hidden');
+                if(tab) tab.classList.remove('active');
+            });
+
+            const activeSec = document.getElementById(`sec-${tabId}`);
+            const activeTab = document.getElementById(`tab-${tabId}`);
+            if(activeSec) activeSec.classList.remove('hidden');
+            if(activeTab) activeTab.classList.add('active');
+
+            // Trigger TV loads or Chart renders on demand
+            if(tabId === 'assets' && !window.assetsLoaded) {
+                fetchMacroAssetPrices();
+                initGoldBtcChart();
+                window.assetsLoaded = true;
+            }
+
+            if(tabId === 'calculator') {
+                calculatePersonalEngine();
+            }
+        }
+
+        // -------------------------------------------------------------
+        // 2. TRADINGVIEW TECHNICAL CHART ENGINE
+        // -------------------------------------------------------------
+        function updateMainTechnicalChart(symbol) {
+            const container = document.getElementById('tradingview_chart_container');
+            if(!container) return;
+            container.innerHTML = '';
+
+            new TradingView.widget({
+                "autosize": true,
+                "symbol": symbol,
+                "interval": "D",
+                "timezone": "Etc/UTC",
+                "theme": "dark",
+                "style": "1",
+                "locale": "en",
+                "toolbar_bg": "#080c14",
+                "enable_publishing": false,
+                "hide_side_toolbar": false,
+                "allow_symbol_change": true,
+                "container_id": "tradingview_chart_container",
+                "studies": [
+                    "STD;RSI",
+                    "STD;MACD"
+                ]
+            });
+        }
+
+        function initSecondaryWidgets() {
+            // Screener Widget
+            const screenerContainer = document.getElementById('tv-screener-widget');
+            if(screenerContainer) {
+                const screenerScript = document.createElement('script');
+                screenerScript.src = 'https://s3.tradingview.com/external-embedding/embed-widget-screener.js';
+                screenerScript.async = true;
+                screenerScript.innerHTML = JSON.stringify({
+                    "width": "100%",
+                    "height": "100%",
+                    "defaultColumn": "overview",
+                    "defaultScreen": "general",
+                    "market": "forex",
+                    "showToolbar": true,
+                    "colorTheme": "dark",
+                    "locale": "en"
+                });
+                screenerContainer.appendChild(screenerScript);
+            }
+
+            // Sector Heatmap Widget
+            const heatmapContainer = document.getElementById('tv-heatmap-widget');
+            if(heatmapContainer) {
+                const heatmapScript = document.createElement('script');
+                heatmapScript.src = 'https://s3.tradingview.com/external-embedding/embed-widget-stock-heatmap.js';
+                heatmapScript.async = true;
+                heatmapScript.innerHTML = JSON.stringify({
+                    "exchanges": [],
+                    "dataSource": "S&P500",
+                    "grouping": "sector",
+                    "blockSize": "market_cap_basic",
+                    "blockColor": "change",
+                    "locale": "en",
+                    "colorTheme": "dark",
+                    "hasTopBar": false,
+                    "isZoomEnabled": true,
+                    "hasSymbolTooltip": true,
+                    "width": "100%",
+                    "height": "100%"
+                });
+                heatmapContainer.appendChild(heatmapScript);
+            }
+        }
+
+        function initGoldBtcChart() {
+            const container = document.getElementById('tv-gold-btc-chart');
+            if(!container) return;
+            new TradingView.widget({
+                "autosize": true,
+                "symbol": "BITSTAMP:BTCUSD",
+                "interval": "D",
+                "timezone": "Etc/UTC",
+                "theme": "dark",
+                "style": "2",
+                "locale": "en",
+                "container_id": "tv-gold-btc-chart"
+            });
+        }
+
+        // Dynamically load TV Library
+        const tvScript = document.createElement('script');
+        tvScript.src = 'https://s3.tradingview.com/tv.js';
+        tvScript.onload = () => {
+            updateMainTechnicalChart("NSE:NIFTY");
+            initSecondaryWidgets();
+        };
+        document.head.appendChild(tvScript);
+
+        // -------------------------------------------------------------
+        // 3. MULTI-CURRENCY GOLD & BITCOIN FETCH ENGINE
+        // -------------------------------------------------------------
+        async function fetchMacroAssetPrices() {
+            const currencies = ['usd', 'inr', 'eur', 'jpy', 'rub', 'mxn'];
+            const symbols = { usd: '$', inr: '₹', eur: '€', jpy: '¥', rub: '₽', mxn: 'Mex$' };
+
+            try {
+                // Fetch BTC Prices via CoinGecko Public API
+                const btcRes = await fetch('https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd,inr,eur,jpy,rub,mxn&include_24hr_change=true');
+                const btcData = await btcRes.json();
+
+                // Fetch Foreign Exchange Rates to calculate Gold
+                const fxRes = await fetch('https://open.er-api.com/v6/latest/USD');
+                const fxData = await fxRes.json();
+
+                // Gold Spot Base Rate (~ $2,650/Oz reference spot)
+                const baseGoldUsd = 2650.00;
+
+                currencies.forEach(curr => {
+                    // Update BTC Cards
+                    const btcVal = btcData.bitcoin ? btcData.bitcoin[curr] : 68000;
+                    const btcChange = btcData.bitcoin ? (btcData.bitcoin[`${curr}_24h_change`] || 0) : 0;
+                    const btcChangeClass = btcChange >= 0 ? 'text-emerald-400 bg-emerald-500/10 border-emerald-500/20' : 'text-rose-400 bg-rose-500/10 border-rose-500/20';
+
+                    const btcEl = document.getElementById(`btc-${curr}`);
+                    if(btcEl) {
+                        btcEl.innerHTML = `
+                            <div class="flex justify-between items-center mb-1">
+                                <span class="text-[10px] text-slate-400 font-mono font-bold uppercase">BTC / ${curr.toUpperCase()}</span>
+                                <span class="text-[10px] font-mono px-1.5 py-0.5 rounded border ${btcChangeClass}">${btcChange >= 0 ? '+' : ''}${btcChange.toFixed(1)}%</span>
+                            </div>
+                            <div class="text-sm sm:text-base font-bold text-amber-400 font-mono">${symbols[curr]}${Math.round(btcVal).toLocaleString()}</div>
+                        `;
+                    }
+
+                    // Update Gold Cards
+                    const fxRate = (fxData.rates && fxData.rates[curr.toUpperCase()]) ? fxData.rates[curr.toUpperCase()] : 1;
+                    const goldVal = baseGoldUsd * fxRate;
+                    const goldEl = document.getElementById(`gold-${curr}`);
+                    if(goldEl) {
+                        goldEl.innerHTML = `
+                            <div class="flex justify-between items-center mb-1">
+                                <span class="text-[10px] text-slate-400 font-mono font-bold uppercase">XAU / ${curr.toUpperCase()}</span>
+                                <span class="text-[10px] font-mono px-1.5 py-0.5 rounded bg-yellow-500/10 text-yellow-400 border border-yellow-500/20">SPOT</span>
+                            </div>
+                            <div class="text-sm sm:text-base font-bold text-yellow-300 font-mono">${symbols[curr]}${Math.round(goldVal).toLocaleString()}</div>
+                        `;
+                    }
+                });
+
+                const timeEl = document.getElementById('last-updated-assets');
+                if(timeEl) timeEl.innerText = `Last synced: ${new Date().toLocaleTimeString()}`;
+
+            } catch (err) {
+                console.warn("Asset price fetch error, loading fallback estimates:", err);
+            }
+        }
+
+        // -------------------------------------------------------------
+        // 4. INFLATION CALCULATOR & WEALTH EROSION ENGINE
+        // -------------------------------------------------------------
+        function renderCalculatorSliders() {
+            const container = document.getElementById('sliders-container');
+            if(!container) return;
+            container.innerHTML = '';
+
+            categoriesState.forEach((item, idx) => {
+                const el = document.createElement('div');
+                el.className = 'p-3 bg-slate-900/80 rounded-xl border border-slate-800 space-y-2';
+                el.innerHTML = `
+                    <div class="flex justify-between items-center flex-wrap gap-1">
+                        <span class="text-xs font-bold text-white flex items-center gap-2">
+                            <i data-lucide="${item.icon}" class="w-3.5 h-3.5 ${item.color}"></i> ${item.name}
+                        </span>
+                        <span class="text-[10px] text-slate-400 font-mono">Official CPI: ${item.officialWeight}%</span>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1">
+                        <!-- Weight Slider -->
+                        <div>
+                            <div class="flex justify-between text-[10px] font-mono text-slate-400 mb-1">
+                                <span>Spend Weight:</span>
+                                <span class="text-cyan-400 font-bold">${item.userWeight}%</span>
+                            </div>
+                            <input type="range" min="0" max="50" step="0.5" value="${item.userWeight}" 
+                                oninput="updateCategoryValue(${idx}, 'userWeight', this.value)"
+                                class="w-full h-1 bg-slate-800 rounded-lg appearance-none cursor-pointer">
+                        </div>
+
+                        <!-- Annual Inflation Slider -->
+                        <div>
+                            <div class="flex justify-between text-[10px] font-mono text-slate-400 mb-1">
+                                <span>Annual Price Hike:</span>
+                                <span class="text-rose-400 font-bold">${item.priceIncrease}%</span>
+                            </div>
+                            <input type="range" min="0" max="30" step="0.5" value="${item.priceIncrease}" 
+                                oninput="updateCategoryValue(${idx}, 'priceIncrease', this.value)"
+                                class="w-full h-1 bg-slate-800 rounded-lg appearance-none cursor-pointer">
+                        </div>
+                    </div>
+                    <p class="text-[10px] text-slate-500 italic">${item.desc}</p>
+                `;
+                container.appendChild(el);
+            });
+
+            lucide.createIcons();
+        }
+
+        function updateCategoryValue(index, field, val) {
+            categoriesState[index][field] = parseFloat(val) || 0;
+            calculatePersonalEngine();
+        }
+
+        function normalizeWeights() {
+            const currentTotal = categoriesState.reduce((acc, cur) => acc + cur.userWeight, 0);
+            if(currentTotal === 0) return;
+            
+            categoriesState.forEach(item => {
+                item.userWeight = parseFloat(((item.userWeight / currentTotal) * 100).toFixed(1));
+            });
+
+            renderCalculatorSliders();
+            calculatePersonalEngine();
+        }
+
+        function resetCalculatorDefaults() {
+            categoriesState = JSON.parse(JSON.stringify(defaultUmcCategories));
+            renderCalculatorSliders();
+            calculatePersonalEngine();
+        }
+
+        function calculatePersonalEngine() {
+            let totalWeightedInflation = 0;
+            let totalWeight = 0;
+
+            categoriesState.forEach(item => {
+                totalWeightedInflation += (item.userWeight / 100) * item.priceIncrease;
+                totalWeight += item.userWeight;
+            });
+
+            // Weight normalization multiplier check
+            const effectiveWeightSum = totalWeight;
+            const personalInflationRate = totalWeight > 0 ? (totalWeightedInflation / (totalWeight / 100)) : 0;
+            const officialHeadlineRate = 4.50;
+            const gapRate = personalInflationRate - officialHeadlineRate;
+
+            // Monthly Income Calculation
+            const incomeInput = document.getElementById('monthly-income-input');
+            const monthlyIncome = parseFloat(incomeInput ? incomeInput.value : 150000) || 150000;
+            const annualSpend = monthlyIncome * 12;
+            const annualLoss = (annualSpend * (personalInflationRate / 100));
+
+            // Update UI elements
+            const personalRateEl = document.getElementById('personal-rate-display');
+            const gapRateEl = document.getElementById('gap-rate-display');
+            const annualLossEl = document.getElementById('annual-loss-display');
+            const weightNumEl = document.getElementById('total-weight-num');
+
+            if(personalRateEl) personalRateEl.innerText = `${personalInflationRate.toFixed(2)}%`;
+            if(gapRateEl) gapRateEl.innerText = `${gapRate >= 0 ? '+' : ''}${gapRate.toFixed(2)}%`;
+            if(annualLossEl) annualLossEl.innerText = `₹${Math.round(annualLoss).toLocaleString('en-IN')}`;
+            if(weightNumEl) {
+                weightNumEl.innerText = `${effectiveWeightSum.toFixed(1)}%`;
+                const badge = document.getElementById('weight-sum-badge');
+                if(Math.abs(effectiveWeightSum - 100) > 0.5) {
+                    badge.className = "p-3 rounded-xl bg-amber-950/30 border border-amber-500/30 flex items-center justify-between text-xs font-mono text-amber-300";
+                } else {
+                    badge.className = "p-3 rounded-xl bg-cyan-950/30 border border-cyan-500/30 flex items-center justify-between text-xs font-mono text-cyan-300";
+                }
+            }
+
+            // Calculate Multi-Year Purchasing Power Loss on ₹1,00,000 cash corpus
+            const baseCorpus = 100000;
+            const r = personalInflationRate / 100;
+            const decay1y = baseCorpus / Math.pow(1 + r, 1);
+            const decay3y = baseCorpus / Math.pow(1 + r, 3);
+            const decay5y = baseCorpus / Math.pow(1 + r, 5);
+            const decay10y = baseCorpus / Math.pow(1 + r, 10);
+
+            document.getElementById('decay-1y').innerText = `₹${Math.round(decay1y).toLocaleString('en-IN')}`;
+            document.getElementById('decay-3y').innerText = `₹${Math.round(decay3y).toLocaleString('en-IN')}`;
+            document.getElementById('decay-5y').innerText = `₹${Math.round(decay5y).toLocaleString('en-IN')}`;
+            document.getElementById('decay-10y').innerText = `₹${Math.round(decay10y).toLocaleString('en-IN')}`;
+
+            updateChart();
+        }
+
+        function updateChart() {
+            const ctx = document.getElementById('weightComparisonChart');
+            if(!ctx) return;
+
+            const labels = ['Housing', 'Food', 'Edu', 'Transport', 'Health', 'Utils', 'Travel', 'Domestic'];
+            const officialWeights = categoriesState.map(c => c.officialWeight);
+            const userWeights = categoriesState.map(c => c.userWeight);
+
+            if(cpiChartInstance) {
+                cpiChartInstance.destroy();
+            }
+
+            cpiChartInstance = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: labels,
+                    datasets: [
+                        {
+                            label: 'Official CPI Basket (%)',
+                            data: officialWeights,
+                            backgroundColor: 'rgba(100, 116, 139, 0.4)',
+                            borderColor: 'rgba(100, 116, 139, 0.8)',
+                            borderWidth: 1
+                        },
+                        {
+                            label: 'Your Custom Basket (%)',
+                            data: userWeights,
+                            backgroundColor: 'rgba(0, 242, 254, 0.6)',
+                            borderColor: 'rgba(0, 242, 254, 1)',
+                            borderWidth: 1
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            grid: { color: '#1e293b' },
+                            ticks: { color: '#94a3b8', font: { family: 'JetBrains Mono', size: 10 } }
+                        },
+                        x: {
+                            grid: { color: '#1e293b' },
+                            ticks: { color: '#94a3b8', font: { family: 'JetBrains Mono', size: 9 } }
+                        }
+                    },
+                    plugins: {
+                        legend: {
+                            labels: { color: '#cbd5e1', font: { size: 11, family: 'Plus Jakarta Sans' } }
+                        }
+                    }
+                }
+            });
+        }
+
+        // Initialize App on DOM Load
+        window.onload = function() {
+            renderCalculatorSliders();
+            calculatePersonalEngine();
+        };
+    </script>
 </body>
 </html>
