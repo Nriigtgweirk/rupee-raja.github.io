@@ -294,6 +294,13 @@
     "momentum_score": 0.3018
   },
   {
+    "symbol": "AMAGI",
+    "price": 554.05,
+    "return_12m": 59.1,
+    "volatility": 46.91,
+    "momentum_score": 1.2913
+  },
+  {
     "symbol": "ARE&M",
     "price": 747.4,
     "return_12m": -24.32,
@@ -691,6 +698,13 @@
     "return_12m": -15.99,
     "volatility": 27.83,
     "momentum_score": -0.2895
+  },
+  {
+    "symbol": "BHARATCOAL",
+    "price": 31.75,
+    "return_12m": -21.76,
+    "volatility": 41.11,
+    "momentum_score": -0.3818
   },
   {
     "symbol": "BDL",
@@ -1582,6 +1596,13 @@
     "momentum_score": -0.2033
   },
   {
+    "symbol": "FRACTAL",
+    "price": 727.35,
+    "return_12m": -14.14,
+    "volatility": 46.34,
+    "momentum_score": -0.0674
+  },
+  {
     "symbol": "UTLSOLAR",
     "price": 401.65,
     "return_12m": 92.69,
@@ -2084,6 +2105,13 @@
     "return_12m": -17.66,
     "volatility": 25.62,
     "momentum_score": -0.7952
+  },
+  {
+    "symbol": "ICICIAMC",
+    "price": 3084.4,
+    "return_12m": 20.37,
+    "volatility": 32.72,
+    "momentum_score": 0.5155
   },
   {
     "symbol": "ICICIPRULI",
@@ -2737,6 +2765,13 @@
     "momentum_score": 0.3409
   },
   {
+    "symbol": "KWIL",
+    "price": 38.36,
+    "return_12m": 30.39,
+    "volatility": 54.63,
+    "momentum_score": 0.7272
+  },
+  {
     "symbol": "LTF",
     "price": 264.35,
     "return_12m": 1.81,
@@ -3225,6 +3260,13 @@
     "return_12m": 37.12,
     "volatility": 37.85,
     "momentum_score": 0.8444
+  },
+  {
+    "symbol": "NEPHROPLUS",
+    "price": 648.95,
+    "return_12m": 37.71,
+    "volatility": 41.71,
+    "momentum_score": 1.1002
   },
   {
     "symbol": "NESTLEIND",
@@ -4058,6 +4100,13 @@
     "return_12m": 85.33,
     "volatility": 40.37,
     "momentum_score": 2.2537
+  },
+  {
+    "symbol": "SHADOWFAX",
+    "price": 273.15,
+    "return_12m": 148.36,
+    "volatility": 48.4,
+    "momentum_score": 2.9598
   },
   {
     "symbol": "SHAILY",
