@@ -5,27 +5,51 @@
   <title>Nifty Total Market - Momentum Scores</title>
   <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
   <style>
-    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; padding: 2rem; background: #f8f9fa; }
-    .card { background: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; margin: 0; padding: 20px; background: #f4f6f9; }
+    .card { background: white; padding: 24px; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
     h1 { margin-top: 0; color: #1a202c; }
-    .nav-link { display: inline-block; margin-bottom: 1rem; color: #2b6cb0; font-weight: bold; text-decoration: none; }
-    .nav-link:hover { text-decoration: underline; }
-    .btn { background: #3182ce; color: white; border: none; padding: 0.6rem 1.2rem; border-radius: 6px; font-weight: bold; cursor: pointer; margin-right: 0.5rem; transition: background 0.2s; }
-    .btn:hover { background: #2b6cb0; }
+    
+    .tab-buttons { display: flex; gap: 10px; margin-bottom: 20px; border-bottom: 2px solid #e2e8f0; padding-bottom: 10px; }
+    .tab-btn { padding: 10px 20px; border: none; background: #edf2f7; font-weight: bold; border-radius: 6px; cursor: pointer; color: #4a5568; }
+    .tab-btn.active { background: #3182ce; color: white; }
+
+    .opt-bar { background: #ebf8ff; border: 1px solid #bee3f8; padding: 15px; border-radius: 8px; margin-bottom: 20px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+    .opt-btn { background: #2b6cb0; color: white; border: none; padding: 10px 18px; border-radius: 6px; font-weight: bold; cursor: pointer; transition: background 0.2s; }
+    .opt-btn:hover { background: #2c5282; }
+
+    table.dataTable { width: 100% !important; border-collapse: collapse; }
+    th, td { text-align: left; padding: 10px; }
   </style>
 </head>
 <body>
 
-  <a class="nav-link" href="index.html">← Back to Main Home</a>
-  
   <div class="card">
-    <h1>Nifty Total Market Momentum Scores (750 Stocks)</h1>
-    <p>Ranked by 12M Risk-Adjusted Momentum Score (Ex-1M). Click column headers to sort.</p>
+    <h1>Nifty Total Market Momentum Dashboard</h1>
+    <p>Categorized by Market Cap. Select a cap tier and click an optimization button to transfer top stocks into portfolio weighting.</p>
 
-    <table id="momentumTable" class="display" style="width:100%">
+    <div class="opt-bar">
+      <div><strong>Category Actions:</strong> Optimize top-ranked momentum stocks within current category view:</div>
+      <div>
+        <button class="opt-btn" onclick="optimizeCategoryTop(10)">Optimize Top 10</button>
+        <button class="opt-btn" onclick="optimizeCategoryTop(20)">Optimize Top 20</button>
+        <button class="opt-btn" onclick="optimizeCategoryTop(30)">Optimize Top 30</button>
+      </div>
+    </div>
+
+    <div class="tab-buttons">
+      <button class="tab-btn active" onclick="switchCategory('Large Cap')">Large Cap</button>
+      <button class="tab-btn" onclick="switchCategory('Mid Cap')">Mid Cap</button>
+      <button class="tab-btn" onclick="switchCategory('Small Cap')">Small Cap</button>
+      <button class="tab-btn" onclick="switchCategory('Micro Cap')">Micro Cap</button>
+    </div>
+
+    <table id="momentumTable" class="display">
       <thead>
         <tr>
           <th>Symbol</th>
+          <th>Company Name</th>
+          <th>Industry</th>
+          <th>Market Cap (₹ Cr)</th>
           <th>Price (₹)</th>
           <th>12M Return (%)</th>
           <th>Volatility (%)</th>
@@ -34,61 +58,65 @@
       </thead>
       <tbody></tbody>
     </table>
-
-    <div style="margin-top: 2rem; padding-top: 1rem; border-top: 1px solid #e2e8f0;">
-      <p style="font-weight: bold; margin-bottom: 0.5rem;">Send Top Momentum Stocks to Minimum Variance Optimizer:</p>
-      <button class="btn" onclick="optimizeTopN(10)">Optimize Top 10 Stocks →</button>
-      <button class="btn" onclick="optimizeTopN(20)">Optimize Top 20 Stocks →</button>
-      <button class="btn" onclick="optimizeTopN(30)">Optimize Top 30 Stocks →</button>
-    </div>
   </div>
 
   <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
   <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
   <script>
-    // 1. Declare global variable to store stock dataset
-    let globalMomentumData = [];
+    let rawData = [];
+    let currentCategory = 'Large Cap';
+    let dataTable;
 
     $(document).ready(function() {
       fetch('data.json')
-        .then(response => response.json())
+        .then(res => res.json())
         .then(data => {
-          // 2. Assign loaded array to global variable
-          globalMomentumData = data;
-
-          $('#momentumTable').DataTable({
-            data: data,
-            columns: [
-              { data: 'symbol' },
-              { data: 'price' },
-              { data: 'return_12m' },
-              { data: 'volatility' },
-              { data: 'momentum_score' }
-            ],
-            order: [[4, 'desc']], // Default sort by Momentum Score descending
-            pageLength: 25
-          });
-        })
-        .catch(err => console.error('Error loading data.json:', err));
+          rawData = data;
+          initTable();
+        });
     });
 
-    // 3. Function to select top N stocks and redirect
-    function optimizeTopN(n) {
-      if (!globalMomentumData || globalMomentumData.length === 0) {
-        alert("Data is still loading. Please wait a moment.");
+    function initTable() {
+      const filtered = rawData.filter(d => d.category === currentCategory);
+      
+      dataTable = $('#momentumTable').DataTable({
+        data: filtered,
+        destroy: true,
+        columns: [
+          { data: 'symbol', render: d => `<strong>${d}</strong>` },
+          { data: 'name' },
+          { data: 'industry' },
+          { data: 'marketCapCr', render: $.fn.dataTable.render.number(',', '.', 0) },
+          { data: 'price', render: $.fn.dataTable.render.number(',', '.', 2) },
+          { data: 'return_12m' },
+          { data: 'volatility' },
+          { data: 'momentum_score', render: d => `<strong>${d}</strong>` }
+        ],
+        order: [[7, 'desc']], // Default sort by Momentum Score descending
+        pageLength: 25
+      });
+    }
+
+    function switchCategory(cat) {
+      currentCategory = cat;
+      $('.tab-btn').removeClass('active');$(event.target).addClass('active');
+      initTable();
+    }
+
+    function optimizeCategoryTop(n) {
+      const categoryStocks = rawData
+        .filter(d => d.category === currentCategory)
+        .sort((a, b) => b.momentum_score - a.momentum_score)
+        .slice(0, n);
+
+      if (categoryStocks.length === 0) {
+        alert("No stocks available in this category!");
         return;
       }
 
-      // Sort descending by momentum score and slice top N
-      const topTickers = [...globalMomentumData]
-        .sort((a, b) => b.momentum_score - a.momentum_score)
-        .slice(0, n)
-        .map(item => item.symbol);
-
-      // Store selection in LocalStorage
-      localStorage.setItem('selectedStocks', JSON.stringify(topTickers));
-
-      // Redirect to optimization page
+      localStorage.setItem('selectedCategory', currentCategory);
+      localStorage.setItem('selectedN', n);
+      localStorage.setItem('selectedStocks', JSON.stringify(categoryStocks));
       window.location.href = 'min_variance.html';
     }
   </script>
