@@ -2244,6 +2244,17 @@
     "momentum_score": 0.1742
   },
   {
+    "symbol": "PIRAMALFIN",
+    "name": "PIRAMAL FINANCE LIMITED",
+    "industry": "Credit Services",
+    "marketCapCr": 46092.25,
+    "category": "Mid Cap",
+    "price": 1948.7,
+    "return_12m": 48.13,
+    "volatility": 33.44,
+    "momentum_score": 1.896
+  },
+  {
     "symbol": "IPCALAB",
     "name": "IPCA LABORATORIES LTD",
     "industry": "Drug Manufacturers - Specialty & Generic",
@@ -2253,17 +2264,6 @@
     "return_12m": 43.26,
     "volatility": 29.96,
     "momentum_score": 1.7681
-  },
-  {
-    "symbol": "PIRAMALFIN",
-    "name": "PIRAMAL FINANCE LIMITED",
-    "industry": "Credit Services",
-    "marketCapCr": 46017.8,
-    "category": "Mid Cap",
-    "price": 1948.7,
-    "return_12m": 48.13,
-    "volatility": 33.44,
-    "momentum_score": 1.896
   },
   {
     "symbol": "SUPREMEIND",
@@ -2667,10 +2667,10 @@
     "industry": "N/A",
     "marketCapCr": 35064.49,
     "category": "Mid Cap",
-    "price": 435.4,
-    "return_12m": 7.47,
-    "volatility": 16.88,
-    "momentum_score": 0.4972
+    "price": 435.93,
+    "return_12m": 7.6,
+    "volatility": 16.85,
+    "momentum_score": 0.5203
   },
   {
     "symbol": "HEXT",
@@ -3646,10 +3646,10 @@
     "industry": "N/A",
     "marketCapCr": 21866.53,
     "category": "Small Cap",
-    "price": 319.98,
-    "return_12m": -2.41,
-    "volatility": 16.11,
-    "momentum_score": 0.1928
+    "price": 318.2,
+    "return_12m": -2.95,
+    "volatility": 16.08,
+    "momentum_score": 0.1905
   },
   {
     "symbol": "KAYNES",
@@ -7989,7 +7989,7 @@
     "symbol": "ADVENZYMES",
     "name": "ADVANCED ENZYME TECH LTD",
     "industry": "Specialty Chemicals",
-    "marketCapCr": 2864.7,
+    "marketCapCr": 2864.02,
     "category": "Micro Cap",
     "price": 262.0,
     "return_12m": -15.42,
