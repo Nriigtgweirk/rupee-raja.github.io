@@ -1149,7 +1149,7 @@
     "industry": "Drug Manufacturers - Specialty & Generic",
     "marketCapCr": 106749.87,
     "category": "Mid Cap",
-    "price": 1855.3,
+    "price": 1848.3,
     "return_12m": 60.66,
     "volatility": 26.64,
     "momentum_score": 1.9169
@@ -2148,7 +2148,7 @@
     "symbol": "MPHASIS",
     "name": "MPHASIS LIMITED",
     "industry": "Information Technology Services",
-    "marketCapCr": 46858.74,
+    "marketCapCr": 46896.27,
     "category": "Mid Cap",
     "price": 2455.0,
     "return_12m": -9.2,
@@ -2238,7 +2238,7 @@
     "industry": "Auto Parts",
     "marketCapCr": 45305.82,
     "category": "Mid Cap",
-    "price": 2343.6,
+    "price": 2339.6,
     "return_12m": 1.61,
     "volatility": 35.51,
     "momentum_score": -0.4217
@@ -2414,7 +2414,7 @@
     "industry": "Solar",
     "marketCapCr": 40135.3,
     "category": "Mid Cap",
-    "price": 886.0,
+    "price": 885.5,
     "return_12m": -13.37,
     "volatility": 33.89,
     "momentum_score": -0.3637
@@ -2590,10 +2590,10 @@
     "industry": "N/A",
     "marketCapCr": 35064.49,
     "category": "Mid Cap",
-    "price": 416.83,
-    "return_12m": 3.49,
-    "volatility": 16.88,
-    "momentum_score": 0.3061
+    "price": 419.93,
+    "return_12m": 4.26,
+    "volatility": 16.86,
+    "momentum_score": 0.3041
   },
   {
     "symbol": "ENDURANCE",
@@ -2645,7 +2645,7 @@
     "industry": "Railroads",
     "marketCapCr": 33968.16,
     "category": "Mid Cap",
-    "price": 446.0,
+    "price": 444.1,
     "return_12m": -13.01,
     "volatility": 28.25,
     "momentum_score": -0.4924
@@ -2667,7 +2667,7 @@
     "industry": "Credit Services",
     "marketCapCr": 33860.14,
     "category": "Mid Cap",
-    "price": 169.14,
+    "price": 167.79,
     "return_12m": -25.35,
     "volatility": 32.97,
     "momentum_score": -0.9471
@@ -2678,7 +2678,7 @@
     "industry": "Diagnostics & Research",
     "marketCapCr": 33718.04,
     "category": "Mid Cap",
-    "price": 2016.5,
+    "price": 2011.5,
     "return_12m": 31.53,
     "volatility": 29.17,
     "momentum_score": 0.934
@@ -3569,10 +3569,10 @@
     "industry": "N/A",
     "marketCapCr": 21866.53,
     "category": "Small Cap",
-    "price": 320.87,
-    "return_12m": 0.94,
-    "volatility": 16.37,
-    "momentum_score": -0.0091
+    "price": 318.3,
+    "return_12m": 0.14,
+    "volatility": 16.35,
+    "momentum_score": 0.0319
   },
   {
     "symbol": "GRANULES",
@@ -3624,7 +3624,7 @@
     "industry": "Engineering & Construction",
     "marketCapCr": 21708.0,
     "category": "Small Cap",
-    "price": 80.4,
+    "price": 80.15,
     "return_12m": -28.26,
     "volatility": 36.49,
     "momentum_score": -0.993
@@ -3765,7 +3765,7 @@
     "symbol": "GESHIP",
     "name": "THE GE SHPG.LTD",
     "industry": "Marine Shipping",
-    "marketCapCr": 19199.87,
+    "marketCapCr": 19163.33,
     "category": "Small Cap",
     "price": 1426.0,
     "return_12m": 35.01,
@@ -4361,7 +4361,7 @@
     "industry": "Agricultural Inputs",
     "marketCapCr": 15599.4,
     "category": "Small Cap",
-    "price": 389.35,
+    "price": 384.35,
     "return_12m": -14.93,
     "volatility": 27.57,
     "momentum_score": -0.6874
@@ -4370,7 +4370,7 @@
     "symbol": "ATUL",
     "name": "ATUL LTD",
     "industry": "Specialty Chemicals",
-    "marketCapCr": 15549.93,
+    "marketCapCr": 15549.14,
     "category": "Small Cap",
     "price": 5290.0,
     "return_12m": -6.98,
@@ -4735,7 +4735,7 @@
     "industry": "Confectioners",
     "marketCapCr": 13934.5,
     "category": "Small Cap",
-    "price": 658.4,
+    "price": 654.4,
     "return_12m": 43.84,
     "volatility": 42.18,
     "momentum_score": 1.1083
@@ -4840,17 +4840,6 @@
     "momentum_score": -0.6789
   },
   {
-    "symbol": "RKFORGE",
-    "name": "RAMKRISHNA FORGINGS LTD",
-    "industry": "Metal Fabrication",
-    "marketCapCr": 13455.47,
-    "category": "Small Cap",
-    "price": 713.4,
-    "return_12m": 34.21,
-    "volatility": 38.94,
-    "momentum_score": 0.7663
-  },
-  {
     "symbol": "SOBHA",
     "name": "SOBHA LIMITED",
     "industry": "Real Estate - Development",
@@ -4860,6 +4849,17 @@
     "return_12m": -23.36,
     "volatility": 31.83,
     "momentum_score": -0.9937
+  },
+  {
+    "symbol": "RKFORGE",
+    "name": "RAMKRISHNA FORGINGS LTD",
+    "industry": "Metal Fabrication",
+    "marketCapCr": 13238.57,
+    "category": "Small Cap",
+    "price": 713.4,
+    "return_12m": 34.21,
+    "volatility": 38.94,
+    "momentum_score": 0.7663
   },
   {
     "symbol": "TMB",
@@ -5461,7 +5461,7 @@
     "industry": "Capital Markets",
     "marketCapCr": 10781.62,
     "category": "Micro Cap",
-    "price": 112.66,
+    "price": 111.01,
     "return_12m": -21.37,
     "volatility": 40.1,
     "momentum_score": -0.4236
@@ -5758,7 +5758,7 @@
     "industry": "Engineering & Construction",
     "marketCapCr": 9458.28,
     "category": "Micro Cap",
-    "price": 196.8,
+    "price": 194.9,
     "return_12m": -16.08,
     "volatility": 35.95,
     "momentum_score": -0.4213
@@ -6539,7 +6539,7 @@
     "industry": "Information Technology Services",
     "marketCapCr": 7087.88,
     "category": "Micro Cap",
-    "price": 256.07,
+    "price": 254.82,
     "return_12m": -30.19,
     "volatility": 47.6,
     "momentum_score": -0.7829
@@ -7023,7 +7023,7 @@
     "industry": "Specialty Business Services",
     "marketCapCr": 5758.52,
     "category": "Micro Cap",
-    "price": 407.75,
+    "price": 405.55,
     "return_12m": 13.18,
     "volatility": 43.29,
     "momentum_score": -0.1889
